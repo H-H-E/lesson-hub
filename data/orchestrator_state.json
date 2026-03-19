@@ -1,14 +1,6 @@
 {
   "queue": [
     {
-      "grade": 1,
-      "module": 3,
-      "topic": "Light and Shadow",
-      "version": 1,
-      "score": 0.0,
-      "status": "pending"
-    },
-    {
       "grade": 2,
       "module": 1,
       "topic": "Life Cycles",
@@ -65,7 +57,7 @@
       "status": "pending"
     }
   ],
-  "completed": 2,
+  "completed": 3,
   "failed": 0,
-  "last_updated": "2026-03-19T20:19:05.495698"
+  "last_updated": "2026-03-19T20:19:07.749437"
 }
