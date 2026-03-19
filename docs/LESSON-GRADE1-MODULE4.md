@@ -1,64 +1,83 @@
 # Grade 1 Science - Module 4
-## Sky Patterns - Day and Night
+## Sky Patterns
 
 **Duration:** 45 minutes
+**Version:** 1
+**Systems Literacy Alignment:** See standards section
 
 ---
 
-## Learning Objectives
+## 🎯 Learning Objectives
 
-1. [Objective 1 - Students will be able to...]
-2. [Objective 2]
-3. [Objective 3]
-
----
-
-## Materials
-
-- [ ] Required materials
-- [ ] Handouts
-- [ ] Technology
+By end of lesson, students will be able to:
+1. [SMART objective 1]
+2. [SMART objective 2]
+3. [SMART objective 3]
 
 ---
 
-## Lesson Sequence
 
-### Opening (5 min)
-**Hook:** [Engaging question or demo]
 
-### Exploration (15 min)
-**Activity:** [Hands-on exploration]
+## 🧪 Lesson Sequence
 
-### Discovery (10 min)
-**Discussion:** [Key concepts]
+### The Hook (5 min)
+[Engaging mystery or question]
+
+### Explore (15 min)
+[Hands-on activity]
+
+### Discover (10 min)
+[Discussion and formalization]
 
 ### Create (10 min)
-**Activity:** [Student creation]
+[Student creation]
 
 ### Check (5 min)
-**Exit ticket:** [Quick assessment]
+[Exit ticket]
 
 ---
 
 ## Differentiation
 
-**Level 1 (Support):** [Scaffolding]
-**Level 2 (Guided):** [Some support]
-**Level 3 (Extension):** [Challenge]
+### Level 1 (Highest Support)
+- Step-by-step instructions
+- Visual guides
+
+### Level 2 (Guided)
+- Partner work
+- Checkpoints
+
+### Level 3 (Extension)
+- Open challenges
+
+
+
+## 📝 Assessment
+
+### Formative
+- Observation
+- Discussion
+- Exit ticket
+
+### Summative
+- [Project description]
+
+
 
 ---
 
-## Assessment
+## 🌍 Systems Literacy Connection
 
-- Formative: [Ongoing checks]
-- Summative: [End of lesson]
+> *"You are not a lone creature being bossed around by morality; you are a living process inside other living processes."*
 
----
+### Chapter Connection
+This lesson connects to the larger story of systems literacy.
 
-## First Peoples Integration
+### 💡 Key Metaphor
+[Metaphor specific to Sky Patterns]
 
-[Where appropriate, connect to local Indigenous knowledge]
+### 📔 Explorer's Journal
+1. One thing that surprised me...
+2. One question I'm still wondering...
+3. One connection to my life...
 
----
-
-*Designed: 2026-03-19T08:28:08.772610*
