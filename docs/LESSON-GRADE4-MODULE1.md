@@ -1,147 +1,232 @@
 # Grade 4 Science - Module 1
 ## Senses
 
-**Duration:** 45 minutes
+**Duration:** 45 minutes  
 **Version:** 1
+**Score:** 984/200
+**Agents:** 27
 
 ---
 
-## Learning Objectives
+## 🎯 Learning Objectives
 
-By end of lesson, students will be able to:
-1. [SMART objective 1]
-2. [SMART objective 2]  
-3. [SMART objective 3]
-
----
-
-## Materials
-
-- [ ] Required materials
-- [ ] Handouts
-- [ ] Technology access
+1. Identify 3 key features of Senses
+2. Explain relationship between Senses and everyday life
+3. Demonstrate understanding through creative project
+4. Connect Senses to another subject
 
 ---
 
-## Lesson Sequence
+## 📚 Materials
 
-### Opening (5 min)
-**Hook:** [Engaging introduction]
-
-### Exploration (15 min)
-**Activity:** [Hands-on exploration]
-
-### Discovery (10 min)
-**Discussion:** [Key concepts]
-
-### Create (10 min)
-**Activity:** [Student creation]
-
-### Check (5 min)
-**Exit ticket:** [Quick assessment]
+- [ ] Visual aids
+- [ ] Student journals
+- [ ] Hands-on materials
+- [ ] Chart paper
 
 ---
 
-## Differentiation
+## 🌍 Systems Literacy Connection
 
-### Level 1 (Highest Support)
-- Step-by-step instructions
-- Visual guides
-- Teacher support
+> *"You are not an isolated atom — you are a process inside other processes."*
 
-### Level 2 (Guided)
-- Partner work
+**Key Metaphor:** Senses = system
+
+Chapter 4: You are not an atom - you're a process in processes.
+
+---
+
+## 🎭 The Hook
+
+Mystery about Senses
+
+---
+
+## 🧪 Lesson Activities
+
+### Explore (15 min)
+Hands-on with Senses
+### Discover (10 min)
+Class discussion
+### Create (15 min)
+Student project on Senses
+
+---
+
+## 🔄 Differentiation
+
+### Level 1
+Highest support
+- - Visual supports
+- Step-by-step
+- Peer mentor
+
+### Level 2
+Expected level
+- - Partner work
 - Checkpoints
+- Choice
 
-### Level 3 (Extension)
-- Open challenges
-- Independent research
+### Level 3
+Extension
+- - Research
+- Peer teaching
+- Real-world
+
 
 ---
 
-## Assessment
+## 📝 Assessment
 
 ### Formative
 - Observation
-- Discussion
 - Exit ticket
 
-### Summative
-- Project or quiz
+### Quiz
+- What is Senses?
 
 ---
 
-## First Peoples Integration
+## 📚 Standards
 
-[Where appropriate, connect to local Indigenous knowledge]
+### BC Curriculum
+- BC Grade 4
+
+### CSTA Standards  
+
 
 ---
 
-*Designed by AI Pipeline v2*
+## 🌍 First Peoples Integration
 
-
-## Detailed Activities
-
-### Activity 1: [Name]
-**Time:** 10 minutes
-**Materials:** [List]
-**Procedure:**
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
-
-**Differentiation Tips:**
-- Level 1: [Support]
-- Level 2: [Guidance]  
-- Level 3: [Extension]
-
-### Activity 2: [Name]
-**Time:** 15 minutes
-[Similar structure]
+- Connect to local Indigenous perspectives
+- Include Indigenous stories
+- Acknowledge traditional territories
 
 ---
 
-## Student Version
+## 📖 Cross-Curricular Connections
 
-[Simplified version for students to follow independently]
+### Math
+- Counting
+- Measuring
+- Graphing
+### Language Arts
+- Writing
+- Reading
+- Discussing
+### Arts
+- Drawing
+- Drama
+- Music
 
 ---
 
-## Teacher Version
+## 🏢 Real-World Connections
 
-[Detailed notes for teachers including:
-- Common questions
-- What to watch for
-- Timing adjustments
-- Discussion prompts]
+- Related careers
 
+---
 
-## Interactive Simulation
+## 🔮 Misconceptions to Address
 
-p5.js code available: `CODE-GRADE4-MODULE1.py`
+- Research needed
 
-Copy/paste into editor.p5js.org to run.
+---
 
+## 🖥️ Interactive Simulation
 
-## Assessments
+```javascript
+// p5.js: Senses
+// Grade 4
 
-### Quiz (5 questions)
-1. [Question 1]
-   a) [Option A]
-   b) [Option B] ✓
-   c) [Option C]
-   
-2. [Question 2]
-[...]
+let angle = 0;
+function setup() { createCanvas(600, 400); textSize(16); }
+function draw() {
+  background(240, 245, 255);
+  fill(50); textSize(24); textAlign(CENTER);
+  text("Senses", width/2, 40);
+  translate(width/2, height/2);
+  rotate(angle);
+  fill(100, 150, 255); rectMode(CENTER);
+  rect(0, 0, 100, 100);
+  angle += 0.02;
+  fill(80); textSize(14);
+  text("Explore Senses!", 0, 150);
+}
+```
 
-### Rubric
+---
 
-| Criteria | 1 | 2 | 3 | 4 |
+## 🎯 Extensions
+
+### Research
+Research one aspect deeply
+**Output:** Presentation
+### Quest
+Find Senses in 3 places
+**Output:** Photo journal
+### Create
+Create something new
+**Output:** Art/model
+
+---
+
+## 📔 Explorer's Journal
+
+# Explorer's Journal: Senses
+
+## Before
+What do you know?
+## During
+Draw one discovery
+## After
+1. Surprised me...
+2. Wondering...
+3. Connection to my life...
+
+---
+
+## 👨‍👩‍👧 Parent Guide
+
+# Family Guide: Senses
+
+## What We're Learning
+Senses
+## Talk About It
+1. What did you discover?
+2. Favorite part?
+## Try This
+[Activity suggestion]
+## Vocabulary
+[Key words]
+
+---
+
+## 📋 Rubric
+
+| Criteria | 4 | 3 | 2 | 1 |
 |----------|---|---|---|---|
-| [Criterion 1] | | | | |
-| [Criterion 2] | | | | |
+| Understanding | Deep understanding | Solid understanding | Partial | Limited |
+| Participation | Active | Most | Sometimes | Minimal |
+| Connections | Multiple | One | With prompting | None |
 
-### Self-Assessment
-- [ ] I can do this
-- [ ] I need practice
-- [ ] I need help
+---
+
+## 📝 Teacher Notes
+
+# Teacher Notes: Senses
+
+## Timing
+- Hook: 5 min
+- Explore: 15 min
+## Common Questions
+Q: Why does Senses matter?
+A: [Answer]
+## Materials
+- Gather day before
+- Test technology
+
+---
+
+*Generated by Deep Pipeline: 27 agents | Score: 984/200*

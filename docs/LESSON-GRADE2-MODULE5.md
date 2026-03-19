@@ -1,5 +1,5 @@
-# Grade 2 Science - Module 2
-## Properties of Matter
+# Grade 2 Science - Module 5
+## Growth
 
 **Duration:** 45 minutes  
 **Version:** 1
@@ -10,10 +10,10 @@
 
 ## 🎯 Learning Objectives
 
-1. Identify 3 key features of Properties of Matter
-2. Explain relationship between Properties of Matter and everyday life
+1. Identify 3 key features of Growth
+2. Explain relationship between Growth and everyday life
 3. Demonstrate understanding through creative project
-4. Connect Properties of Matter to another subject
+4. Connect Growth to another subject
 
 ---
 
@@ -30,7 +30,7 @@
 
 > *"You are not an isolated atom — you are a process inside other processes."*
 
-**Key Metaphor:** Properties of Matter = system
+**Key Metaphor:** Growth = system
 
 Chapter 2: You are not an atom - you're a process in processes.
 
@@ -38,18 +38,18 @@ Chapter 2: You are not an atom - you're a process in processes.
 
 ## 🎭 The Hook
 
-Mystery about Properties of Matter
+Mystery about Growth
 
 ---
 
 ## 🧪 Lesson Activities
 
 ### Explore (15 min)
-Hands-on with Properties of Matter
+Hands-on with Growth
 ### Discover (10 min)
 Class discussion
 ### Create (15 min)
-Student project on Properties of Matter
+Student project on Growth
 
 ---
 
@@ -83,7 +83,7 @@ Extension
 - Exit ticket
 
 ### Quiz
-- What is Properties of Matter?
+- What is Growth?
 
 ---
 
@@ -137,7 +137,7 @@ Extension
 ## 🖥️ Interactive Simulation
 
 ```javascript
-// p5.js: Properties of Matter
+// p5.js: Growth
 // Grade 2
 
 let angle = 0;
@@ -145,14 +145,14 @@ function setup() { createCanvas(600, 400); textSize(16); }
 function draw() {
   background(240, 245, 255);
   fill(50); textSize(24); textAlign(CENTER);
-  text("Properties of Matter", width/2, 40);
+  text("Growth", width/2, 40);
   translate(width/2, height/2);
   rotate(angle);
   fill(100, 150, 255); rectMode(CENTER);
   rect(0, 0, 100, 100);
   angle += 0.02;
   fill(80); textSize(14);
-  text("Explore Properties of Matter!", 0, 150);
+  text("Explore Growth!", 0, 150);
 }
 ```
 
@@ -164,7 +164,7 @@ function draw() {
 Research one aspect deeply
 **Output:** Presentation
 ### Quest
-Find Properties of Matter in 3 places
+Find Growth in 3 places
 **Output:** Photo journal
 ### Create
 Create something new
@@ -174,7 +174,7 @@ Create something new
 
 ## 📔 Explorer's Journal
 
-# Explorer's Journal: Properties of Matter
+# Explorer's Journal: Growth
 
 ## Before
 What do you know?
@@ -189,10 +189,10 @@ Draw one discovery
 
 ## 👨‍👩‍👧 Parent Guide
 
-# Family Guide: Properties of Matter
+# Family Guide: Growth
 
 ## What We're Learning
-Properties of Matter
+Growth
 ## Talk About It
 1. What did you discover?
 2. Favorite part?
@@ -215,13 +215,13 @@ Properties of Matter
 
 ## 📝 Teacher Notes
 
-# Teacher Notes: Properties of Matter
+# Teacher Notes: Growth
 
 ## Timing
 - Hook: 5 min
 - Explore: 15 min
 ## Common Questions
-Q: Why does Properties of Matter matter?
+Q: Why does Growth matter?
 A: [Answer]
 ## Materials
 - Gather day before

@@ -1,167 +1,232 @@
 # Grade 4 Science - Module 3
-## Light and Sound Energy
+## Sound
 
-**Duration:** 60 minutes (Lesson 1 of 5)
-**Grade:** 4
-**Curriculum Area:** Science - Physical Sciences
-
----
-
-## Learning Objectives (SMART)
-
-By the end of this lesson, students will be able to:
-
-1. **Explain** that light travels in a straight line from a source with 85% accuracy on written response
-2. **Demonstrate** how light interacts with different materials (reflects, absorbs, transmits) through hands-on testing
-3. **Design** an experiment to test one property of light using the scientific method
-4. **Compare** how sound and light travel differently (speed, medium requirements)
+**Duration:** 45 minutes  
+**Version:** 1
+**Score:** 984/200
+**Agents:** 27
 
 ---
 
-## Lesson Sequence
+## 🎯 Learning Objectives
 
-### Opening (10 min)
-**Hook - Mystery Demonstration:**
-- Turn off classroom lights
-- Use a flashlight and mirror to "write" a message on the wall
-- Ask: "How did the light get there without touching it?"
-
-*Teacher introduces question:* "Today we're investigating how light moves and behaves - this is something Indigenous peoples have understood for thousands of years through their observations of the sun, moon, and stars."
-
-**Pre-Assessment Question:** "What do you already know about how light travels? What about sound?"
-
-### Exploration (20 min)
-**Station Rotation: Light Properties Lab**
-
-Create 4 stations that students rotate through in 5-minute blocks:
-
-**Station 1: Straight Line Travel**
-- Use flashlights and cardboard with holes to demonstrate light travels in straight lines
-- Students predict where light will go, then test
-
-**Station 2: Reflection**
-- Mirrors, reflective surfaces, and flashlights
-- Create a light maze using multiple mirrors
-- Record which surfaces reflect best
-
-**Station 3: Absorption**
-- Place thermometers under different colored paper under a heat lamp
-- Measure temperature changes over 3 minutes
-- Compare results
-
-**Station 4: Transparency**
-- Test different materials (plastic, glass, cardboard, tissue paper)
-- Categorize as transparent, translucent, or opaque
-
-### Discovery (15 min)
-**Whole Class Demonstration: Sound vs. Light Race**
-- Set up a simple experiment showing that light travels faster than sound
-- Flash a bright light and make a sound simultaneously from across the room
-- Students observe which arrives first
-
-*Key Concept:*
-- Light does NOT need a medium to travel (can travel through space)
-- Sound NEEDS a medium (air, water, solid) to travel
-
-*Connection to First Peoples:* "The Anishinaabe (Ojibwe) understanding of light includes the medicine wheel concept - light brings knowledge and clarity, darkness brings reflection. The sun's light was crucial for traditional solar calendars used by many Indigenous peoples to track seasons."
-
-### Create (10 min)
-**Activity: Design a Light Puzzle**
-
-Students design a simple puzzle for classmates:
-- Create a pathway where light must bounce off mirrors to reach a target
-- Must include at least 2 mirrors and show understanding of reflection
-
-Materials: Cardboard, mirrors (small), flashlight, target
-
-### Check (5 min)
-**Exit Ticket:**
-1. Draw and label how light travels from a flashlight to a wall
-2. List one material that reflects light and one that absorbs it
+1. Identify 3 key features of Sound
+2. Explain relationship between Sound and everyday life
+3. Demonstrate understanding through creative project
+4. Connect Sound to another subject
 
 ---
 
-## Differentiation
+## 📚 Materials
 
-### Level 1 - Support
-- Provide pre-cut shapes for station activities
-- Offer sentence stems for explanations
-- Partner with a confident peer
-- Allow verbal responses with teacher transcription
-- Visual vocabulary cards with images
-
-### Level 2 - Guided
-- Provide recording sheets with prompts
-- Allow choice of stations (not all required)
-- Offer a word bank for written work
-- Check in with teacher between stations
-
-### Level 3 - Extension
-- Research how fiber optics use light transmission
-- Investigate how animals use light (bioluminescence, camouflage)
-- Calculate the speed of light vs. sound using real data
-- Create a more complex mirror maze puzzle
+- [ ] Visual aids
+- [ ] Student journals
+- [ ] Hands-on materials
+- [ ] Chart paper
 
 ---
 
-## Assessment
+## 🌍 Systems Literacy Connection
 
-### Formative Assessment
-- **Station Observations:** Teacher checklist during lab rotations
-- **Prediction/Results Sheets:** Check for scientific thinking
-- **Exit Ticket:** Assess understanding of light properties
-- **Peer Feedback:** Students give feedback on puzzle designs
+> *"You are not an isolated atom — you are a process inside other processes."*
 
-### Summative Assessment Options
-- **Option A:** Light Investigation Book - Students document experiments and findings
-- **Option B:** Light and Sound Quiz - Written test with diagrams
-- **Option C:** Design Challenge - Create a device that uses light properties
+**Key Metaphor:** Sound = system
 
-### Success Criteria
-- [ ] Accurately describes light traveling in straight lines
-- [ ] Can give examples of reflection, absorption, and transmission
-- [ ] Explains difference between light and sound travel
-- [ ] Demonstrates scientific process in experiments
+Chapter 4: You are not an atom - you're a process in processes.
 
 ---
 
-## First Peoples Integration
+## 🎭 The Hook
 
-### Content Connections
-- **Light in Indigenous Knowledge:** Many Indigenous cultures used light patterns for navigation, timekeeping, and seasonal planning
-- **Sun Dances and Ceremonies:** Light plays a central role in many Indigenous ceremonies across North America
-- **Traditional Technologies:** Use of reflective surfaces in Indigenous technologies
-
-### Indigenous Perspectives on Light and Sound
-1. **Haudenosaunee (Iroquois):** The concept of *Sky Woman* and creation stories involve light
-2. **Cree and Dene:** Aurora Borealis (Northern Lights) have significant cultural meaning
-3. **Coast Salish:** Use of light for fishing and navigation
-
-### Local Connection
-- Discuss how local First Peoples might have used light in daily life
-- Explore how traditional houses (longhouses, tipis) were designed in relation to light
-- Consider traditional uses of sound (drums, signals, storytelling)
-
-### Cultural Sensitivity
-- Use respectful language when discussing Indigenous spiritual concepts
-- Invite local knowledge keepers to share traditional understanding of light phenomena
-- Connect to living cultures, not just historical practices
+Play hidden sounds: 'What do you hear?'
 
 ---
 
-## Materials Checklist
+## 🧪 Lesson Activities
 
-- [ ] Flashlights (8-10)
-- [ ] Small mirrors (10-12)
-- [ ] Cardboard with holes (punch cards)
-- [ ] Colored paper (various colors)
-- [ ] Thermometers or temperature strips
-- [ ] Materials for transparency test (plastic, glass, etc.)
-- [ ] Recording sheets
-- [ ] Exit tickets
-- [ ] Timer
+### Explore (15 min)
+Hands-on with Sound
+### Discover (10 min)
+Class discussion
+### Create (15 min)
+Student project on Sound
 
 ---
 
-*Designed: 2026-03-19*
-*Aligned with BC Grade 4 Science - Physical Sciences*
+## 🔄 Differentiation
+
+### Level 1
+Highest support
+- - Visual supports
+- Step-by-step
+- Peer mentor
+
+### Level 2
+Expected level
+- - Partner work
+- Checkpoints
+- Choice
+
+### Level 3
+Extension
+- - Research
+- Peer teaching
+- Real-world
+
+
+---
+
+## 📝 Assessment
+
+### Formative
+- Observation
+- Exit ticket
+
+### Quiz
+- What is Sound?
+
+---
+
+## 📚 Standards
+
+### BC Curriculum
+- BC Grade 4
+
+### CSTA Standards  
+
+
+---
+
+## 🌍 First Peoples Integration
+
+- Connect to local Indigenous perspectives
+- Include Indigenous stories
+- Acknowledge traditional territories
+
+---
+
+## 📖 Cross-Curricular Connections
+
+### Math
+- Counting
+- Measuring
+- Graphing
+### Language Arts
+- Writing
+- Reading
+- Discussing
+### Arts
+- Drawing
+- Drama
+- Music
+
+---
+
+## 🏢 Real-World Connections
+
+- Related careers
+
+---
+
+## 🔮 Misconceptions to Address
+
+- Research needed
+
+---
+
+## 🖥️ Interactive Simulation
+
+```javascript
+// p5.js: Sound
+// Grade 4
+
+let angle = 0;
+function setup() { createCanvas(600, 400); textSize(16); }
+function draw() {
+  background(240, 245, 255);
+  fill(50); textSize(24); textAlign(CENTER);
+  text("Sound", width/2, 40);
+  translate(width/2, height/2);
+  rotate(angle);
+  fill(100, 150, 255); rectMode(CENTER);
+  rect(0, 0, 100, 100);
+  angle += 0.02;
+  fill(80); textSize(14);
+  text("Explore Sound!", 0, 150);
+}
+```
+
+---
+
+## 🎯 Extensions
+
+### Research
+Research one aspect deeply
+**Output:** Presentation
+### Quest
+Find Sound in 3 places
+**Output:** Photo journal
+### Create
+Create something new
+**Output:** Art/model
+
+---
+
+## 📔 Explorer's Journal
+
+# Explorer's Journal: Sound
+
+## Before
+What do you know?
+## During
+Draw one discovery
+## After
+1. Surprised me...
+2. Wondering...
+3. Connection to my life...
+
+---
+
+## 👨‍👩‍👧 Parent Guide
+
+# Family Guide: Sound
+
+## What We're Learning
+Sound
+## Talk About It
+1. What did you discover?
+2. Favorite part?
+## Try This
+[Activity suggestion]
+## Vocabulary
+[Key words]
+
+---
+
+## 📋 Rubric
+
+| Criteria | 4 | 3 | 2 | 1 |
+|----------|---|---|---|---|
+| Understanding | Deep understanding | Solid understanding | Partial | Limited |
+| Participation | Active | Most | Sometimes | Minimal |
+| Connections | Multiple | One | With prompting | None |
+
+---
+
+## 📝 Teacher Notes
+
+# Teacher Notes: Sound
+
+## Timing
+- Hook: 5 min
+- Explore: 15 min
+## Common Questions
+Q: Why does Sound matter?
+A: [Answer]
+## Materials
+- Gather day before
+- Test technology
+
+---
+
+*Generated by Deep Pipeline: 27 agents | Score: 984/200*
