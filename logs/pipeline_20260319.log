@@ -1,0 +1,11 @@
+2026-03-19 20:45:41,353 | INFO | 📂 Restored state: 0 queued
+2026-03-19 20:45:41,354 | INFO | 🎯 Pipeline Orchestrator initialized
+2026-03-19 20:45:53,299 | INFO | 📂 Restored state: 0 queued
+2026-03-19 20:45:53,300 | INFO | 🎯 Pipeline Orchestrator initialized
+2026-03-19 20:45:53,300 | INFO | 📝 Queued: Grade 1 Module 1 - Living Things
+2026-03-19 20:45:53,305 | INFO | 📝 Queued: Grade 1 Module 2 - Matter
+2026-03-19 20:45:53,308 | INFO | 📝 Queued: Grade 2 Module 1 - Life Cycles
+2026-03-19 20:45:53,311 | INFO | 📝 Queued: Grade 3 Module 1 - Biodiversity
+2026-03-19 20:45:53,314 | INFO | 📦 Starting batch processing (max: 4)
+2026-03-19 20:45:53,314 | INFO | 🔄 Processing: Living Things (Grade 1)
+2026-03-19 20:45:53,331 | ERROR |   ✗ systems_literacy: 'Lesson' object has no attribute 'grade_band'
