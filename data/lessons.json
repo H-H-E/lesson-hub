@@ -1,0 +1,43 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Welcome to p5.js basics",
+      "objectives": [
+        "Understand what p5.js basics is",
+        "Navigate the web editor",
+        "Run your first sketch"
+      ],
+      "duration": 45,
+      "stage": "draft",
+      "status": "published",
+      "published_at": "2026-03-19T04:15:24.178093"
+    },
+    {
+      "id": 2,
+      "title": "Drawing Shapes",
+      "objectives": [
+        "Use ellipse() for circles",
+        "Use rect() for rectangles",
+        "Understand coordinate system"
+      ],
+      "duration": 45,
+      "stage": "draft",
+      "status": "published",
+      "published_at": "2026-03-19T04:15:24.183875"
+    },
+    {
+      "id": 3,
+      "title": "Colors & Variables",
+      "objectives": [
+        "Use RGB color values",
+        "Create and use variables",
+        "Modify shapes with variables"
+      ],
+      "duration": 50,
+      "stage": "draft",
+      "status": "published",
+      "published_at": "2026-03-19T04:15:24.189852"
+    }
+  ]
+}

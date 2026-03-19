@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Hub - Choose Your Mode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d9ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 50px;
+        }
+        
+        .mode-selector {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .mode-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            width: 280px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .mode-card:hover {
+            transform: translateY(-10px);
+            border-color: #00d9ff;
+            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.2);
+        }
+        
+        .mode-card.student:hover {
+            border-color: #00ff88;
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+        }
+        
+        .mode-card.teacher:hover {
+            border-color: #ff6b6b;
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.2);
+        }
+        
+        .mode-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .mode-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .mode-desc {
+            font-size: 0.95rem;
+            color: #aaa;
+            line-height: 1.5;
+        }
+        
+        .status-bar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        
+        .status-bar span {
+            color: #00d9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Lesson Hub</h1>
+        <p class="subtitle">Interactive Learning Platform</p>
+        
+        <div class="mode-selector">
+            <a href="/student/" class="mode-card student">
+                <div class="mode-icon">🎮</div>
+                <div class="mode-title">Student Mode</div>
+                <div class="mode-desc">
+                    Interactive lessons with simulations.<br>
+                    Track your progress, earn badges.
+                </div>
+            </a>
+            
+            <a href="/teacher/" class="mode-card teacher">
+                <div class="mode-icon">📚</div>
+                <div class="mode-title">Teacher Mode</div>
+                <div class="mode-desc">
+                    Lesson scripts, talking points.<br>
+                    Guide discussions, track students.
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="status-bar">
+        Automation: <span id="status">Ready</span> | 
+        Lessons: <span id="lessons">0 completed</span> |
+        Last run: <span id="last-run">Never</span>
+    </div>
+    
+    <script>
+        // Load status from data/status.json
+        fetch('/api/status')
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById('status').textContent = data.automation_status;
+                document.getElementById('lessons').textContent = data.lessons_completed + ' completed';
+                document.getElementById('last-run').textContent = data.last_run || 'Never';
+            })
+            .catch(() => {});
+    </script>
+</body>
+</html>

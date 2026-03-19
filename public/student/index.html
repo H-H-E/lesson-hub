@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mode - Lesson Hub</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0a0a0f;
+            color: #eee;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #00ff88, #00d9ff);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header h1 { color: #000; font-size: 1.5rem; }
+        
+        .progress-badge {
+            background: rgba(0,0,0,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .container {
+            display: flex;
+            min-height: calc(100vh - 70px);
+        }
+        
+        .sidebar {
+            width: 280px;
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .sidebar h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 15px;
+        }
+        
+        .lesson-list {
+            list-style: none;
+        }
+        
+        .lesson-item {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+        
+        .lesson-item:hover { background: rgba(255,255,255,0.08); }
+        
+        .lesson-item.active {
+            background: rgba(0,255,136,0.1);
+            border-left-color: #00ff88;
+        }
+        
+        .lesson-item.completed {
+            border-left-color: #00ff88;
+        }
+        
+        .lesson-item.completed::after {
+            content: '✓';
+            float: right;
+            color: #00ff88;
+        }
+        
+        .main {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            gap: 30px;
+        }
+        
+        .lesson-content {
+            flex: 1;
+        }
+        
+        .lesson-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .lesson-objectives {
+            background: rgba(0,217,255,0.1);
+            border-left: 3px solid #00d9ff;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .lesson-objectives h3 {
+            font-size: 0.9rem;
+            color: #00d9ff;
+            margin-bottom: 10px;
+        }
+        
+        .lesson-objectives ul {
+            margin-left: 20px;
+        }
+        
+        .lesson-objectives li { margin-bottom: 5px; }
+        
+        .simulation-area {
+            background: #111;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .simulation-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .simulation-header h3 { color: #00ff88; }
+        
+        #p5-canvas {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .code-example {
+            background: #1a1a2e;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+        
+        .code-example .comment { color: #666; }
+        .code-example .keyword { color: #ff79c6; }
+        .code-example .string { color: #f1fa8c; }
+        .code-example .function { color: #50fa7b; }
+        
+        .quiz-section {
+            background: rgba(255,107,107,0.1);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .quiz-section h3 { margin-bottom: 15px; }
+        
+        .quiz-option {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: #eee;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s;
+        }
+        
+        .quiz-option:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: #ff6b6b;
+        }
+        
+        .quiz-option.correct {
+            background: rgba(0,255,136,0.2);
+            border-color: #00ff88;
+        }
+        
+        .quiz-option.wrong {
+            background: rgba(255,107,107,0.2);
+            border-color: #ff6b6b;
+        }
+        
+        .progress-panel {
+            width: 300px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .progress-panel h3 {
+            margin-bottom: 20px;
+            color: #888;
+        }
+        
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00ff88;
+        }
+        
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            aspect-ratio: 1;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+        
+        .badge.earned { opacity: 1; }
+        
+        .next-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #00ff88, #00d9ff);
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        .next-btn:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎮 Lesson Hub - Student Mode</h1>
+        <div class="progress-badge">Lesson 1 of 5</div>
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Your Lessons</h2>
+            <ul class="lesson-list" id="lessonList">
+                <li class="lesson-item completed">1. Welcome to p5.js</li>
+                <li class="lesson-item active">2. Drawing Shapes</li>
+                <li class="lesson-item">3. Colors & Variables</li>
+                <li class="lesson-item">4. Animation Basics</li>
+                <li class="lesson-item">5. Build Your Scene</li>
+            </ul>
+        </aside>
+        
+        <main class="main">
+            <div class="lesson-content">
+                <h1 class="lesson-title">2. Drawing Shapes</h1>
+                
+                <div class="lesson-objectives">
+                    <h3>🎯 Learning Objectives</h3>
+                    <ul>
+                        <li>Use ellipse() to draw circles and ovals</li>
+                        <li>Use rect() to draw rectangles and squares</li>
+                        <li>Understand coordinate system (x, y)</li>
+                    </ul>
+                </div>
+                
+                <div class="simulation-area">
+                    <div class="simulation-header">
+                        <h3>🎨 Interactive Demo</h3>
+                        <button onclick="resetCanvas()">↻ Reset</button>
+                    </div>
+                    <div id="p5-canvas"></div>
+                </div>
+                
+                <div class="code-example">
+                    <span class="comment">// Draw a circle at position (200, 150)</span><br>
+                    <span class="function">ellipse</span>(<span class="string">200</span>, <span class="string">150</span>, <span class="string">80</span>, <span class="string">80</span>);
+                </div>
+                
+                <div class="quiz-section">
+                    <h3>📝 Quick Quiz</h3>
+                    <p>What will ellipse(100, 100, 50, 50) draw?</p>
+                    <br>
+                    <button class="quiz-option" onclick="checkAnswer(this, false)">A square</button>
+                    <button class="quiz-option" onclick="checkAnswer(this, true)">A circle (50x50 pixels)</button>
+                    <button class="quiz-option" onclick="checkAnswer(this, false)">A line</button>
+                </div>
+            </div>
+            
+            <div class="progress-panel">
+                <h3>Your Progress</h3>
+                <div class="stat">
+                    <span>Completed</span>
+                    <span class="stat-value">1/5</span>
+                </div>
+                <div class="stat">
+                    <span>Quiz Score</span>
+                    <span class="stat-value">100%</span>
+                </div>
+                <div class="stat">
+                    <span>Time Spent</span>
+                    <span class="stat-value">12 min</span>
+                </div>
+                
+                <h3 style="margin-top: 30px;">Badges</h3>
+                <div class="badge-grid">
+                    <div class="badge earned" title="First Lesson">🌟</div>
+                    <div class="badge" title="Complete 5 Lessons">🏆</div>
+                    <div class="badge" title="Perfect Quiz">💯</div>
+                    <div class="badge" title="Speed Runner">⚡</div>
+                    <div class="badge" title="Code Master">🎨</div>
+                    <div class="badge" title="Explorer">🔍</div>
+                </div>
+                
+                <button class="next-btn">Next Lesson →</button>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        let canvas;
+        
+        function setup() {
+            let canvasDiv = document.getElementById('p5-canvas');
+            canvas = createCanvas(600, 300);
+            canvas.parent('p5-canvas');
+            resetCanvas();
+        }
+        
+        function draw() {
+            // Interactive demo - follows mouse
+            fill(0, 255, 136, 100);
+            noStroke();
+            ellipse(mouseX, mouseY, 50, 50);
+        }
+        
+        function resetCanvas() {
+            background(30);
+            
+            // Draw some example shapes
+            fill(255, 107, 107);
+            ellipse(100, 100, 80, 80);
+            
+            fill(0, 217, 255);
+            rect(250, 60, 80, 80);
+            
+            fill(255, 215, 0);
+            ellipse(450, 100, 60, 40);
+        }
+        
+        function checkAnswer(btn, correct) {
+            document.querySelectorAll('.quiz-option').forEach(b => {
+                b.disabled = true;
+                b.classList.remove('correct', 'wrong');
+            });
+            
+            if (correct) {
+                btn.classList.add('correct');
+                btn.textContent += ' ✓ Correct!';
+            } else {
+                btn.classList.add('wrong');
+                btn.textContent += ' ✗ Try again next time!';
+            }
+        }
+    </script>
+</body>
+</html>
