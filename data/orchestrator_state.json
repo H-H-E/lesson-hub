@@ -1,14 +1,6 @@
 {
   "queue": [
     {
-      "grade": 4,
-      "module": 2,
-      "topic": "Energy",
-      "version": 1,
-      "score": 0.0,
-      "status": "pending"
-    },
-    {
       "grade": 5,
       "module": 1,
       "topic": "Body Systems",
@@ -17,7 +9,7 @@
       "status": "pending"
     }
   ],
-  "completed": 8,
+  "completed": 9,
   "failed": 0,
-  "last_updated": "2026-03-19T20:19:18.193401"
+  "last_updated": "2026-03-19T20:19:20.132873"
 }
