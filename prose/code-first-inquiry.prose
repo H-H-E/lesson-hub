@@ -1,0 +1,264 @@
+# Code-First Inquiry Pipeline
+#
+# Generates interactive, inquiry-based computational science lessons.
+# Students discover scientific principles through code experiments.
+#
+# The core philosophy: Explore first, formalize second.
+
+input topic: "The scientific phenomenon to explore (e.g., 'gravity and falling', 'emergent behavior', 'heat and temperature')"
+input target_audience: "Who are the learners? (e.g., 'high school students', 'curious adults')"
+input num_modules: 6  # Number of exploration modules
+input science_domain: "What domain? (e.g., 'physics', 'biology', 'chemistry', 'complex systems')"
+
+# Agent definitions
+agent phenomenon_designer:
+  model: sonnet
+  prompt: """
+You design compelling scientific mysteries for exploration.
+Your job is to create:
+- Puzzles that spark curiosity
+- Phenomena that seem magical until explained
+- Visual demos that trigger "wait, WHY?"
+- Open-ended questions
+
+You understand the difference between:
+- Verification exercises (boring)
+- Discovery learning (powerful)
+
+Design for wonder.
+"""
+
+agent simulation_architect:
+  model: sonnet
+  prompt: """
+You build exploratory simulations that reveal scientific principles.
+You create p5.js sketches that:
+- Start with a mystery (something surprising happens)
+- Have adjustable parameters students can tweak
+- Show the behavior clearly
+- Can be extended by students
+
+The simulation should let students:
+- Make predictions
+- Test hypotheses
+- Discover patterns
+- Share findings
+
+Make the invisible visible.
+"""
+
+agent inquiry_facilitator:
+  model: sonnet
+  prompt: """
+You craft inquiry-based learning experiences.
+You design:
+- Guided exploration sequences
+- Discovery prompts
+- Reflection questions
+- Connection builders
+
+You balance:
+- Freedom to explore
+- Enough structure to learn
+- Student ownership
+- Peer learning opportunities
+
+Facilitate discovery, don't lecture.
+"""
+
+agent assessment_designer:
+  model: sonnet
+  prompt: """
+You create assessments that test deep understanding.
+Not: "Did they memorize?"
+But: "Can they explain? Predict? Apply?"
+
+Design:
+- Quick checks (3 questions, 3 minutes)
+- Code challenges (apply to new situation)
+- Discovery reflections (explain what they found)
+- Creative extensions (go beyond the lab)
+
+Make assessment part of learning.
+"""
+
+# Phase 1: Design the Mystery
+session "Designing the phenomenon: {topic}"
+
+let phenomenon = session: phenomenon_designer
+  prompt: """
+Design a compelling exploration module on: {topic}
+
+Target audience: {target_audience}
+Domain: {science_domain}
+
+Create:
+
+1. THE HOOK (2 min)
+   - A visual puzzle or demo that triggers curiosity
+   - Something surprising or counterintuitive
+   - Make them want to know WHY
+
+2. THE QUESTION
+   - One driving question the module answers
+   - Should be answerable through code exploration
+
+3. THE DISCOVERY
+   - What scientific principle will they discover?
+   - What will surprise them?
+
+4. THE FORMALIZATION
+   - What science will we reveal?
+   - Keep it accessible but accurate
+
+Return structured module design.
+"""
+  output: json
+
+# Phase 2: Build the Simulation
+let simulation = session: simulation_architect
+  prompt: """
+Create an exploratory p5.js simulation for: {topic}
+
+The phenomenon: {phenomenon.mystery}
+The question: {phenomenon.driving_question}
+
+Requirements:
+1. Opens with something surprising/curious
+2. Has 3-5 adjustable parameters students can tweak
+3. Clear visual output that reveals the pattern
+4. Can be run in editor.p5js.org
+
+Structure:
+- setup() with interactive parameters
+- draw() showing the phenomenon
+- Helper functions for calculations
+- Comments explaining what each part does
+
+Include:
+- A version for the student to modify
+- A "teacher version" with more controls
+- Suggested experiments to try
+
+Make it beautiful AND educational.
+"""
+  context: phenomenon
+
+# Phase 3: Design the Inquiry
+let inquiry = session: inquiry_facilitator
+  prompt: """
+Create the inquiry learning experience for: {topic}
+
+Phenomenon: {phenomenon.title}
+Simulation: {simulation.description}
+
+Structure the lesson (Code Lab format):
+
+1. THE HOOK (2 min)
+   - Show the mystery first
+   - Don't explain!
+
+2. THE EXPERIMENT (15 min)
+   - Guided exploration questions
+   - "What happens if you...?"
+   - "Can you make it do X?"
+   - Parameter challenges
+
+3. THE DISCOVERY (5 min)
+   - Class discussion prompts
+   - Share findings
+   - Connect experiences
+
+4. THE FORMALIZATION (10 min)
+   - Here's the science behind what you discovered
+   - Connect to formal terms
+   - Show the math (accessible version)
+
+5. THE EXTENSION (15 min)
+   - Apply to new problem
+   - Creative challenge
+
+6. THE QUICK CHECK (3 min)
+   - 3 questions that test understanding
+
+Create specific prompts for each section.
+"""
+  context: { phenomenon, simulation }
+
+# Phase 4: Create Assessment
+let assessment = session: assessment_designer
+  prompt: """
+Create assessments for: {topic}
+
+Phenomenon: {phenomenon}
+Inquiry: {inquiry}
+
+1. QUICK CHECK (3 questions, ~3 min)
+   - Multiple choice or short answer
+   - Test: prediction, pattern recognition, explanation
+   
+2. CODE CHALLENGE
+   - Apply to a new situation
+   - Similar but not identical to the lab
+   - Should take 20-30 minutes
+   
+3. DISCOVERY REFLECTION
+   - What did you discover?
+   - What surprised you?
+   - What questions do you still have?
+   
+4. EXTENSION CHALLENGE
+   - Open-ended creative challenge
+   - Go beyond the module
+   - For extra credit
+
+Return as structured quiz.
+"""
+  context: { phenomenon, inquiry }
+
+# Phase 5: Integration
+let module = {
+  phenomenon: phenomenon,
+  simulation: simulation,
+  inquiry: inquiry,
+  assessment: assessment,
+  
+  # Metadata
+  domain: {science_domain},
+  audience: {target_audience},
+  duration: "90 minutes (or 2 x 45 min sessions)",
+  
+  # Connections to other modules
+  connections: [],
+  prerequisites: [],
+  extensions: []
+}
+
+output module_{module.number} = module
+
+# Final output
+output course = {
+  title: "Code-First Inquiry: Computational Science",
+  subtitle: "Discover science through code experiments",
+  
+  philosophy: {
+    approach: "Explore → Discover → Formalize → Apply",
+    ratio: "70% making, 20% reflecting, 10% instruction",
+    core: "Code as a lens for scientific understanding"
+  },
+  
+  modules: [module_1, module_2, ..., module_{num_modules}],
+  
+  metadata: {
+    total_modules: {num_modules},
+    domain: {science_domain},
+    audience: {target_audience}
+  }
+}
+
+output stats = {
+  modules_created: {num_modules},
+  simulations_built: {num_modules},
+  inquiries_designed: {num_modules},
+  assessments_created: {num_modules} * 4  # quick check + challenge + reflection + extension
+}
