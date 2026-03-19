@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson Pipeline Dashboard</title>
+    <meta http-equiv="refresh" content="30">
+    <style>
+        body { font-family: monospace; background: #0a0a0a; color: #00ff88; padding: 20px; }
+        h1 { color: #00d9ff; }
+        .stat { display: inline-block; margin: 10px; padding: 15px; background: #111; border: 1px solid #333; }
+        .log { background: #000; padding: 10px; height: 300px; overflow: auto; border: 1px solid #333; }
+        .pass { color: #00ff88; }
+        .fail { color: #ff4444; }
+        .running { color: #ffa500; }
+    </style>
+</head>
+<body>
+    <h1>🎓 Lesson Pipeline Dashboard</h1>
+    <p>Updated: 20:19:03</p>
+    
+    <div>
+        <div class="stat">
+            <h3>Total: 0</h3>
+        </div>
+        <div class="stat">
+            <h3 class="pass">Passed: 0</h3>
+        </div>
+        <div class="stat">
+            <h3 class="fail">Failed: 0</h3>
+        </div>
+        <div class="stat">
+            <h3>Avg Score: 0.0%</h3>
+        </div>
+    </div>
+    
+    <h2>Recent Activity</h2>
+    <div class="log">
+        <div>[20:19:00] Queued: Grade 1 Module 1 - Living Things</div><div>[20:19:00] Queued: Grade 1 Module 2 - Matter</div><div>[20:19:00] Queued: Grade 1 Module 3 - Light and Shadow</div><div>[20:19:00] Queued: Grade 2 Module 1 - Life Cycles</div><div>[20:19:00] Queued: Grade 2 Module 2 - Properties</div><div>[20:19:00] Queued: Grade 3 Module 1 - Biodiversity</div><div>[20:19:00] Queued: Grade 3 Module 2 - Forces</div><div>[20:19:00] Queued: Grade 4 Module 1 - Senses</div><div>[20:19:00] Queued: Grade 4 Module 2 - Energy</div><div>[20:19:00] Queued: Grade 5 Module 1 - Body Systems</div><div>[20:19:00] Processing: Living Things</div><div>[20:19:03] ✅ COMPLETE: Living Things (Score: 100.0)</div>
+    </div>
+</body>
+</html>
