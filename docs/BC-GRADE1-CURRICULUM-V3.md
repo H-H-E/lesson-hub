@@ -405,7 +405,7 @@ Each module includes:
 ```
 Name: ___________
 
-Draw a living thing:           Draw a non-living thing:
+Draw a living thing:     Draw a non-living thing:
 
 [ ] I can sort living things
 [ ] I can explain what makes something alive
@@ -415,7 +415,7 @@ Draw a living thing:           Draw a non-living thing:
 ```
 Name: ___________
 
-Draw something solid:         Draw something liquid:
+Draw something solid:     Draw something liquid:
 
 Draw a gas:
 
@@ -429,6 +429,8 @@ Name: ___________
 Today my shadow is: [ ] Long  [ ] Short  [ ] No shadow
 
 My shadow points: [ ] Toward the sun  [ ] Away from sun
+
+Tomorrow I will check my shadow at: _______
 ```
 
 ---
@@ -440,7 +442,3 @@ My shadow points: [ ] Toward the sun  [ ] Away from sun
 - [ ] First Peoples content reviewed
 - [ ] Differentiation notes prepared
 - [ ] Assessment tools copied
-
----
-
-*Version 3 - Added timing and worksheets*
