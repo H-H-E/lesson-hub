@@ -2,14 +2,6 @@
   "queue": [
     {
       "grade": 3,
-      "module": 1,
-      "topic": "Biodiversity",
-      "version": 1,
-      "score": 0.0,
-      "status": "pending"
-    },
-    {
-      "grade": 3,
       "module": 2,
       "topic": "Forces",
       "version": 1,
@@ -41,7 +33,7 @@
       "status": "pending"
     }
   ],
-  "completed": 5,
+  "completed": 6,
   "failed": 0,
-  "last_updated": "2026-03-19T20:19:12.052760"
+  "last_updated": "2026-03-19T20:19:14.096142"
 }
