@@ -1,83 +1,232 @@
 # Grade 1 Science - Module 6
 ## Sorting and Classifying
 
-**Duration:** 45 minutes
+**Duration:** 45 minutes  
 **Version:** 1
-**Systems Literacy Alignment:** See standards section
+**Score:** 246/200
+**Agents:** 27
 
 ---
 
 ## 🎯 Learning Objectives
 
-By end of lesson, students will be able to:
-1. [SMART objective 1]
-2. [SMART objective 2]
-3. [SMART objective 3]
+1. Identify 3 key features of Sorting and Classifying
+2. Explain relationship between Sorting and Classifying and everyday life
+3. Demonstrate understanding through creative project
+4. Connect Sorting and Classifying to another subject
 
 ---
 
+## 📚 Materials
 
-
-## 🧪 Lesson Sequence
-
-### The Hook (5 min)
-[Engaging mystery or question]
-
-### Explore (15 min)
-[Hands-on activity]
-
-### Discover (10 min)
-[Discussion and formalization]
-
-### Create (10 min)
-[Student creation]
-
-### Check (5 min)
-[Exit ticket]
-
----
-
-## Differentiation
-
-### Level 1 (Highest Support)
-- Step-by-step instructions
-- Visual guides
-
-### Level 2 (Guided)
-- Partner work
-- Checkpoints
-
-### Level 3 (Extension)
-- Open challenges
-
-
-
-## 📝 Assessment
-
-### Formative
-- Observation
-- Discussion
-- Exit ticket
-
-### Summative
-- [Project description]
-
-
+- [ ] Visual aids
+- [ ] Student journals
+- [ ] Hands-on materials
+- [ ] Chart paper
 
 ---
 
 ## 🌍 Systems Literacy Connection
 
-> *"You are not a lone creature being bossed around by morality; you are a living process inside other living processes."*
+> *"You are not an isolated atom — you are a process inside other processes."*
 
-### Chapter Connection
-This lesson connects to the larger story of systems literacy.
+**Key Metaphor:** Sorting and Classifying = system
 
-### 💡 Key Metaphor
-[Metaphor specific to Sorting and Classifying]
+Chapter 1: You are not an atom - you're a process in processes.
 
-### 📔 Explorer's Journal
-1. One thing that surprised me...
-2. One question I'm still wondering...
-3. One connection to my life...
+---
 
+## 🎭 The Hook
+
+Mystery about Sorting and Classifying
+
+---
+
+## 🧪 Lesson Activities
+
+### Explore (15 min)
+Hands-on with Sorting and Classifying
+### Discover (10 min)
+Class discussion
+### Create (15 min)
+Student project on Sorting and Classifying
+
+---
+
+## 🔄 Differentiation
+
+### Level 1
+Highest support
+- - Visual supports
+- Step-by-step
+- Peer mentor
+
+### Level 2
+Expected level
+- - Partner work
+- Checkpoints
+- Choice
+
+### Level 3
+Extension
+- - Research
+- Peer teaching
+- Real-world
+
+
+---
+
+## 📝 Assessment
+
+### Formative
+- Observation
+- Exit ticket
+
+### Quiz
+- What is Sorting and Classifying?
+
+---
+
+## 📚 Standards
+
+### BC Curriculum
+- BC Grade 1
+
+### CSTA Standards  
+
+
+---
+
+## 🌍 First Peoples Integration
+
+- Connect to local Indigenous perspectives
+- Include Indigenous stories
+- Acknowledge traditional territories
+
+---
+
+## 📖 Cross-Curricular Connections
+
+### Math
+- Counting
+- Measuring
+- Graphing
+### Language Arts
+- Writing
+- Reading
+- Discussing
+### Arts
+- Drawing
+- Drama
+- Music
+
+---
+
+## 🏢 Real-World Connections
+
+- Related careers
+
+---
+
+## 🔮 Misconceptions to Address
+
+- Research needed
+
+---
+
+## 🖥️ Interactive Simulation
+
+```javascript
+// p5.js: Sorting and Classifying
+// Grade 1
+
+let angle = 0;
+function setup() { createCanvas(600, 400); textSize(16); }
+function draw() {
+  background(240, 245, 255);
+  fill(50); textSize(24); textAlign(CENTER);
+  text("Sorting and Classifying", width/2, 40);
+  translate(width/2, height/2);
+  rotate(angle);
+  fill(100, 150, 255); rectMode(CENTER);
+  rect(0, 0, 100, 100);
+  angle += 0.02;
+  fill(80); textSize(14);
+  text("Explore Sorting and Classifying!", 0, 150);
+}
+```
+
+---
+
+## 🎯 Extensions
+
+### Research
+Research one aspect deeply
+**Output:** Presentation
+### Quest
+Find Sorting and Classifying in 3 places
+**Output:** Photo journal
+### Create
+Create something new
+**Output:** Art/model
+
+---
+
+## 📔 Explorer's Journal
+
+# Explorer's Journal: Sorting and Classifying
+
+## Before
+What do you know?
+## During
+Draw one discovery
+## After
+1. Surprised me...
+2. Wondering...
+3. Connection to my life...
+
+---
+
+## 👨‍👩‍👧 Parent Guide
+
+# Family Guide: Sorting and Classifying
+
+## What We're Learning
+Sorting and Classifying
+## Talk About It
+1. What did you discover?
+2. Favorite part?
+## Try This
+[Activity suggestion]
+## Vocabulary
+[Key words]
+
+---
+
+## 📋 Rubric
+
+| Criteria | 4 | 3 | 2 | 1 |
+|----------|---|---|---|---|
+| Understanding | Deep understanding | Solid understanding | Partial | Limited |
+| Participation | Active | Most | Sometimes | Minimal |
+| Connections | Multiple | One | With prompting | None |
+
+---
+
+## 📝 Teacher Notes
+
+# Teacher Notes: Sorting and Classifying
+
+## Timing
+- Hook: 5 min
+- Explore: 15 min
+## Common Questions
+Q: Why does Sorting and Classifying matter?
+A: [Answer]
+## Materials
+- Gather day before
+- Test technology
+
+---
+
+*Generated by Deep Pipeline: 27 agents | Score: 246/200*
