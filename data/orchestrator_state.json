@@ -2,14 +2,6 @@
   "queue": [
     {
       "grade": 1,
-      "module": 2,
-      "topic": "Matter",
-      "version": 1,
-      "score": 0.0,
-      "status": "pending"
-    },
-    {
-      "grade": 1,
       "module": 3,
       "topic": "Light and Shadow",
       "version": 1,
@@ -73,7 +65,7 @@
       "status": "pending"
     }
   ],
-  "completed": 1,
+  "completed": 2,
   "failed": 0,
-  "last_updated": "2026-03-19T20:19:03.353733"
+  "last_updated": "2026-03-19T20:19:05.495698"
 }
