@@ -1,17 +1,17 @@
 {
   "status": "running",
-  "queue_length": 5,
-  "completed": 1,
+  "queue_length": 4,
+  "completed": 2,
   "failed": 0,
   "stats": {
-    "total_processed": 5,
-    "passed": 5,
+    "total_processed": 6,
+    "passed": 6,
     "failed": 0,
     "average_score": 100.0,
-    "total_duration": 11.774833000000001,
+    "total_duration": 13.838954000000001,
     "by_stage": {
-      "complete": 5
+      "complete": 6
     }
   },
-  "uptime": "2026-03-19T20:47:42.364212"
+  "uptime": "2026-03-19T20:47:44.437049"
 }
