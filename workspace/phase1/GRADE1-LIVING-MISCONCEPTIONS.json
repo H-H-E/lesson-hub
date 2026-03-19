@@ -1,0 +1,44 @@
+{
+  "misconceptions": [
+    {
+      "belief": "Seeds and eggs are not living things",
+      "reason": "Students see seeds and eggs as immobile and not self-sustaining. They appear inactive and do not show obvious signs of life like movement or breathing.",
+      "correction": "Seeds and eggs ARE living things because they contain the potential for life. A seed has a baby plant inside, and an egg has a baby animal inside. They are alive but in a dormant (resting) state until they get what they need to grow."
+    },
+    {
+      "belief": "Anything that moves is alive, and anything that doesn't move is not alive",
+      "reason": "Young children often use movement as the primary way to tell if something is alive. They see animals move but may not notice plants or stationary organisms.",
+      "correction": "Living things can move, but not all living things move in obvious ways. Plants grow toward light and turn their leaves toward the sun. Many living things like trees, rocks, and water can be moved by wind or other forces without being alive."
+    },
+    {
+      "belief": "Dead things are the same as nonliving things",
+      "reason": "Students have difficulty understanding that something that was once alive (like a dead bird or fallen leaf) is different from something that was never alive (like a rock).",
+      "correction": "Dead things were once alive but are no longer living. They came from a living thing. Nonliving things were never alive. For example, a fallen leaf is 'once living' but a rock is 'nonliving.'"
+    },
+    {
+      "belief": "Plants are not alive because they don't move",
+      "reason": "Plants appear still to young children. Students may not observe or understand plant movement, growth, or responses to the environment.",
+      "correction": "Plants ARE living things! They grow, use energy from food (through photosynthesis), respond to their environment (like turning toward light), and reproduce. They just move more slowly than animals."
+    },
+    {
+      "belief": "Only animals are living things",
+      "reason": "Children often associate 'alive' with familiar animals, especially pets or animals they see regularly. Plants are often overlooked as living things.",
+      "correction": "Both animals AND plants are living things. Living things include all animals, all plants, fungi (like mushrooms), and many tiny organisms too small to see. All living things need food, water, air, and can grow and reproduce."
+    },
+    {
+      "belief": "If something looks like it has always been that way, it is not alive",
+      "reason": "Students struggle to understand that living things change over time. A full-grown tree or a baby looks 'normal' to them, and they may not realize trees started as seeds.",
+      "correction": "Living things change as they grow. A tree started as a tiny seed. A puppy came from a parent. All living things have a life cycle: they are born, grow, and can produce new living things."
+    },
+    {
+      "belief": "Fire is alive",
+      "reason": "Fire moves, grows (gets bigger), needs fuel (like food), and produces energy (heat and light). These characteristics seem similar to living things to young children.",
+      "correction": "Fire is NOT alive, even though it shows some characteristics of living things. Fire does not eat, breathe, grow on its own, or reproduce. It is a chemical reaction called combustion."
+    },
+    {
+      "belief": "Sun is a living thing",
+      "reason": "The sun provides energy and seems 'active' (producing light and heat). Young children may think it is alive because it seems powerful and necessary for life.",
+      "correction": "The sun is NOT alive. It is a star—a giant ball of hot gas. It does not eat, breathe, grow, or reproduce. It provides energy for living things, but it is not living itself."
+    }
+  ]
+}

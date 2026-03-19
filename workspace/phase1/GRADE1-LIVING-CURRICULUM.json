@@ -1,0 +1,74 @@
+{
+  "topic": "Living Things",
+  "grade": 1,
+  "bc_big_ideas": [
+    "Living things have features and behaviours that help them survive in their environment",
+    "Plants and animals have observable features that help them meet their basic needs",
+    "Daily and seasonal changes affect all living things"
+  ],
+  "bc_standards": [
+    {
+      "code": "K-1",
+      "description": "Living things have features and behaviours that help them survive in their environment"
+    },
+    {
+      "code": "K-1a",
+      "description": "Observe and describe the features and behaviours of plants and animals"
+    },
+    {
+      "code": "K-1b",
+      "description": "Identify how different features of plants and animals help them meet their basic needs (e.g., food, shelter, protection)"
+    },
+    {
+      "code": "K-1c",
+      "description": "Recognize that living things grow and change over time"
+    },
+    {
+      "code": "K-1d",
+      "description": "Describe how daily and seasonal changes affect living things"
+    },
+    {
+      "code": "K-1e",
+      "description": "Demonstrate care and respect for living things in their local environment"
+    }
+  ],
+  "csta_standards": [
+    {
+      "code": "1A-CS-01",
+      "description": "Select and operate appropriate software to perform a variety of tasks, and identify hardware and software components (Computing Systems)"
+    },
+    {
+      "code": "1A-CS-02",
+      "description": "Use appropriate terminology in identifying and describing the function of common physical components of computing systems (Computing Systems)"
+    },
+    {
+      "code": "1A-DA-01",
+      "description": "Collect and present data about living things in various visual formats (Data & Analysis)"
+    },
+    {
+      "code": "1A-DA-02",
+      "description": "Describe and interpret data collected about living things (Data & Analysis)"
+    },
+    {
+      "code": "1A-DA-03",
+      "description": "Identify patterns in data about living things (Data & Analysis)"
+    },
+    {
+      "code": "1A-AP-01",
+      "description": "Model daily processes by following and describing algorithms (Algorithms & Programming)"
+    },
+    {
+      "code": "1A-AP-02",
+      "description": "Create programs with sequences of commands to accomplish simple tasks (Algorithms & Programming)"
+    },
+    {
+      "code": "1A-IC-16",
+      "description": "Identify ways that technology can be used to learn about living things (Impacts of Computing)"
+    },
+    {
+      "code": "1A-IC-17",
+      "description": "Work individually and collaboratively to create ways to share information about living things using technology (Impacts of Computing)"
+    }
+  ],
+  "curriculum_notes": "This mapping aligns BC Grade 1 Science Living Things curriculum with CSTA K-2 Computer Science standards. The CSTA standards focus on using technology to collect, analyze, and present data about living things, supporting scientific inquiry skills."
+}
