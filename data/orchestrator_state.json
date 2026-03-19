@@ -1,21 +1,5 @@
 {
-  "queue": [
-    {
-      "id": "b8e6e5ee",
-      "grade": 1,
-      "module": 6,
-      "topic": "Sorting and Classifying",
-      "status": "queued",
-      "version": 1,
-      "score": 0.0,
-      "issues": [],
-      "test_results": {},
-      "standards_alignment": {},
-      "created_at": "2026-03-19T20:47:40.072056",
-      "deployed_at": "",
-      "duration_seconds": 0.0
-    }
-  ],
+  "queue": [],
   "completed": [
     {
       "id": "be3f4cbd",
@@ -101,16 +85,33 @@
       "created_at": "2026-03-19T20:47:40.068874",
       "deployed_at": "2026-03-19T20:47:50.846311",
       "duration_seconds": 2.121311
+    },
+    {
+      "id": "b8e6e5ee",
+      "grade": 1,
+      "module": 6,
+      "topic": "Sorting and Classifying",
+      "status": "complete",
+      "version": 1,
+      "score": 100,
+      "issues": [
+        "systems_literacy: 'Lesson' object has no attribute 'grade_band'"
+      ],
+      "test_results": {},
+      "standards_alignment": {},
+      "created_at": "2026-03-19T20:47:40.072056",
+      "deployed_at": "2026-03-19T20:47:52.921548",
+      "duration_seconds": 2.06247
     }
   ],
   "stats": {
-    "total_processed": 9,
-    "passed": 9,
+    "total_processed": 10,
+    "passed": 10,
     "failed": 0,
     "average_score": 100.0,
-    "total_duration": 20.223262,
+    "total_duration": 22.285732,
     "by_stage": {
-      "complete": 9
+      "complete": 10
     }
   },
   "config": {
@@ -123,5 +124,5 @@
     "parallel_agents": false,
     "strict_mode": false
   },
-  "saved_at": "2026-03-19T20:47:50.848925"
+  "saved_at": "2026-03-19T20:47:52.923457"
 }
