@@ -1,21 +1,6 @@
 {
   "queue": [
     {
-      "id": "bca0d473",
-      "grade": 1,
-      "module": 2,
-      "topic": "Matter",
-      "status": "queued",
-      "version": 1,
-      "score": 0.0,
-      "issues": [],
-      "test_results": {},
-      "standards_alignment": {},
-      "created_at": "2026-03-19T20:45:53.305861",
-      "deployed_at": "",
-      "duration_seconds": 0.0
-    },
-    {
       "id": "6719c533",
       "grade": 2,
       "module": 1,
@@ -63,16 +48,33 @@
       "created_at": "2026-03-19T20:45:53.300473",
       "deployed_at": "2026-03-19T20:45:56.374042",
       "duration_seconds": 3.064325
+    },
+    {
+      "id": "bca0d473",
+      "grade": 1,
+      "module": 2,
+      "topic": "Matter",
+      "status": "complete",
+      "version": 1,
+      "score": 100,
+      "issues": [
+        "systems_literacy: 'Lesson' object has no attribute 'grade_band'"
+      ],
+      "test_results": {},
+      "standards_alignment": {},
+      "created_at": "2026-03-19T20:45:53.305861",
+      "deployed_at": "2026-03-19T20:45:58.515057",
+      "duration_seconds": 2.129428
     }
   ],
   "stats": {
-    "total_processed": 1,
-    "passed": 1,
+    "total_processed": 2,
+    "passed": 2,
     "failed": 0,
     "average_score": 100.0,
-    "total_duration": 3.064325,
+    "total_duration": 5.193753,
     "by_stage": {
-      "complete": 1
+      "complete": 2
     }
   },
   "config": {
@@ -85,5 +87,5 @@
     "parallel_agents": false,
     "strict_mode": false
   },
-  "saved_at": "2026-03-19T20:45:56.380373"
+  "saved_at": "2026-03-19T20:45:58.525334"
 }
