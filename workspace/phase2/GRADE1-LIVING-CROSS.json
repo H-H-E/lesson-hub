@@ -1,0 +1,151 @@
+{
+  "grade": 1,
+  "topic": "Living Things",
+  "connections": [
+    {
+      "subject": "Mathematics",
+      "activities": [
+        {
+          "name": "Seed Counting & Graphing",
+          "description": "Count different seeds in sorting trays, create simple bar graphs showing which seed type is most/least numerous",
+          "integration_point": "Data collection and graphing from seed sorting activity"
+        },
+        {
+          "name": "Plant Measurement",
+          "description": "Measure height of classroom plants using unifix cubes or rulers, record and compare growth over time",
+          "integration_point": "Non-standard measurement and number comparison"
+        },
+        {
+          "name": "Living Things Patterns",
+          "description": "Identify and create patterns using animal movement cards (fly-fly-swim, walk-walk-crawl)",
+          "integration_point": "Pattern recognition and extension"
+        },
+        {
+          "name": "Animal Addition Stories",
+          "description": "Solve simple addition word problems about animals (3 birds sat on a tree, 2 more flew away - how many left?)",
+          "integration_point": "Addition and subtraction in real context"
+        }
+      ]
+    },
+    {
+      "subject": "Language Arts",
+      "activities": [
+        {
+          "name": "Living Things Class Book",
+          "description": "Students write and illustrate pages for a class book about their favorite living thing from the nature walk",
+          "integration_point": "Opinion writing with reasons, illustration captions"
+        },
+        {
+          "name": "Animal Research Pals",
+          "description": "Partner reading of animal books, students share 3 facts they learned with their partner",
+          "integration_point": "Reading informational text, speaking and listening"
+        },
+        {
+          "name": "Living vs Non-Living Vocabulary",
+          "description": "Create illustrated word walls for vocabulary: grow, breathe, respond, habitat, needs",
+          "integration_point": "Science vocabulary development and spelling"
+        },
+        {
+          "name": "Observation Journal Writing",
+          "description": "Write 2-3 sentences about goldfish observations using sentence starters ('I noticed...', 'The fish can...')",
+          "integration_point": "Informational writing, using complete sentences"
+        }
+      ]
+    },
+    {
+      "subject": "Art",
+      "activities": [
+        {
+          "name": "Leaf Rubbing Collages",
+          "description": "Create leaf rubbings using crayons and paper, combine into nature collages",
+          "integration_point": "Texture observation, mixed media art technique"
+        },
+        {
+          "name": "Animal Habitats Diorama",
+          "description": "Build 3D habitats in shoeboxes using clay, paper, and natural materials",
+          "integration_point": "Sculpture and spatial awareness, understanding animal needs"
+        },
+        {
+          "name": "My Living Body Portrait",
+          "description": "Draw self-portrait showing external body parts (head, arms, legs, eyes, ears)",
+          "integration_point": "Human body recognition, proportion awareness"
+        },
+        {
+          "name": "Plant Parts Painting",
+          "description": "Paint observations of real plants - roots, stems, leaves using watercolors",
+          "integration_point": "Observational painting, plant structure awareness"
+        }
+      ]
+    },
+    {
+      "subject": "Social Studies",
+      "activities": [
+        {
+          "name": "Caring for Living Things",
+          "description": "Discuss responsibilities of pet owners and gardeners, create a class promise for caring for classroom plants/animals",
+          "integration_point": "Community responsibility, citizenship"
+        },
+        {
+          "name": "Local Living Things",
+          "description": "Map the schoolyard showing where different living things were found during nature walk",
+          "integration_point": "Map skills, local geography, spatial awareness"
+        },
+        {
+          "name": "How Families Care for Each Other",
+          "description": "Connect to how animal families care for their young, compare to human family care",
+          "integration_point": "Family structures, nurturing behaviors across species"
+        },
+        {
+          "name": "Traditional Foods & Living Things",
+          "description": "Discuss how different cultures relate to living things for food, medicine, and ceremony (connect to First Peoples perspective)",
+          "integration_point": "Cultural awareness, Indigenous knowledge connections"
+        }
+      ]
+    },
+    {
+      "subject": "Music & Movement",
+      "activities": [
+        {
+          "name": "Animal Movement Dance",
+          "description": "Move like different animals (hop like a rabbit, slither like a snake, fly like a bird) to music",
+          "integration_point": "Gross motor skills, animal characteristics, rhythm"
+        },
+        {
+          "name": "Plant Growth Song",
+          "description": "Sing songs about plant growth with motions (seed sleeps, rain falls, sun shines, sprout grows)",
+          "integration_point": "Sequencing, memory, movement while learning plant needs"
+        },
+        {
+          "name": "Living Things Sounds",
+          "description": "Listen to recordings of animal sounds, identify which animal, discuss how animals use sound to communicate",
+          "integration_point": "Sound identification, communication concepts"
+        }
+      ]
+    },
+    {
+      "subject": "Health & Physical Education",
+      "activities": [
+        {
+          "name": "Our Bodies Living Things",
+          "description": "Discuss how our bodies are living things that need food, water, sleep, and exercise",
+          "integration_point": "Personal health, body awareness, healthy choices"
+        },
+        {
+          "name": "Animal Walks",
+          "description": "Physical activity where students move around the room like different animals, discussing how each moves",
+          "integration_point": "Gross motor development, understanding animal adaptations"
+        },
+        {
+          "name": "Healthy Snacks from Plants",
+          "description": "Identify plant parts we eat (carrots=roots, lettuce=leaves, apples=fruit), make simple healthy snack",
+          "integration_point": "Nutrition, plant anatomy, food sources"
+        },
+        {
+          "name": "Senses Exploration",
+          "description": "Use senses to explore living things - smell herbs, feel plant stems, observe goldfish, listen to bird calls",
+          "integration_point": "Five senses, scientific observation"
+        }
+      ]
+    }
+  ]
+}

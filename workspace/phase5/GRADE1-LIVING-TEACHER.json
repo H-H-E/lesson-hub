@@ -1,0 +1,40 @@
+{
+  "score": 65,
+  "grade": "1",
+  "topic": "Living Things",
+  "evaluated_as": "Teacher-ready lesson plan",
+  
+  "issues": [
+    "No simulation link provided - teachers must find/create their own interactive activity",
+    "Sorting cards and worksheets referenced but not included - teachers must create from scratch",
+    "Exit ticket blank template not provided",
+    "No actual Secwepemc language words or cultural content - only vague reference",
+    "Timing is tight: 5+15+10+10+5 = 45 min with no buffer for transitions or behavior management",
+    "Module numbering inconsistent between curriculum doc (Module 1) and lesson plan (no module label)",
+    "Materials section says 'simulation, worksheets' but none attached",
+    "No answer key or expected responses for discussion questions",
+    "First Peoples integration lacks concrete details - teachers need more support"
+  ],
+  
+  "suggestions": [
+    "Add actual hyperlink to interactive simulation (e.g., Nearpod, PhET, or custom)",
+    "Include printable sorting card templates (PDF/images)",
+    "Provide completed exit ticket example with student work sample",
+    "Add 2-3 Secwepemc animal/plant names with pronunciations",
+    "Add 5-10 min buffer time or reduce some activities",
+    "Include rubric for the summative 'poster project' mentioned",
+    "Add specific discussion question answer stems/anchors",
+    "Provide checklist of materials with quantities needed",
+    "Add cross-reference to student-facing materials if separate"
+  ],
+  
+  "practical_notes": "Structure is solid and teacher-friendly, but missing all supporting materials. A teacher could teach this with significant prep time to create the missing assets. Not a 'grab and go' lesson.",
+  
+  "strengths": [
+    "Clear SMART objectives with 90% accuracy target",
+    "Good differentiation for 3 levels",
+    "Common misconceptions noted (sun, cars, seeds)",
+    "Assessment types clearly mapped",
+    "Logical lesson sequence with timing"
+  ]
+}

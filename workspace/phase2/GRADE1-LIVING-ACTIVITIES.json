@@ -1,0 +1,70 @@
+{
+  "grade": 1,
+  "topic": "Living Things",
+  "activities": [
+    {
+      "name": "Nature Walk: Spot the Living",
+      "duration": "30 minutes",
+      "description": "Outdoor exploration where students identify living vs non-living things in the schoolyard. Students walk with clipboards and circle items they think are living.",
+      "materials": ["Clipboards", "Crayons", "Nature Hunt worksheets", "Magnifying glasses"],
+      "teacher_role": "Guide the walk, ensure safety, prompt observations with questions",
+      "student_role": "Walk quietly, observe surroundings, discuss findings with partners"
+    },
+    {
+      "name": "Seed Sorting Adventure",
+      "duration": "20 minutes",
+      "description": "Students examine different seeds (beans, sunflower, pumpkin) using magnifying glasses, then sort them by size, shape, and color.",
+      "materials": ["Variety of seeds", "Magnifying glasses", "Sorting trays", "Recording sheets"],
+      "teacher_role": "Demonstrate how to observe carefully, help struggling students, facilitate group discussion",
+      "student_role": "Examine seeds closely, work in pairs to sort, share observations"
+    },
+    {
+      "name": "Growing Beans Time-Lapse",
+      "duration": "15 minutes",
+      "description": "Watch a time-lapse video of a bean seed sprouting and growing. Discuss what the seed needs to grow into a plant.",
+      "materials": ["Projector/screen", "Time-lapse video", "Bean plant diagram"],
+      "teacher_role": "Play video, pause to ask prediction questions, summarize key points",
+      "student_role": "Watch attentively, answer questions, share what they noticed"
+    },
+    {
+      "name": "Animal Classification Game",
+      "duration": "25 minutes",
+      "description": "Sort picture cards of animals into groups: animals that fly, swim, or walk/crawl. Introduce the idea that animals are living things with different features.",
+      "materials": ["Animal picture cards", "Sorting mats", "Label cards"],
+      "teacher_role": "Explain sorting rules, facilitate group sorting, introduce new vocabulary",
+      "student_role": "Work in groups to sort cards, explain their sorting choices"
+    },
+    {
+      "name": "Our Bodies: Living Machines",
+      "duration": "20 minutes",
+      "description": "Discuss how our bodies are living things that need food, water, and rest. Create a 'My Living Body' book with drawings of things their body can do.",
+      "materials": ["Drawing paper", "Crayons", "My Living Body book template", "Stickers"],
+      "teacher_role": "Lead discussion, give drawing prompts, help with writing names",
+      "student_role": "Draw and share what their body can do, discuss needs of living things"
+    },
+    {
+      "name": "Goldfish Observation Station",
+      "duration": "15 minutes",
+      "description": "Observe classroom goldfish (or fish in video) quietly. Students note how the fish moves, breathes, and responds to surroundings. Record observations.",
+      "materials": ["Goldfish bowl or tank", "Observation worksheets", "Pencils"],
+      "teacher_role": "Set up observation rules, model quiet observation, guide note-taking",
+      "student_role": "Observe quietly, draw what they see, write one observation"
+    },
+    {
+      "name": "Living vs Non-Living Sort",
+      "duration": "20 minutes",
+      "description": "Whole-class activity sorting picture cards into 'Living' and 'Non-Living' categories. Discuss why things are living (grow, need food, move).",
+      "materials": ["Picture cards (rock, dog, sun, tree, car, fish, etc.)", "Two large chart papers", "Glue sticks"],
+      "teacher_role": "Lead discussion, introduce the 3 characteristics of living things, clarify misconceptions",
+      "student_role": "Place cards, explain reasoning, agree/disagree respectfully"
+    },
+    {
+      "name": "Plant Parts Investigation",
+      "duration": "25 minutes",
+      "description": "Examine real plants (grass, herb, flower). Identify and label roots, stem, leaves, and flowers. Touch and smell each part.",
+      "materials": ["Variety of plants", "Magnifying glasses", "Plant parts labels", "Recording sheet"],
+      "teacher_role": "Demonstrate safe handling, guide observation of each part, connect to plant needs",
+      "student_role": "Examine plants carefully, label parts, compare different plants"
+    }
+  ]
+}

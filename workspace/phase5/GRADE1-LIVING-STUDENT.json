@@ -1,0 +1,53 @@
+{
+  "curriculum": "Grade 1 Living Things",
+  "learningTarget": "Identify living vs non-living things with 90% accuracy",
+  "personas": [
+    {
+      "name": "Struggling Student",
+      "issues": [
+        "Confuses living/non-living classifications (e.g., thinks fire is living)",
+        "Difficulty articulating why something is living using sentence stems",
+        "Struggles with abstract concept of 'needs' and 'survival'",
+        "Requires visual supports for every question",
+        "Difficulty with exit ticket drawing task - incomplete"
+      ],
+      "score": 65
+    },
+    {
+      "name": "Average Student",
+      "issues": [
+        "Minor confusion between plants and animals initially",
+        "Sometimes forgets to explain 'why' when identifying"
+      ],
+      "score": 88
+    },
+    {
+      "name": "Advanced Student",
+      "issues": [
+        "Needs extension activities - curriculum too easy",
+        "Finishes tasks quickly, requests more challenging material"
+      ],
+      "score": 100
+    },
+    {
+      "name": "ESL Student",
+      "issues": [
+        "Vocabulary barrier: 'non-living', 'survive', 'features' are challenging",
+        "Strong comprehension through visual aids",
+        "Difficulty with sentence stems in English",
+        "Benefits from bilingual vocabulary cards"
+      ],
+      "score": 72
+    },
+    {
+      "name": "Bored Student",
+      "issues": [
+        "Already knows living vs non-living from kindergarten",
+        "Disengaged during repetitive practice activities",
+        "Rushes through exit ticket without effort",
+        "Needs enrichment or choice-based learning"
+      ],
+      "score": 75
+    }
+  ]
+}

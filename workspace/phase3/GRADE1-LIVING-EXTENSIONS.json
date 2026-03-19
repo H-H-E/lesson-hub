@@ -1,0 +1,24 @@
+{
+  "extensions": [
+    {
+      "name": "Living Things Journal",
+      "description": "Students keep a daily nature journal where they draw or describe one living thing they see each day—at home, school, or outside. They can include plants, animals, insects, or even themselves! This encourages observation skills and connects learning to real life."
+    },
+    {
+      "name": "Pet or Plant Care Project",
+      "description": "Students take responsibility for caring for a classroom plant or small pet (like a goldfish or classroom pet hamster) for one week. They record feeding times, water needs, and observations about how the living thing changes or responds to care."
+    },
+    {
+      "name": "Living vs. Non-Living Sort",
+      "description": "Students create a sorting activity with pictures or physical objects from around the classroom. They work in pairs to categorize items into 'living' and 'non-living' groups, then explain why each item belongs where it does using vocabulary from the unit."
+    },
+    {
+      "name": "Animal Habitat Diorama",
+      "description": "Students build a small diorama (using a shoebox) showing an animal in its natural habitat. They research what that animal needs to survive, what it eats, and where it lives. This connects the concept of living things to their specific needs and environments."
+    },
+    {
+      "name": "Growing Seeds Experiment",
+      "description": "Students plant seeds in clear cups to observe germination and growth over several weeks. They measure the plant weekly, record observations in a growth chart, and learn about the life cycle of plants—all living things that grow and change."
+    }
+  ]
+}

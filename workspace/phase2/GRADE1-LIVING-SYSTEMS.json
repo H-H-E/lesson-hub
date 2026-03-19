@@ -1,0 +1,36 @@
+{
+  "quote": "\"In nature, nothing exists alone.\" — Rachel Carson",
+  "metaphor": "A garden is like a team — each plant and animal has a job, and they all help each other grow!",
+  "systems_connection": {
+    "big_idea": "Living things are connected in ecosystems",
+    "systems_principles": [
+      {
+        "principle": "Interdependence",
+        "description": "Plants need animals and animals need plants — they depend on each other",
+        "grade1_manifestation": "Bees need flowers for nectar, flowers need bees to spread pollen"
+      },
+      {
+        "principle": "Patterns",
+        "description": "Living things follow predictable patterns: grow, eat, respond",
+        "grade1_manifestation": "All living things move toward food and water; plants grow toward light"
+      },
+      {
+        "principle": "Inputs and Outputs",
+        "description": "Living things take in what they need and give out waste that others can use",
+        "grade1_manifestation": "Plants take in water and sunlight, give off oxygen; animals breathe out carbon dioxide that plants need"
+      },
+      {
+        "principle": "Cycles",
+        "description": "Nature has repeating cycles that keep life going",
+        "grade1_manifestation": "Water cycles from clouds to rain to soil to plants and back to clouds"
+      }
+    ],
+    "systems_vocabulary": ["needs", "depends on", "helps", "together", "cycle"],
+    "discussion_prompts": [
+      "What would happen if all the bees disappeared?",
+      "How does a garden help the animals that visit it?",
+      "What does a plant give to the world? What does it take?"
+    ],
+    "future_connections": "This foundation prepares students to understand food webs (Grade 3), ecosystems (Grade 5), and environmental stewardship (middle school)"
+  }
+}

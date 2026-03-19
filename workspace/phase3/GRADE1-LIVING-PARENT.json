@@ -1,0 +1,69 @@
+{
+  "grade": 1,
+  "topic": "Living Things",
+  "vocabulary": [
+    {
+      "word": "Living",
+      "definition": "Something that can grow, move, breathe, and needs food"
+    },
+    {
+      "word": "Plant",
+      "definition": "A living thing that grows from soil and makes its own food using sunlight"
+    },
+    {
+      "word": "Animal",
+      "definition": "A living thing that can move around and usually eats other living things for food"
+    },
+    {
+      "word": "Habitat",
+      "definition": "The natural home where a plant or animal lives"
+    },
+    {
+      "word": "Grow",
+      "definition": "To get bigger over time"
+    },
+    {
+      "word": "Food",
+      "definition": "What living things eat to have energy and stay healthy"
+    },
+    {
+      "word": "Seed",
+      "definition": "A tiny part of a plant that can grow into a new plant"
+    }
+  ],
+  "questions": [
+    "What makes something a living thing?",
+    "How are plants and animals the same? How are they different?",
+    "What do plants need to grow?",
+    "What do animals need to survive?",
+    "Why do different animals live in different places?",
+    "Can you name three living things in your backyard?",
+    "What happens to a plant when it gets too little water or sunlight?"
+  ],
+  "activities": [
+    {
+      "name": "Nature Walk",
+      "description": "Take a walk outside and identify living things. Count how many different plants and animals you can spot."
+    },
+    {
+      "name": "Seed Planting",
+      "description": "Plant a bean seed in a small cup. Watch it grow over several weeks and record changes."
+    },
+    {
+      "name": "Animal Classification",
+      "description": "Sort pictures of animals into groups: pets vs. wild animals, or animals that fly vs. animals that walk."
+    },
+    {
+      "name": "Food Chain Story",
+      "description": "Create a simple story showing how a plant gets energy from the sun, and an animal eats the plant."
+    },
+    {
+      "name": "Bug Detective",
+      "description": "Search for insects in the garden. Observe them for a few minutes and discuss what they are doing."
+    },
+    {
+      "name": "Animal Habitat Art",
+      "description": "Draw or build a habitat for your favorite animal using craft supplies or drawings."
+    }
+  ]
+}

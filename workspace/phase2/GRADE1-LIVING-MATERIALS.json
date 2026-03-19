@@ -1,0 +1,106 @@
+{
+  "unit": "Living Things",
+  "grade": 1,
+  "materials": [
+    {
+      "item": "Planting soil (potting mix)",
+      "quantity": "2 bags (5kg each)",
+      "notes": "For seed planting activities"
+    },
+    {
+      "item": "Small pots or seed trays",
+      "quantity": "30",
+      "notes": "For individual student planting"
+    },
+    {
+      "item": "Bean seeds (fast-growing)",
+      "quantity": "2 packs (50 seeds each)",
+      "notes": "Easy to germinate, quick results"
+    },
+    {
+      "item": "Magnifying glasses",
+      "quantity": "15",
+      "notes": "For observing insects, leaves, seeds"
+    },
+    {
+      "item": "Picture cards of living things",
+      "quantity": "2 sets (40 cards)",
+      "notes": "Animals, plants, humans for sorting"
+    },
+    {
+      "item": "Plastic containers (clear)",
+      "quantity": "15",
+      "notes": "For observation of insects, worms"
+    },
+    {
+      "item": "Worms (live)",
+      "quantity": "1 box",
+      "notes": "For observing movement, habitats"
+    },
+    {
+      "item": "Leaves (variety collection)",
+      "quantity": "30 different leaves",
+      "notes": "For shape, size comparison activities"
+    },
+    {
+      "item": "Chart paper",
+      "quantity": "10 sheets",
+      "notes": "For class charts, sorting activities"
+    },
+    {
+      "item": "Markers/crayons",
+      "quantity": "4 boxes",
+      "notes": "For drawing living things"
+    },
+    {
+      "item": "Paper plates",
+      "quantity": "30",
+      "notes": "For sorting activities"
+    },
+    {
+      "item": "Glue sticks",
+      "quantity": "10",
+      "notes": "For collages, projects"
+    },
+    {
+      "item": "Scissors (child-safe)",
+      "quantity": "15",
+      "notes": "For cutting activities"
+    },
+    {
+      "item": "Watering can (small)",
+      "quantity": "2",
+      "notes": "For plant care activities"
+    },
+    {
+      "item": "Books about living things",
+      "quantity": "5-8 titles",
+      "notes": "Age-appropriate picture books on plants/animals"
+    },
+    {
+      "item": "Petri dishes or clear cups",
+      "quantity": "20",
+      "notes": "For seed sprouting observation"
+    },
+    {
+      "item": "Cotton balls",
+      "quantity": "2 packs",
+      "notes": "For moisture in seed germination"
+    },
+    {
+      "item": "Food coloring",
+      "quantity": "1 set",
+      "notes": "For celery/water absorption experiment"
+    },
+    {
+      "item": "White carnations",
+      "quantity": "3",
+      "notes": "For water movement in plants experiment"
+    },
+    {
+      "item": "Bug catchers/observation nets",
+      "quantity": "10",
+      "notes": "For outdoor nature exploration"
+    }
+  ]
+}

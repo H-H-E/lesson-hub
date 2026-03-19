@@ -1,0 +1,105 @@
+{
+  "testType": "adversarial",
+  "gradeLevel": 1,
+  "topic": "Living Things",
+  "score": 62,
+  "issues": [
+    {
+      "id": "A1",
+      "category": "Scientific Accuracy",
+      "severity": "high",
+      "title": "Hook statement contradicts plant movement",
+      "description": "The hook says 'Ms. Green [the plant] doesn't move at all.' This is scientifically inaccurate - plants DO move through phototropism and growth movements. This reinforces the common misconception that plants are not living things.",
+      "location": "GRADE1-LIVING-03-HOOK.md",
+      "suggestion": "Change to 'Ms. Green doesn't run or walk around like a dog, but she does grow toward the light over time.'"
+    },
+    {
+      "id": "A2",
+      "category": "Ambiguous Instructions",
+      "severity": "high",
+      "title": "Contradiction in Mr. Wiggles description",
+      "description": "The hook says Mr. Wiggles 'moves all by himself' but then asks if he's alive. This is confusing because self-movement IS a characteristic of living things. Students may be confused why something that 'moves by itself' isn't alive.",
+      "location": "GRADE1-LIVING-03-HOOK.md",
+      "suggestion": "Clarify: 'Mr. Wiggles moves because I wound him up' or 'Mr. Wiggles moves because the batteries push him' to distinguish from self-directed movement."
+    },
+    {
+      "id": "A3",
+      "category": "Inconsistent Standards",
+      "severity": "medium",
+      "title": "Basic needs inconsistency - shelter missing from objectives",
+      "description": "Objectives list 3 characteristics (movement, food/air needs, growth) but activities and differentiation materials include 'shelter' as a 4th basic need. The Care Guide activity explicitly includes shelter, creating inconsistency.",
+      "location": "GRADE1-LIVING-04-ACTIVITIES.md vs GRADE1-LIVING-01-OBJECTIVES.md",
+      "suggestion": "Update objectives to explicitly include shelter as a 4th basic need, or remove shelter from activities to maintain consistency."
+    },
+    {
+      "id": "A4",
+      "category": "Quiz Design Flaw",
+      "severity": "medium",
+      "title": "Trick question uses untaught concept",
+      "description": "Quiz question 'Living things can: ... D) Make their own food (trick question!)' - but photosynthesis is NOT taught at Grade 1 level. Students may actually think D is correct since they've been told plants make their own food.",
+      "location": "GRADE1-LIVING-06-ASSESSMENT.md",
+      "suggestion": "Remove 'make their own food' as an option, or explicitly state in instruction that this concept will be taught in later grades."
+    },
+    {
+      "id": "A5",
+      "category": "Ambiguous Instructions",
+      "severity": "medium",
+      "title": "Seed experiment Cup 3 unclear expectation",
+      "description": "Cup 3 is placed in a 'dark closet' - what's the expected outcome? Students may not understand if it should not grow, grow poorly, or grow differently. No clear prediction guidance.",
+      "location": "GRADE1-LIVING-04-ACTIVITIES.md",
+      "suggestion": "Add explicit expected outcome: 'What will happen? Will it grow tall and green, or will it be pale and weak? Why?'"
+    },
+    {
+      "id": "A6",
+      "category": "Assessment Equity",
+      "severity": "medium",
+      "title": "Project assumes access to living thing",
+      "description": "The summative project requires students to select and investigate a living thing. Students without pets, garden access, or nature access may be disadvantaged.",
+      "location": "GRADE1-LIVING-06-ASSESSMENT.md",
+      "suggestion": "Provide a list of acceptable living things for students to choose from, or offer classroom/school-based options."
+    },
+    {
+      "id": "A7",
+      "category": "Measurement Ambiguity",
+      "severity": "low",
+      "title": "Objective measurement unclear",
+      "description": "Objective 1 says '5+ living things with 80% accuracy' - 80% of 5 is 4, but does this mean 4/5 correct? Also '8/10 items' doesn't specify if teacher-provided or student-selected.",
+      "location": "GRADE1-LIVING-01-OBJECTIVES.md",
+      "suggestion": "Clarify: 'Correctly identifies at least 5 living things from a set of 10 (80% = 8/10)'"
+    },
+    {
+      "id": "A8",
+      "category": "Complexity Mismatch",
+      "severity": "low",
+      "title": "Systems diagram uses advanced vocabulary",
+      "description": "The systems circle diagram includes 'decomposers' which is a Grade 2+ concept. Grade 1 students won't understand what this means.",
+      "location": "GRADE1-LIVING-07-SYSTEMS.md",
+      "suggestion": "Simplify to 'Dead things become soil' or remove decomposers entirely."
+    },
+    {
+      "id": "A9",
+      "category": "Quiz Design Flaw",
+      "severity": "low",
+      "title": "Exit ticket distractor not ambiguous enough",
+      "description": "Exit ticket A includes 'Moon' as a non-living option - Moon is obviously not living. Better distractor would be 'cloud' or 'shadow' which students might more plausibly confuse.",
+      "location": "GRADE1-LIVING-06-ASSESSMENT.md",
+      "suggestion": "Replace 'Moon' with 'cloud' or 'shadow' for more realistic diagnostic value."
+    },
+    {
+      "id": "A10",
+      "category": "Ambiguous Instructions",
+      "severity": "low",
+      "title": "Open-ended question has single expected answer",
+      "description": "Quiz 2 Q4 asks 'What will happen?' to a fish in a bowl with no water. Students might reasonably say 'it will be thirsty', 'it might survive a while', or 'it will get sick' - but rubric expects single answer.",
+      "location": "GRADE1-LIVING-06-ASSESSMENT.md",
+      "suggestion": "Accept multiple reasonable answers or provide specific answer key with alternative responses."
+    }
+  ],
+  "severityCounts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 5,
+    "low": 3
+  },
+  "summary": "Found 10 issues across scientific accuracy, inconsistent standards, ambiguous instructions, and assessment design. The most critical are the plant movement contradiction in the hook and the shelter/basic needs inconsistency. These could reinforce common misconceptions in young learners."
+}

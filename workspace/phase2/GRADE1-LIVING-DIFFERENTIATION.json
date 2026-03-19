@@ -1,0 +1,125 @@
+{
+  "grade": 1,
+  "topic": "Living Things",
+  "levels": [
+    {
+      "level": "1 - Support",
+      "description": "For students who need additional scaffolding, visual supports, and hands-on guidance to engage with living things concepts. These students benefit from reduced complexity, repeated exposure, and teacher proximity during activities.",
+      "strategies": [
+        "Use picture-based vocabulary cards with real photographs instead of illustrations",
+        "Provide graphic organizers with pre-filled sections to reduce writing demands",
+        "Offer tactile learning experiences with real specimens (leaves, rocks, plastic animals)",
+        "Implement peer tutoring pairing with confident learners",
+        "Use verbal and physical prompts during sorting activities",
+        "Simplify instructions to 1-2 step directions",
+        "Provide sentence stems for verbal responses (e.g., 'A living thing can ___')",
+        "Offer color-coded sorting bins (green=living, gray=non-living)",
+        "Allow use of manipulatives instead of written responses",
+        "Provide whispered audio guides during nature walk components"
+      ],
+      "activities": [
+        {
+          "name": "Touch & Sort",
+          "description": "Students physically sort real objects (feather, leaf, rock, plastic toy) into living/non-living bins with teacher guidance",
+          "materials": ["Feathers", "Leaves", "Rocks", "Plastic animals", "Sorting bins"],
+          "scaffolding": "Teacher holds student's hand during sorting, provides verbal cues"
+        },
+        {
+          "name": "Picture Walk",
+          "description": "Teacher-led virtual walk through local environment using large photographs, students point to identify living things",
+          "materials": ["Environment photo cards", "Pointer stick"],
+          "scaffolding": "Reduced set of 4-5 clear images, immediate positive reinforcement"
+        },
+        {
+          "name": "Needs Match",
+          "description": "Students match pre-labeled pictures of needs (water, sun, food) to a single plant or animal with physical cards",
+          "materials": ["Picture cards", "Matching mat"],
+          "scaffolding": "Only 3 items to match, visual-only responses allowed"
+        }
+      ]
+    },
+    {
+      "level": "2 - Core",
+      "description": "For students working at grade-level expectations. These students engage with the full curriculum through standard activities, independent practice, and collaborative learning with appropriate challenge.",
+      "strategies": [
+        "Present content through multiple modalities (visual, auditory, kinesthetic)",
+        "Use think-pair-share for processing questions",
+        "Provide open-ended exploration time during investigations",
+        "Offer choice in how students demonstrate learning (drawing, labeling, verbal)",
+        "Include both structured and unstructured activity time",
+        "Use grade-level vocabulary with explicit teaching of key terms",
+        "Facilitate small group discussions with diverse learners",
+        "Provide immediate feedback during practice activities",
+        "Connect concepts to students' own experiences and environments"
+      ],
+      "activities": [
+        {
+          "name": "Living Things Scavenger Hunt",
+          "description": "Students explore the classroom or outdoor area to find and record 8 living things on their checklist",
+          "materials": ["Clipboard", "Checklist", "Pencil", "Magnifying glass"],
+          "differentiation": "Core version includes 8 items, some visual cues provided"
+        },
+        {
+          "name": "Sort & Explain",
+          "description": "Students sort picture cards into living/non-living categories and explain their reasoning to a partner",
+          "materials": ["Sorting cards", "Category mats", "Recording sheet"],
+          "differentiation": "Students write or verbalize 1 reason for each choice"
+        },
+        {
+          "name": "Plant Needs Diagram",
+          "description": "Students label a plant diagram with water, sunlight, and soil, then predict what happens if one is missing",
+          "materials": ["Plant diagram worksheet", "Colored pencils"],
+          "differentiation": "Includes word bank and example prediction sentence"
+        },
+        {
+          "name": "Animal Movement Match",
+          "description": "Students match animals to their movement types (walk, fly, swim, crawl) and create a movement freeze frame",
+          "materials": ["Animal cards", "Movement labels", "Open space"],
+          "differentiation": "16 animals to match, includes extension question"
+        }
+      ]
+    },
+    {
+      "level": "3 - Extension",
+      "description": "For students who demonstrate advanced understanding and need enrichment. These students engage with deeper thinking, real-world applications, and independent research opportunities.",
+      "strategies": [
+        "Offer open-ended inquiry questions without predetermined answers",
+        "Provide research opportunities using age-appropriate media",
+        "Encourage students to create their own questions for investigation",
+        "Include leadership roles in group activities (teacher's helper, team captain)",
+        "Challenge with 'what if' scenarios and prediction tasks",
+        "Connect to higher-grade concepts in simplified ways",
+        "Allow extended time for deeper exploration of interests",
+        "Offer choice in complex project-based learning",
+        "Invite students to help peers as 'expert' teachers",
+        "Introduce basic scientific vocabulary and classification"
+      ],
+      "activities": [
+        {
+          "name": "Living Things Detective",
+          "description": "Students investigate a mystery scenario where they must determine if something is living based on multiple criteria, defending their answer with evidence",
+          "materials": ["Mystery items (seeds, dried flowers, fossils)", "Evidence recording sheet"],
+          "challenge": "Requires justification using all 4 characteristics of living things"
+        },
+        {
+          "name": "Design a Habitat",
+          "description": "Students design a habitat for a chosen animal, explaining how it meets all the animal's needs",
+          "materials": ["Art supplies", "Habitat planning template", "Reference books"],
+          "challenge": "Includes consideration of food chain, shelter, and climate"
+        },
+        {
+          "name": "Needs Experiment",
+          "description": "Students predict and observe what happens to a plant when one need is removed over multiple days, recording findings",
+          "materials": ["Multiple plants", "Manipulation materials (cardboard box, plastic bag)", "Observation journal"],
+          "challenge": "Independent investigation with hypothesis, data collection, and conclusion"
+        },
+        {
+          "name": "Animal Adaptation Explorer",
+          "description": "Students research how different animals have adapted to survive, comparing 3+ animals and presenting findings",
+          "materials": ["Age-appropriate books/tablets", "Presentation template"],
+          "challenge": "Compares adaptations across environments, connects to survival needs"
+        }
+      ]
+    }
+  ]
+}

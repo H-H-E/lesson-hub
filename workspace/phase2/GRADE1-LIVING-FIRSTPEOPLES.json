@@ -1,0 +1,46 @@
+{
+  "grade": 1,
+  "topic": "Living Things",
+  "firstPeoplesPrinciples": [
+    {
+      "name": "Connection to Country",
+      "connection": "Nature Walk: Spot the Living - Students explore the schoolyard, connecting to the land and observing living things in their local environment, honoring Traditional Owners' Country.",
+      "activity": "Aboriginal Plant Uses Walk: Identify plants that Traditional Peoples use for food, medicine, and tools. Students learn the Indigenous names where possible and understand that Country sustains all living things."
+    },
+    {
+      "name": "Everything is Connected",
+      "connection": "Seed Sorting Adventure - Seeds are part of the生命周期 that connects plants, animals, and people together in Indigenous knowledge systems.",
+      "activity": "Story of the Seed: Share a story from Aboriginal or Torres Strait Islander culture about how seeds came to be, teaching that all living things are related and care for each other."
+    },
+    {
+      "name": "Country/Place",
+      "connection": "Growing Beans Time-Lapse - Understanding how plants grow connects students to the land and seasonal patterns that Traditional Peoples have observed for thousands of years.",
+      "activity": "Seasonal Planting Circle: Discuss when Country tells us to plant different seeds. Create a seasonal wheel showing when Traditional foods are harvested on Country."
+    },
+    {
+      "name": "Culture is Connected to Land",
+      "connection": "Animal Classification Game - Animals have special significance in Indigenous cultures, each with totemic connections and cultural responsibilities.",
+      "activity": "Animal Totem Cards: Students learn about animals important to local Aboriginal or Torres Strait Islander peoples, understanding that people and animals share responsibilities to care for Country."
+    },
+    {
+      "name": "Spiritual Relationship",
+      "connection": "Our Bodies: Living Machines - Our bodies are gifts from our ancestors and connected to past, present, and future generations.",
+      "activity": "Body Mapping: Students draw their body and include things they receive from Country (food, shelter, medicine plants). Discuss how our bodies are connected to our family's and community's wellbeing."
+    },
+    {
+      "name": "Learning from Observation",
+      "connection": "Goldfish Observation Station - Quiet observation is a traditional way of learning used by Indigenous peoples for millennia.",
+      "activity": "Lake/Marine Life Stories: Share stories from Indigenous cultures about water creatures. Students practice the respectful, quiet observation that Traditional fishers and rangers use."
+    },
+    {
+      "name": "Two-Way Learning",
+      "connection": "Living vs Non-Living Sort - Understanding that Indigenous knowledge and Western science both have value and can teach each other.",
+      "activity": "Elder Storytelling Circle: Invite an Elder or knowledge holder to share knowledge about living things on Country. Students share what they learned and compare with classroom learning."
+    },
+    {
+      "name": "Culture Informs Science",
+      "connection": "Plant Parts Investigation - Indigenous peoples have detailed botanical knowledge passed down over 65,000+ years.",
+      "activity": "Bush Tucker Garden Investigation: Explore edible and medicinal plant parts from Aboriginal or Torres Strait Islander food traditions. Students taste safe plants and learn which parts of plants are food."
+    }
+  ]
+}

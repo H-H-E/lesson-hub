@@ -1,0 +1,53 @@
+{
+  "valid": true,
+  "coverage_score": 0.75,
+  "grade": 1,
+  "topic": "Living Things",
+  "bc_alignment": {
+    "big_idea": "Living things have features and behaviours that help them survive in their environment",
+    "status": "fully_aligned",
+    "curricular_competencies": [
+      "Questioning and predicting",
+      "Processing and analyzing (sorting/classifying)",
+      "Communicating"
+    ]
+  },
+  "csta_alignment": {
+    "level": "1A (K-2)",
+    "covered": [
+      "1A-DA-06: Collect and present data in visual formats",
+      "1A-DA-07: Identify patterns in data",
+      "1A-AP-09: Create programs using sequencing",
+      "1A-AP-10: Decompose steps needed to solve problems"
+    ],
+    "partially_covered": [
+      "1A-AP-08: Model daily processes by creating algorithms"
+    ]
+  },
+  "missing": [
+    "1A-CS-01: Select and operate appropriate tools to express ideas using digital representations",
+    "1A-AP-11: Create plans through collaborative design",
+    "1A-AP-12: Develop plans that describe sequence of events, goals, expected outcomes",
+    "1A-IC-13: Identify ways people use computing in daily life",
+    "1A-IC-14: Identify positive and negative impacts of computing"
+  ],
+  "validation_notes": {
+    "strengths": [
+      "BC Science Big Idea fully addressed",
+      "Sorting activity aligns with CSTA data analysis standards",
+      "p5.js simulation demonstrates sequencing concepts",
+      "Classification task requires decomposition of problem"
+    ],
+    "gaps": [
+      "No explicit connection to computing as everyday tool (1A-CS-01)",
+      "No collaborative design component (1A-AP-11)",
+      "No explicit positive/negative impacts of computing discussion (1A-IC-13, 1A-IC-14)",
+      "Algorithm planning step not explicitly included (1A-AP-12)"
+    ]
+  },
+  "recommendations": [
+    "Add reflection question: 'How do computers help us learn about living things?'",
+    "Include collaborative sorting activity where students work in pairs",
+    "Add planning worksheet where students describe their sorting approach before coding"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "module": "Grade 1 Living Things",
+  "description": "Real-world career and application connections for Grade 1 Living Things curriculum",
+  "careers": [
+    {
+      "name": "Veterinarian (Vet)",
+      "description": "A doctor who helps sick animals get better",
+      "connection": "Students learn that animals need food and care - vets help animals stay healthy",
+      "age_appropriate": true,
+      "simpler_name": "Animal Doctor"
+    },
+    {
+      "name": "Zookeeper",
+      "description": "Someone who takes care of animals at the zoo",
+      "connection": "Learning about animal needs (food, water, shelter) connects to how zookeepers feed and care for animals",
+      "age_appropriate": true,
+      "simpler_name": "Zoo Helper"
+    },
+    {
+      "name": "Farmer",
+      "description": "Someone who grows food and cares for farm animals",
+      "connection": "Plants need water and sunlight to grow - farmers plant seeds and help crops grow",
+      "age_appropriate": true,
+      "simpler_name": "Farm Worker"
+    },
+    {
+      "name": "Gardener",
+      "description": "Someone who grows plants and flowers",
+      "connection": "Learning about what plants need (water, sun, soil) - gardeners help plants grow",
+      "age_appropriate": true,
+      "simpler_name": "Plant Helper"
+    },
+    {
+      "name": "Pet Store Worker",
+      "description": "Someone who helps take care of pets and tells families how to care for them",
+      "connection": "Connecting animal needs to how we care for pets at home",
+      "age_appropriate": true,
+      "simpler_name": "Pet Helper"
+    },
+    {
+      "name": "Biologist (Scientist who studies living things)",
+      "description": "A scientist who learns about plants and animals",
+      "connection": "Scientists observe and learn about living things just like students do on nature walks",
+      "age_appropriate": true,
+      "simpler_name": "Nature Scientist"
+    }
+  ],
+  "applications": [
+    {
+      "title": "Planting a Classroom Garden",
+      "description": "Students plant seeds and observe how living things grow over time",
+      "careers_connected": ["Farmer", "Gardener"],
+      "curriculum_link": "Basic needs of plants (water, sunlight, soil)"
+    },
+    {
+      "title": "Nature Walk Observation",
+      "description": "Walk around school grounds to find and name living things",
+      "careers_connected": ["Biologist"],
+      "curriculum_link": "Identify and name living things in local environment"
+    },
+    {
+      "title": "Pet Care Discussion",
+      "description": "Discuss what pets need (food, water, love) and how we help them",
+      "careers_connected": ["Veterinarian", "Pet Store Worker"],
+      "curriculum_link": "Living things need food and respond to environment"
+    },
+    {
+      "title": "Animal Movement Game",
+      "description": "Act out how different animals move (walk, fly, swim, crawl)",
+      "careers_connected": ["Zookeeper"],
+      "curriculum_link": "Compare how different animals move"
+    },
+    {
+      "title": "My Pet or Favorite Animal Project",
+      "description": "Students share about a pet or animal they know, what it needs, and how it moves",
+      "careers_connected": ["Veterinarian", "Zookeeper", "Pet Store Worker"],
+      "curriculum_link": "Animals need food, water, shelter; different movement types"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "personas": [
+    {
+      "name": "Reviewer",
+      "issues": [
+        "Curriculum lacks clear progression from simple to complex concepts",
+        "No explicit connection to real-world examples beyond classroom",
+        "Assessment criteria not clearly communicated to parents",
+        "Limited differentiation for diverse learning needs",
+        "No guidance for parents on how to support at home"
+      ],
+      "score": 72
+    },
+    {
+      "name": "Questioner",
+      "issues": [
+        "Why is 90% the target rather than 100% for basic living/non-living区分?",
+        "What prerequisite knowledge is assumed?",
+        "How does this connect to next grade's standards?",
+        "What evidence shows this 90% target is appropriate?",
+        "Why are sentence stems the primary assessment method?"
+      ],
+      "score": 65
+    },
+    {
+      "name": "Comparer",
+      "issues": [
+        "Compared to common core standards, this seems basic",
+        "Kindergarten already covers living/non-living in many districts",
+        "No cross-curricular connections (math counting, art drawing)",
+        "Lacks STEM integration opportunities",
+        "International curricula often introduce classification earlier"
+      ],
+      "score": 60
+    },
+    {
+      "name": "Critic",
+      "issues": [
+        "90% accuracy target is too low for such a fundamental concept",
+        "Exit ticket drawing task is subjective and hard to assess",
+        "No consideration for regional/cultural contexts (e.g., desert vs rainforest ecosystems)",
+        "Biased toward animal-centric examples, plant examples underrepresented",
+        "No safety or ethical considerations mentioned",
+        "Curriculum assumes homogeneous classroom without addressing disabilities or neurodiversity"
+      ],
+      "score": 55
+    }
+  ]
+}

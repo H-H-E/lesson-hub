@@ -1,0 +1,81 @@
+{
+  "valid": true,
+  "score": 90,
+  "grade": 1,
+  "topic": "Living Things",
+  "language_assessment": {
+    "vocabulary": {
+      "score": 8,
+      "notes": "Age-appropriate core vocabulary (grow, move, food, breathe, respond). Technical terms like 'ecosystem', 'ecologist' reserved for teacher notes only."
+    },
+    "sentence_structure": {
+      "score": 9,
+      "notes": "Short sentences, direct instructions. Sentence starters provided for ELL/extra support students."
+    },
+    "visual_support": {
+      "score": 8,
+      "notes": "Picture cards, checklists with pictures mentioned. Could benefit from more visual diagrams."
+    }
+  },
+  "structure_assessment": {
+    "organization": {
+      "score": 10,
+      "notes": "Excellent 4-phase structure (Explore, Discover, Create, Check) with clear timing. Each phase has specific activities."
+    },
+    "timing": {
+      "score": 10,
+      "notes": "60-minute lesson with detailed timing breakdowns. Backup plans mentioned for weather."
+    },
+    "instructions": {
+      "score": 9,
+      "notes": "Teacher instructions are clear and numbered. Key questions provided for discussion."
+    }
+  },
+  "differentiation": {
+    "score": 9,
+    "notes": "3-level differentiation (Highest Support, Guided, Extension). Good for mixed-ability classrooms."
+  },
+  "engagement": {
+    "score": 10,
+    "notes": "Strong hooks (Mystery of Growing Sprout), hands-on activities (outdoor walk, Living Chain game, Web collage), song with actions. High engagement for ages 6-7."
+  },
+  "concerns": [
+    {
+      "severity": "low",
+      "area": "philosophical_content",
+      "description": "Systems literacy quote in closing circle may be too abstract for some Grade 1 students. Teacher guidance helps simplify."
+    },
+    {
+      "severity": "low",
+      "area": "vocabulary_pre_teaching",
+      "description": "ELL students may need pre-teaching for terms: 'respond', 'surroundings', 'reproduce', 'connection', 'system'"
+    },
+    {
+      "severity": "medium",
+      "area": "outdoor_activity",
+      "description": "Outdoor Discovery Walk is weather-dependent. Backup plan mentioned but uses windows/indoor plants which reduces impact."
+    },
+    {
+      "severity": "low",
+      "area": "complex_activities",
+      "description": "Living Chain Game and Web Collage require good executive function - some students may need additional scaffolding"
+    }
+  ],
+  "strengths": [
+    "Clear 5-characteristic framework (grow, move, need food, breathe, respond) taught through memorable song with actions",
+    "Engaging mystery hook activates prior knowledge",
+    "Concrete, hands-on activities appropriate for kinesthetic Grade 1 learners",
+    "Excellent cross-curricular connections (art, math, language, PE)",
+    "Parent take-home guide extends learning beyond classroom",
+    "3-level differentiation supports diverse learners",
+    "Exit ticket with thumbs up/down allows quick formative assessment",
+    "p5.js simulation provides digital extension option"
+  ],
+  "recommendations": [
+    "Add picture vocabulary cards for key terms before lesson",
+    "Prepare indoor backup for outdoor walk in advance",
+    "Pre-teach 'respond' with concrete examples (plant toward light, pet runs when called)",
+    "Consider adding visual timer for students who need task structure"
+  ],
+  "summary": "Highly accessible Grade 1 science lesson with strong structure, clear language, and engaging activities. Minor concerns around vocabulary pre-teaching for ELL students and weather backup for outdoor activities. Well-suited for ages 6-7 with the 3-level differentiation providing support for all learners."
+}

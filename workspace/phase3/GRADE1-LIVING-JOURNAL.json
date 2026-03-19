@@ -1,0 +1,32 @@
+{
+  "title": "Explorer's Journal: Living Things",
+  "grade": 1,
+  "topic": "Living Things",
+  "before_prompts": [
+    "What does it mean for something to be 'alive'? Can you think of three living things right now?",
+    "Look out a window or go outside. What living things do you see? Are they moving? Do they need food?",
+    "Are a rock and a dog the same? How are they different? What makes a dog alive?",
+    "Have you ever touched a plant? Did it feel soft or hard? Do you think plants are living things?",
+    "What do you need to stay alive? What do fish, cats, and flowers need?"
+  ],
+  "during_prompts": [
+    "Draw a picture of a living thing you saw today. What is it doing right now?",
+    "Animals move to find food. How do you think a bee finds flowers? Can you move like a bee?",
+    "Plants grow toward the sun. What happens if a plant stays in the dark? Why?",
+    "All living things have parts. What parts does a tree have? What parts do you have?",
+    "Baby animals look like their parents. Can you find a picture of a baby animal and its parent?",
+    "Living things grow. How have you grown since you were a baby? How has a pet or plant grown?",
+    "What do you think happens to a seed when you plant it? Let's draw what might happen!",
+    "Animals eat food. What is your favorite food? What do birds eat? What do fish eat?"
+  ],
+  "after_prompts": [
+    "Today we learned about living things. What surprised you the most?",
+    "Can you name three things that are NOT alive? How do you know they are not living?",
+    "If you could be any living thing for a day, what would you be and why?",
+    "What did you draw or write in your journal today that you're most proud of?",
+    "Tomorrow, try to find one living thing outside that you haven't noticed before. What is it?",
+    "How are you like a plant? How are you different from a rock?",
+    "What question do you still have about living things that you'd like to learn more about?",
+    "Let's think: What would happen if there was no sun? Would living things be okay?"
+  ]
+}

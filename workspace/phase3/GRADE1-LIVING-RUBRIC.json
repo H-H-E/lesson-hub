@@ -1,0 +1,39 @@
+{
+  "criteria": [
+    {
+      "name": "Identifying Living Things",
+      "l4": "Correctly identifies and explains why many different things are living (plants, animals, humans) with accurate reasons",
+      "l3": "Identifies living things accurately and gives at least one reason why they are living",
+      "l2": "Identifies some living things but may confuse some non-living items as living",
+      "l1": "Cannot consistently distinguish living from non-living things"
+    },
+    {
+      "name": "Basic Needs of Living Things",
+      "l4": "Explains all basic needs (food, water, air, shelter) for plants and animals and why each is needed",
+      "l3": "Names the basic needs of living things correctly",
+      "l2": "Names some needs but incomplete or confuses needs of plants vs animals",
+      "l1": "Cannot identify basic needs of living things"
+    },
+    {
+      "name": "Observing Plant Parts",
+      "l4": "Correctly names and describes functions of all major plant parts (roots, stems, leaves, flowers)",
+      "l3": "Names most plant parts and their basic functions",
+      "l2": "Names some plant parts but confuses their functions",
+      "l1": "Cannot identify basic plant parts"
+    },
+    {
+      "name": "Observing Animal Parts",
+      "l4": "Identifies body parts of various animals and explains how they help the animal",
+      "l3": "Identifies animal body parts correctly",
+      "l2": "Identifies some animal parts but incomplete",
+      "l1": "Cannot identify basic animal body parts"
+    },
+    {
+      "name": "Growth and Changes in Living Things",
+      "l4": "Describes how living things change over time and gives examples of growth stages",
+      "l3": "Recognizes that living things grow and change",
+      "l2": "Shows some understanding of growth but incomplete",
+      "l1": "Does not understand that living things grow and change"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "objectives": [
+    {
+      "text": "Students will identify and name at least 8 different living things (plants and animals) in their local environment with 80% accuracy",
+      "standard": "NGSS.K-LS1-1: Use observations to describe patterns of what plants and animals need to survive",
+      "assessment_method": "Nature walk observation checklist with teacher-led questioning"
+    },
+    {
+      "text": "Students will explain that living things grow, move, need food, and respond to their environment by sorting picture cards into 'living' vs 'non-living' categories with 90% accuracy",
+      "standard": "NGSS.K-LS1-1: Use observations to describe patterns of what plants and animals need to survive",
+      "assessment_method": "Sorting activity worksheet with visual criteria checklist"
+    },
+    {
+      "text": "Students will describe the basic needs of plants (water, sunlight, soil) by labeling a diagram and predicting what happens when one need is missing",
+      "standard": "NGSS.1-LS1-1: Use materials to design a solution to a human problem by mimicking plants and animals",
+      "assessment_method": "Labeled diagram assessment and 'what if' prediction prompt"
+    },
+    {
+      "text": "Students will compare how different animals move (walk, fly, swim, crawl) by matching animals to their movement type with 85% accuracy",
+      "standard": "NGSS.1-LS1-1: Use materials to design a solution to a human problem by mimicking plants and animals",
+      "assessment_method": "Matching quiz with visual support and teacher observation"
+    }
+  ]
+}

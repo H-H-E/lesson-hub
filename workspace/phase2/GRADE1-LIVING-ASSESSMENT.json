@@ -1,0 +1,258 @@
+{
+  "formative": [
+    {
+      "id": "f1",
+      "title": "Nature Walk Observation Checklist",
+      "type": "observation",
+      "description": "Teacher-led outdoor walk where students identify living things in the environment",
+      "timing": "During unit - Day 2",
+      "items": [
+        {
+          "criterion": "Identifies plants (trees, flowers, grass)",
+          "points": 1
+        },
+        {
+          "criterion": "Identifies animals (birds, insects, pets)",
+          "points": 1
+        },
+        {
+          "criterion": "Explains why something is living (moves, grows, needs food)",
+          "points": 2
+        },
+        {
+          "criterion": "Names at least 8 different living things",
+          "points": 2
+        }
+      ],
+      "total_points": 6,
+      "passing_threshold": "5 points (80%)",
+      "method": "Teacher observation with checklist, verbal questioning"
+    },
+    {
+      "id": "f2",
+      "title": "Living vs Non-Living Sorting Activity",
+      "type": "hands-on",
+      "description": "Students sort picture cards into 'living' and 'non-living' categories on paper plates",
+      "timing": "During unit - Day 3",
+      "items": [
+        {
+          "criterion": "Correctly sorts at least 8 living things",
+          "points": 8
+        },
+        {
+          "criterion": "Correctly identifies at least 6 non-living items",
+          "points": 6
+        },
+        {
+          "criterion": "Explains why each item belongs in its category",
+          "points": 4
+        }
+      ],
+      "total_points": 18,
+      "passing_threshold": "16 points (90%)",
+      "method": "Visual sorting with teacher-led discussion",
+      "materials_needed": ["Picture cards", "Paper plates", "Markers"]
+    },
+    {
+      "id": "f3",
+      "title": "Plant Needs Labeling Check",
+      "type": "drawing",
+      "description": "Students label a plant diagram and answer 'what if' prediction questions",
+      "timing": "During unit - Day 5",
+      "items": [
+        {
+          "criterion": "Labels water, sunlight, soil correctly",
+          "points": 3
+        },
+        {
+          "criterion": "Identifies roots, stem, leaves, flower",
+          "points": 4
+        },
+        {
+          "criterion": "Predicts what happens if plant has no water",
+          "points": 2
+        },
+        {
+          "criterion": "Predicts what happens if plant has no sunlight",
+          "points": 2
+        }
+      ],
+      "total_points": 11,
+      "passing_threshold": "8 points",
+      "method": "Worksheet with diagram and short answers"
+    },
+    {
+      "id": "f4",
+      "title": "Animal Movement Matching Game",
+      "type": "matching",
+      "description": "Students match animals to how they move (walk, fly, swim, crawl)",
+      "timing": "During unit - Day 6",
+      "items": [
+        {
+          "criterion": "Correctly matches 8+ animals to movement type",
+          "points": 8
+        },
+        {
+          "criterion": "Names additional animals not shown",
+          "points": 2
+        }
+      ],
+      "total_points": 10,
+      "passing_threshold": "8.5 points (85%)",
+      "method": "Visual matching activity with teacher observation"
+    }
+  ],
+  "summative": {
+    "title": "Living Things Unit Test",
+    "type": "written",
+    "description": "End-of-unit assessment covering all learning objectives",
+    "timing": "End of unit - Day 7",
+    "duration": "30 minutes",
+    "sections": [
+      {
+        "name": "Part A: Living or Not Living",
+        "type": "circle_the_answer",
+        "items": 10,
+        "description": "Look at the picture and circle whether it is living or not living",
+        "scoring": "1 point each, 10 total"
+      },
+      {
+        "name": "Part B: Label the Plant",
+        "type": "labeling",
+        "items": 5,
+        "description": "Label the parts of the plant (roots, stem, leaves, flower, soil)",
+        "scoring": "1 point each, 5 total"
+      },
+      {
+        "name": "Part C: Animal Movement",
+        "type": "matching",
+        "items": 8,
+        "description": "Draw a line to match each animal with how it moves",
+        "scoring": "1 point each, 8 total"
+      },
+      {
+        "name": "Part D: What Do Plants Need?",
+        "type": "multiple_choice",
+        "items": 4,
+        "description": "Choose the correct answer for what plants need to survive",
+        "scoring": "1 point each, 4 total"
+      },
+      {
+        "name": "Part E: Explain Your Thinking",
+        "type": "short_answer",
+        "items": 2,
+        "description": "Draw and write about a living thing you saw today and why it is living",
+        "scoring": "4 points each, 8 total"
+      }
+    ],
+    "total_points": 35,
+    "passing_threshold": "28 points (80%)",
+    "standards_covered": [
+      "NGSS.K-LS1-1",
+      "NGSS.1-LS1-1"
+    ]
+  },
+  "quiz_questions": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "question": "Which of these is a living thing?",
+      "options": ["Rock", "Cloud", "Dog", "Table"],
+      "correct_answer": "Dog",
+      "objective_id": "f2"
+    },
+    {
+      "id": "q2",
+      "type": "true_false",
+      "question": "A toy car is living because it can move.",
+      "correct_answer": "False",
+      "explanation": "Living things move on their own and need food and water. A toy cannot move by itself.",
+      "objective_id": "f2"
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "question": "What do plants need to grow?",
+      "options": ["Candy", "Water and sunlight", "Video games", "Television"],
+      "correct_answer": "Water and sunlight",
+      "objective_id": "f3"
+    },
+    {
+      "id": "q4",
+      "type": "matching",
+      "question": "Match each animal to how it moves:",
+      "items": [
+        {"animal": "Dog", "movement": "walk"},
+        {"animal": "Bird", "movement": "fly"},
+        {"animal": "Fish", "movement": "swim"},
+        {"animal": "Snake", "movement": "crawl"}
+      ],
+      "correct_answer": {"Dog": "walk", "Bird": "fly", "Fish": "swim", "Snake": "crawl"},
+      "objective_id": "f4"
+    },
+    {
+      "id": "q5",
+      "type": "short_answer",
+      "question": "Name three things that are living.",
+      "sample_answers": ["Tree, Cat, Flower", "Dog, Grass, Butterfly", "Human, Bird, Bean seed"],
+      "correct_answer": "Any 3 living things (plant or animal)",
+      "points": 3,
+      "objective_id": "f1"
+    },
+    {
+      "id": "q6",
+      "question": "What happens to a plant if you give it no water?",
+      "type": "prediction",
+      "correct_answer": "It will wilt/die/become dry",
+      "explanation": "Plants need water to stay alive and make food. Without water, they cannot survive.",
+      "points": 2,
+      "objective_id": "f3"
+    },
+    {
+      "id": "q7",
+      "type": "multiple_choice",
+      "question": "Which animal swims?",
+      "options": ["Dog", "Frog", "Eagle", "Cat"],
+      "correct_answer": "Frog",
+      "objective_id": "f4"
+    },
+    {
+      "id": "q8",
+      "question": "Is a flower living? Why or why not?",
+      "type": "explain",
+      "correct_answer": "Yes, because it grows, needs water and sunlight, and responds to the environment",
+      "points": 3,
+      "objective_id": "f2"
+    },
+    {
+      "id": "q9",
+      "type": "sorting",
+      "question": "Put these in the right group: Sun, Cat, Book, Tree, Car, Butterfly",
+      "correct_answer": {"Living": ["Cat", "Tree", "Butterfly"], "Not Living": ["Sun", "Book", "Car"]},
+      "points": 6,
+      "objective_id": "f2"
+    },
+    {
+      "id": "q10",
+      "type": "multiple_choice",
+      "question": "What is the job of the roots?",
+      "options": ["To make flowers", "To hold the plant and take in water", "To make seeds", "To attract bees"],
+      "correct_answer": "To hold the plant and take in water",
+      "objective_id": "f3"
+    }
+  ],
+  "rubrics": {
+    "formative_scoring": {
+      "exceeds": "90-100% of points",
+      "meets": "80-89% of points",
+      "approaching": "70-79% of points",
+      "below": "Below 70% - needs intervention"
+    },
+    "summative_scoring": {
+      "exceeds": "90-100% (32-35 points)",
+      "meets": "80-89% (28-31 points)",
+      "approaching": "70-79% (24-27 points)",
+      "below": "Below 70% (below 24 points)"
+    }
+  }
+}
