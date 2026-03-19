@@ -1,21 +1,6 @@
 {
   "queue": [
     {
-      "id": "1a618151",
-      "grade": 1,
-      "module": 4,
-      "topic": "Sky Patterns",
-      "status": "queued",
-      "version": 1,
-      "score": 0.0,
-      "issues": [],
-      "test_results": {},
-      "standards_alignment": {},
-      "created_at": "2026-03-19T20:47:40.065260",
-      "deployed_at": "",
-      "duration_seconds": 0.0
-    },
-    {
       "id": "943db49a",
       "grade": 1,
       "module": 5,
@@ -97,16 +82,33 @@
       "created_at": "2026-03-19T20:47:40.061445",
       "deployed_at": "2026-03-19T20:47:46.651340",
       "duration_seconds": 2.214152
+    },
+    {
+      "id": "1a618151",
+      "grade": 1,
+      "module": 4,
+      "topic": "Sky Patterns",
+      "status": "complete",
+      "version": 1,
+      "score": 100,
+      "issues": [
+        "systems_literacy: 'Lesson' object has no attribute 'grade_band'"
+      ],
+      "test_results": {},
+      "standards_alignment": {},
+      "created_at": "2026-03-19T20:47:40.065260",
+      "deployed_at": "2026-03-19T20:47:48.714967",
+      "duration_seconds": 2.048845
     }
   ],
   "stats": {
-    "total_processed": 7,
-    "passed": 7,
+    "total_processed": 8,
+    "passed": 8,
     "failed": 0,
     "average_score": 100.0,
-    "total_duration": 16.053106,
+    "total_duration": 18.101951,
     "by_stage": {
-      "complete": 7
+      "complete": 8
     }
   },
   "config": {
@@ -119,5 +121,5 @@
     "parallel_agents": false,
     "strict_mode": false
   },
-  "saved_at": "2026-03-19T20:47:46.654432"
+  "saved_at": "2026-03-19T20:47:48.717544"
 }
