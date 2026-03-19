@@ -1,116 +1,17 @@
 {
-  "queue": [
-    {
-      "id": "be3f4cbd",
-      "grade": 1,
-      "module": 1,
-      "topic": "Living Things",
-      "status": "queued",
-      "version": 1,
-      "score": 0.0,
-      "issues": [],
-      "test_results": {},
-      "standards_alignment": {},
-      "created_at": "2026-03-19T20:47:40.053781",
-      "deployed_at": "",
-      "duration_seconds": 0.0
-    },
-    {
-      "id": "bca0d473",
-      "grade": 1,
-      "module": 2,
-      "topic": "Matter",
-      "status": "queued",
-      "version": 1,
-      "score": 0.0,
-      "issues": [],
-      "test_results": {},
-      "standards_alignment": {},
-      "created_at": "2026-03-19T20:47:40.057643",
-      "deployed_at": "",
-      "duration_seconds": 0.0
-    },
-    {
-      "id": "d3a8b19b",
-      "grade": 1,
-      "module": 3,
-      "topic": "Light and Shadow",
-      "status": "queued",
-      "version": 1,
-      "score": 0.0,
-      "issues": [],
-      "test_results": {},
-      "standards_alignment": {},
-      "created_at": "2026-03-19T20:47:40.061445",
-      "deployed_at": "",
-      "duration_seconds": 0.0
-    },
-    {
-      "id": "1a618151",
-      "grade": 1,
-      "module": 4,
-      "topic": "Sky Patterns",
-      "status": "queued",
-      "version": 1,
-      "score": 0.0,
-      "issues": [],
-      "test_results": {},
-      "standards_alignment": {},
-      "created_at": "2026-03-19T20:47:40.065260",
-      "deployed_at": "",
-      "duration_seconds": 0.0
-    },
-    {
-      "id": "943db49a",
-      "grade": 1,
-      "module": 5,
-      "topic": "Sound",
-      "status": "queued",
-      "version": 1,
-      "score": 0.0,
-      "issues": [],
-      "test_results": {},
-      "standards_alignment": {},
-      "created_at": "2026-03-19T20:47:40.068874",
-      "deployed_at": "",
-      "duration_seconds": 0.0
-    },
-    {
-      "id": "b8e6e5ee",
-      "grade": 1,
-      "module": 6,
-      "topic": "Sorting and Classifying",
-      "status": "queued",
-      "version": 1,
-      "score": 0.0,
-      "issues": [],
-      "test_results": {},
-      "standards_alignment": {},
-      "created_at": "2026-03-19T20:47:40.072056",
-      "deployed_at": "",
-      "duration_seconds": 0.0
-    }
-  ],
-  "completed": [],
+  "status": "running",
+  "queue_length": 5,
+  "completed": 1,
+  "failed": 0,
   "stats": {
-    "total_processed": 4,
-    "passed": 4,
+    "total_processed": 5,
+    "passed": 5,
     "failed": 0,
     "average_score": 100.0,
-    "total_duration": 9.496784000000002,
+    "total_duration": 11.774833000000001,
     "by_stage": {
-      "complete": 4
+      "complete": 5
     }
   },
-  "config": {
-    "min_score": 60,
-    "max_retries": 3,
-    "auto_deploy": true,
-    "github_enabled": true,
-    "dashboard_enabled": true,
-    "notification_enabled": false,
-    "parallel_agents": false,
-    "strict_mode": false
-  },
-  "saved_at": "2026-03-19T20:47:40.072638"
+  "uptime": "2026-03-19T20:47:42.364212"
 }

@@ -1,21 +1,6 @@
 {
   "queue": [
     {
-      "id": "be3f4cbd",
-      "grade": 1,
-      "module": 1,
-      "topic": "Living Things",
-      "status": "queued",
-      "version": 1,
-      "score": 0.0,
-      "issues": [],
-      "test_results": {},
-      "standards_alignment": {},
-      "created_at": "2026-03-19T20:47:40.053781",
-      "deployed_at": "",
-      "duration_seconds": 0.0
-    },
-    {
       "id": "bca0d473",
       "grade": 1,
       "module": 2,
@@ -91,15 +76,33 @@
       "duration_seconds": 0.0
     }
   ],
-  "completed": [],
+  "completed": [
+    {
+      "id": "be3f4cbd",
+      "grade": 1,
+      "module": 1,
+      "topic": "Living Things",
+      "status": "complete",
+      "version": 1,
+      "score": 100,
+      "issues": [
+        "systems_literacy: 'Lesson' object has no attribute 'grade_band'"
+      ],
+      "test_results": {},
+      "standards_alignment": {},
+      "created_at": "2026-03-19T20:47:40.053781",
+      "deployed_at": "2026-03-19T20:47:42.352162",
+      "duration_seconds": 2.278049
+    }
+  ],
   "stats": {
-    "total_processed": 4,
-    "passed": 4,
+    "total_processed": 5,
+    "passed": 5,
     "failed": 0,
     "average_score": 100.0,
-    "total_duration": 9.496784000000002,
+    "total_duration": 11.774833000000001,
     "by_stage": {
-      "complete": 4
+      "complete": 5
     }
   },
   "config": {
@@ -112,5 +115,5 @@
     "parallel_agents": false,
     "strict_mode": false
   },
-  "saved_at": "2026-03-19T20:47:40.072638"
+  "saved_at": "2026-03-19T20:47:42.354595"
 }
