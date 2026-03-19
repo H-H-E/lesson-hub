@@ -1,0 +1,283 @@
+# Nature of Code Curriculum Pipeline
+#
+# Comprehensive curriculum pipeline based on Daniel Shiffman's "The Nature of Code"
+# Generates structured, simulation-focused programming lessons with p5.js
+#
+# The book covers: Randomness → Vectors → Forces → Oscillation → Particles → 
+#                 Autonomous Agents → Physics → Cellular Automata → Fractals → 
+#                 Genetic Algorithms → Neural Networks → Neuroevolution
+
+input topic: "Nature of Code - Simulating Natural Phenomena with Code"
+input target_audience: "Intermediate programmers with p5.js basics"
+input num_weeks: 14  # Standard semester length
+input num_lessons_per_week: 2
+
+# Agent definitions
+agent curriculum_architect:
+  model: sonnet
+  prompt: """
+You are a curriculum architect specializing in computational thinking and simulation.
+You design curricula that follow The Nature of Code philosophy:
+- Start with observation of natural phenomena
+- Extract algorithmic rules
+- Implement in code
+- Iterate and explore
+
+Structure lessons to build intuition before formalization.
+"""
+
+agent content_developer:
+  model: sonnet
+  prompt: """
+You are a creative coding educator specializing in p5.js and Processing.
+You create:
+- Engaging visual demonstrations
+- Interactive simulations
+- Code that reveals mathematical beauty
+- Explorations that inspire wonder
+
+Use Daniel Shiffman's teaching style: playful, exploratory, visually striking.
+"""
+
+agent simulation_engineer:
+  model: sonnet
+  prompt: """
+You are a simulation engineer who builds working p5.js sketches.
+You write:
+- Clean, readable p5.js code
+- Object-oriented simulations
+- Physically accurate (but simplified) models
+- Code that runs directly in the p5.js web editor
+
+Focus on making the math visible and tangible.
+"""
+
+agent assessor:
+  model: sonnet
+  prompt: """
+You are an educational assessor focused on:
+- Conceptual understanding (can they explain WHY?)
+- Code comprehension (can they read and modify?)
+- Creative application (can they extend to new cases?)
+- Debugging skills (can they find and fix issues?)
+
+Create assessments that test deep understanding, not just memorization.
+"""
+
+agent ecosystem_curator:
+  model: sonnet
+  prompt: """
+You create culminating projects that tie concepts together.
+Following The Nature of Code's "Ecosystem Project" tradition:
+- Build a coherent system over time
+- Integrate multiple chapter concepts
+- Allow creative expression within constraints
+- Document and reflect on the process
+
+Guide students to create something meaningful to them.
+"""
+
+# Phase 1: Curriculum Architecture
+session "Designing Nature of Code curriculum architecture"
+
+let curriculum_structure = session: curriculum_architect
+  prompt: """
+Design a {num_weeks}-week curriculum based on The Nature of Code.
+
+BOOK STRUCTURE:
+Part 1: INANIMATE OBJECTS (Weeks 1-4)
+- Chapter 0: Randomness
+- Chapter 1: Vectors  
+- Chapter 2: Forces
+- Chapter 3: Oscillation
+- Chapter 4: Particle Systems
+
+Part 2: IT'S ALIVE! (Weeks 5-8)
+- Chapter 5: Autonomous Agents
+- Chapter 6: Physics Libraries
+- Chapter 7: Cellular Automata
+- Chapter 8: Fractals
+
+Part 3: INTELLIGENCE (Weeks 9-12)
+- Chapter 9: Evolutionary Computing
+- Chapter 10: Neural Networks
+- Chapter 11: Neuroevolution
+
+Week 13-14: Final Projects
+
+For each week, specify:
+1. Topics covered (from chapters above)
+2. Learning objectives (what students will understand)
+3. Key simulations they'll build
+4. Prerequisite concepts they need
+5. How it connects to the Ecosystem Project
+
+Return structured curriculum map.
+"""
+  output: json
+
+# Phase 2: Generate Weekly Modules
+loop for each week in curriculum_structure.weeks:
+
+  # 2a. Conceptual Foundation
+  session "Week {week.number}: {week.title}"
+  
+  let conceptual_lesson = session: content_developer
+    prompt: """
+Create the conceptual foundation for Week {week.number}: {week.title}
+
+Target: {target_audience}
+Topics: {week.topics}
+Prerequisites: {week.prerequisites}
+
+Structure:
+1. Opening hook - Show a stunning natural phenomenon (video/gif)
+2. The question - "How would we model this computationally?"
+3. Historical context - Who studied this? What are the key insights?
+4. The math (gently) - Only enough to implement
+5. First code - Minimal working example
+
+Make it accessible but respect the complexity.
+"""
+    context: week
+
+  # 2b. Build the Simulation
+  let simulation_code = session: simulation_engineer
+    prompt: """
+Create a p5.js simulation for Week {week.number}: {week.title}
+
+Topic: {week.title}
+Learning objectives: {week.learning_objectives}
+
+Create:
+1. A complete, working p5.js sketch
+2. Well-commented code (inline explanations)
+3. Variables that students can tweak
+4. Visual output that reveals the underlying math
+
+The code should be copy-pasteable into editor.p5js.org
+
+Include:
+- setup() and draw() functions
+- Object-oriented design where appropriate
+- Comments explaining each major section
+"""
+    context: conceptual_lesson
+
+  # 2c. Exercises and Challenges
+  let exercises = session: content_developer
+    prompt: """
+Create exercises for Week {week.number}: {week.title}
+
+Concept: {week.title}
+Main simulation: {simulation_code}
+
+Create 3-4 exercises in increasing difficulty:
+
+EXERCISE 1: Basic (everyone should attempt)
+- Modify one parameter
+- Change one behavior
+- Expected completion: 10 min
+
+EXERCISE 2: Intermediate (most students)
+- Add a new feature
+- Combine with previous concepts
+- Expected completion: 30 min
+
+EXERCISE 3: Challenge (for advanced students)
+- Open-ended exploration
+- Creative extension
+- No expected completion time
+
+For each exercise:
+- Clear instructions
+- Hints for stuck students
+- Extension questions for fast finishers
+
+Also include 1 "watch this" video recommendation from The Coding Train.
+"""
+    context: { week, simulation_code }
+
+  # 2d: Assessment
+  let assessment = session: assessor
+    prompt: """
+Create assessment for Week {week.number}: {week.title}
+
+Topics: {week.topics}
+Simulations: {simulation_code}
+
+Create:
+1. Concept check questions (3-5 multiple choice or short answer)
+   - Test understanding of WHY, not just WHAT
+   
+2. Code reading exercise
+   - Given a sketch, predict its behavior
+   - Find the bug in a broken sketch
+   
+3. Code writing exercise
+   - Write a sketch that demonstrates X
+   - Similar to but not identical to exercises
+
+Return as structured quiz that could be auto-graded.
+"""
+    context: { week, simulation_code, exercises }
+
+# Phase 3: The Ecosystem Project
+session "Designing the Ecosystem Project"
+
+let ecosystem_project = session: ecosystem_curator
+  prompt: """
+Create the culminating "Ecosystem Project" for the Nature of Code course.
+
+Target: {target_audience}
+Duration: Weeks 1-14 (ongoing project)
+
+Following the book's tradition:
+- A digital ecosystem of procedural creatures
+- Each creature has physics, behavior, appearance
+- Creatures interact, evolve, compete
+- Student personalizes their vision
+
+Structure:
+1. Week 1-4: Core physics (movement, forces)
+2. Week 5-8: Behaviors (steering, flocking)  
+3. Week 9-12: Intelligence (evolution, learning)
+4. Week 13-14: Polish and presentation
+
+Create:
+- Project specification with milestones
+- Example "baseline" implementation
+- Creative prompt variations (not everyone wants bugs!)
+- Presentation guidelines
+- Reflection questions
+
+Make it achievable but allow for impressive creativity.
+"""
+  context: curriculum_structure
+
+# Phase 4: Integration - Generate Complete Course
+output course = {
+  title: "The Nature of Code",
+  subtitle: "Simulating Natural Phenomena with p5.js",
+  author: "Inspired by Daniel Shiffman",
+  
+  structure: curriculum_structure,
+  
+  weeks: [week_1, week_2, ..., week_{num_weeks}],
+  
+  ecosystem_project: ecosystem_project,
+  
+  metadata: {
+    duration: "{num_weeks} weeks",
+    prerequisites: "Basic p5.js or Processing experience",
+    tools: ["p5.js", "code editor", "web browser"],
+    community: ["Coding Train Discord", "Processing Forums"]
+  }
+}
+
+output stats = {
+  weeks_designed: {num_weeks},
+  lessons_created: {num_weeks} conceptual + {num_weeks} simulations,
+  exercises_created: {num_weeks} * 4,
+  assessments_created: {num_weeks}
+}
