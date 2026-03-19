@@ -490,10 +490,14 @@ Students work through the interactive simulation. Walk around and help.
         # Push to GitHub
         print("Pushing to GitHub...")
         
-        # Add and commit
-        subprocess.run(['git', 'add', '-A'], check=True)
+        # Add and commit (don't fail if nothing to commit)
+        subprocess.run(['git', 'add', '-A'])
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M')
-        subprocess.run(['git', 'commit', '-m', f'Lesson update: {timestamp}'], check=True)
+        commit_result = subprocess.run(['git', 'commit', '-m', f'Lesson update: {timestamp}'], capture_output=True)
+        
+        if commit_result.returncode != 0:
+            print("No new changes to push")
+            return
         
         # Push using gh auth token
         import getpass
