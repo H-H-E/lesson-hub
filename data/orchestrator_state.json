@@ -1,14 +1,6 @@
 {
   "queue": [
     {
-      "grade": 2,
-      "module": 2,
-      "topic": "Properties",
-      "version": 1,
-      "score": 0.0,
-      "status": "pending"
-    },
-    {
       "grade": 3,
       "module": 1,
       "topic": "Biodiversity",
@@ -49,7 +41,7 @@
       "status": "pending"
     }
   ],
-  "completed": 4,
+  "completed": 5,
   "failed": 0,
-  "last_updated": "2026-03-19T20:19:09.891710"
+  "last_updated": "2026-03-19T20:19:12.052760"
 }
