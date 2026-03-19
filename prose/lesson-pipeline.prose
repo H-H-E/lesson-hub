@@ -1,0 +1,254 @@
+# Lesson Generation Pipeline
+#
+# Generates structured, consistent lessons with quality control.
+# From topic to publishable lesson in one run.
+# Uses AI agents for design, creation, testing, and review.
+#
+# Usage: Provide topic, target audience, and lesson parameters
+
+input topic: "The subject to create lessons about (e.g., 'p5.js basics', 'Python for beginners')"
+input target_audience: "Who are the learners? (e.g., 'middle school students', 'adult beginners')"
+input num_lessons: 5
+input lesson_duration: "45 minutes"  # Target duration per lesson
+
+# Agent definitions
+agent curriculum_designer:
+  model: sonnet
+  prompt: """
+You are a curriculum design specialist. You create:
+- Clear learning objectives
+- Logical lesson progression
+- Appropriate scaffolding for the audience
+- Assessment strategies
+
+Focus on backward design: start with outcomes, then create activities.
+"""
+
+agent content_creator:
+  model: sonnet
+  prompt: """
+You are an educational content creator. You create:
+- Engaging lesson content
+- Interactive elements
+- Clear explanations at the right level
+- Practice activities
+
+Make content interactive and hands-on where possible.
+"""
+
+agent lesson_tester:
+  model: sonnet
+  prompt: """
+You are a teaching assistant simulating a tutoring session.
+Your job is to TEST lessons by:
+1. Pretending to be a student going through the lesson
+2. Asking questions a student would ask
+3. Identifying confusing parts
+4. Checking if learning objectives are met
+
+Be constructive but thorough. Look for gaps.
+"""
+
+agent reviewer:
+  model: sonnet
+  prompt: """
+You are a senior educator reviewing lessons for:
+- Alignment with learning objectives
+- Appropriate difficulty for audience
+- Clarity and engagement
+- Assessment validity
+- Consistency across lessons
+
+Be demanding. Only approve lessons that are truly ready.
+"""
+
+# Phase 1: Curriculum Design
+session "Designing curriculum for: {topic}"
+
+let curriculum = session: curriculum_designer
+  prompt: """
+Create a curriculum structure for: {topic}
+
+Target audience: {target_audience}
+Number of lessons: {num_lessons}
+Lesson duration: {lesson_duration}
+
+For EACH lesson, specify:
+1. Title (clear, engaging)
+2. Learning objectives (2-4 specific, measurable)
+3. Key concepts to cover
+4. Suggested activities
+5. Assessment type
+
+Return as structured JSON that can be parsed.
+"""
+  output: json
+
+# Phase 2: Content Creation Loop
+loop for each lesson in curriculum.lessons:
+  session "Creating lesson: {lesson.title}"
+  
+  let lesson_content = session: content_creator
+    prompt: """
+Create complete lesson content for:
+
+Title: {lesson.title}
+Learning Objectives: {lesson.objectives}
+Target: {target_audience}
+Duration: {lesson_duration}
+
+Include:
+1. Opening hook (engaging intro)
+2. Direct instruction content
+3. Interactive demo/explanation
+4. Guided practice activity
+5. Independent practice
+6. Quick assessment/quiz
+7. Summary/closing
+
+Make it practical and ready to teach.
+"""
+    context: lesson
+
+# Phase 3: Testing Loop
+  let test_results = session: lesson_tester
+    prompt: """
+Test this lesson by simulating a tutoring session:
+
+Lesson: {lesson_content.title}
+Objectives: {lesson_content.objectives}
+Content: {lesson_content.body}
+
+Simulate a student going through:
+1. The opening - is it engaging?
+2. The explanations - are they clear?
+3. The activities - are they doable?
+4. The quiz - does it assess the objectives?
+
+Identify:
+- Confusion points
+- Missing information
+- Timing issues
+- Engagement concerns
+
+Return structured feedback.
+"""
+    context: lesson_content
+
+# Phase 4: Review Loop
+  let review = session: reviewer
+    prompt: """
+Review this lesson for publication readiness:
+
+Lesson: {lesson_content.title}
+Objectives: {lesson_content.objectives}
+Content: {lesson_content}
+Test feedback: {test_results}
+
+Rate each area 1-10:
+- Alignment with objectives
+- Audience appropriateness  
+- Clarity and engagement
+- Assessment quality
+- Consistency with other lessons
+
+Decision: APPROVED / NEEDS_REVISION
+
+If NEEDS_REVISION, specify what must be fixed.
+"""
+    context: { lesson_content, test_results }
+
+# Loop until approved (max 3 iterations)
+loop until **lesson is approved** (max: 3):
+  if **needs revision**:
+    lesson_content = session: content_creator
+      prompt: """
+Revise this lesson based on review feedback:
+
+Original: {lesson_content}
+Review: {review}
+Test feedback: {test_results}
+
+Fix the issues identified. Keep what's working.
+"""
+      context: { lesson_content, review, test_results }
+    
+    # Re-test after revision
+    test_results = session: lesson_tester
+      prompt: """
+Re-test the revised lesson:
+
+Revised: {lesson_content}
+Original concerns: {test_results}
+
+Did we fix the issues? Any new concerns?
+"""
+      context: lesson_content
+
+# Phase 5: Generate Teacher Script
+  let teacher_script = session: curriculum_designer
+    prompt: """
+Create a teacher script for this lesson:
+
+Lesson: {lesson_content.title}
+Objectives: {lesson_content.objectives}
+Content: {lesson_content}
+
+For each section, write:
+1. Timing (how long)
+2. What to SAY (exact script)
+3. What to DO (actions)
+4. Questions to ASK (discussion prompts)
+5. Things to WATCH FOR (common issues)
+
+Format as a practical teaching guide.
+"""
+    context: lesson_content
+
+# Phase 6: Generate Student View
+  let student_content = session: content_creator
+    prompt: """
+Create student-facing content from this lesson:
+
+Lesson: {lesson_content.title}
+Objectives: {lesson_content.objectives}
+Content: {lesson_content}
+
+Format as:
+1. Clear objectives (what they'll learn)
+2. Interactive content they can follow
+3. Practice they can do
+4. Quiz to check understanding
+
+Make it self-guided and engaging.
+"""
+    context: lesson_content
+
+# Output the complete lesson package
+output lesson_{lesson.number} = {
+  id: lesson.number,
+  title: lesson_content.title,
+  objectives: lesson_content.objectives,
+  content: lesson_content.body,
+  teacher_script: teacher_script,
+  student_content: student_content,
+  quiz: lesson_content.quiz,
+  test_results: test_results,
+  review: review,
+  approved: true
+}
+
+# Final output
+output curriculum = {
+  topic: {topic},
+  audience: {target_audience},
+  lessons: [lesson_1, lesson_2, ..., lesson_{num_lessons}],
+  total_duration: {num_lessons} x {lesson_duration}
+}
+
+output stats = {
+  lessons_created: {num_lessons},
+  lessons_approved: count of approved lessons,
+  total_revisions: sum of all revision counts,
+  average_review_score: average across all reviews
+}
