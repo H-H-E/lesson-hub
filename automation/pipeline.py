@@ -487,14 +487,28 @@ Students work through the interactive simulation. Walk around and help.
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M')
         subprocess.run(['git', 'commit', '-m', f'Lesson update: {timestamp}'])
         
-        # Push
+        # Push to GitHub
         print("Pushing to GitHub...")
-        result = subprocess.run(['git', 'push', 'origin', 'master'], capture_output=True)
+        
+        # Add and commit
+        subprocess.run(['git', 'add', '-A'], check=True)
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M')
+        subprocess.run(['git', 'commit', '-m', f'Lesson update: {timestamp}'], check=True)
+        
+        # Push using gh auth token
+        import getpass
+        token = os.popen("gh auth token").read().strip()
+        
+        result = subprocess.run([
+            'git', 'push', 
+            f'https://x-access-token:{token}@github.com/H-H-E/lesson-hub.git',
+            'master'
+        ], capture_output=True)
         
         if result.returncode == 0:
             print("✅ Pushed to https://github.com/H-H-E/lesson-hub")
         else:
-            print(f"⚠️ Push failed: {result.stderr.decode()}")
+            print(f"⚠️ Push warning: {result.stderr.decode()[:100]}")
 
 
 def run_pipeline(stage=None, topic="p5.js basics", lessons=5):
