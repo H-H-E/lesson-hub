@@ -3,42 +3,37 @@
 
 **Duration:** 45 minutes
 **Version:** 1
+**Systems Literacy Alignment:** See standards section
 
 ---
 
-## Learning Objectives
+## 🎯 Learning Objectives
 
 By end of lesson, students will be able to:
 1. [SMART objective 1]
-2. [SMART objective 2]  
+2. [SMART objective 2]
 3. [SMART objective 3]
 
 ---
 
-## Materials
 
-- [ ] Required materials
-- [ ] Handouts
-- [ ] Technology access
 
----
+## 🧪 Lesson Sequence
 
-## Lesson Sequence
+### The Hook (5 min)
+[Engaging mystery or question]
 
-### Opening (5 min)
-**Hook:** [Engaging introduction]
+### Explore (15 min)
+[Hands-on activity]
 
-### Exploration (15 min)
-**Activity:** [Hands-on exploration]
-
-### Discovery (10 min)
-**Discussion:** [Key concepts]
+### Discover (10 min)
+[Discussion and formalization]
 
 ### Create (10 min)
-**Activity:** [Student creation]
+[Student creation]
 
 ### Check (5 min)
-**Exit ticket:** [Quick assessment]
+[Exit ticket]
 
 ---
 
@@ -47,7 +42,6 @@ By end of lesson, students will be able to:
 ### Level 1 (Highest Support)
 - Step-by-step instructions
 - Visual guides
-- Teacher support
 
 ### Level 2 (Guided)
 - Partner work
@@ -55,11 +49,10 @@ By end of lesson, students will be able to:
 
 ### Level 3 (Extension)
 - Open challenges
-- Independent research
 
----
 
-## Assessment
+
+## 📝 Assessment
 
 ### Formative
 - Observation
@@ -67,81 +60,24 @@ By end of lesson, students will be able to:
 - Exit ticket
 
 ### Summative
-- Project or quiz
+- [Project description]
+
+
 
 ---
 
-## First Peoples Integration
+## 🌍 Systems Literacy Connection
 
-[Where appropriate, connect to local Indigenous knowledge]
+> *"You are not a lone creature being bossed around by morality; you are a living process inside other living processes."*
 
----
+### Chapter Connection
+This lesson connects to the larger story of systems literacy.
 
-*Designed by AI Pipeline v2*
+### 💡 Key Metaphor
+[Metaphor specific to Matter]
 
+### 📔 Explorer's Journal
+1. One thing that surprised me...
+2. One question I'm still wondering...
+3. One connection to my life...
 
-## Detailed Activities
-
-### Activity 1: [Name]
-**Time:** 10 minutes
-**Materials:** [List]
-**Procedure:**
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
-
-**Differentiation Tips:**
-- Level 1: [Support]
-- Level 2: [Guidance]  
-- Level 3: [Extension]
-
-### Activity 2: [Name]
-**Time:** 15 minutes
-[Similar structure]
-
----
-
-## Student Version
-
-[Simplified version for students to follow independently]
-
----
-
-## Teacher Version
-
-[Detailed notes for teachers including:
-- Common questions
-- What to watch for
-- Timing adjustments
-- Discussion prompts]
-
-
-## Interactive Simulation
-
-p5.js code available: `CODE-GRADE1-MODULE2.py`
-
-Copy/paste into editor.p5js.org to run.
-
-
-## Assessments
-
-### Quiz (5 questions)
-1. [Question 1]
-   a) [Option A]
-   b) [Option B] ✓
-   c) [Option C]
-   
-2. [Question 2]
-[...]
-
-### Rubric
-
-| Criteria | 1 | 2 | 3 | 4 |
-|----------|---|---|---|---|
-| [Criterion 1] | | | | |
-| [Criterion 2] | | | | |
-
-### Self-Assessment
-- [ ] I can do this
-- [ ] I need practice
-- [ ] I need help
