@@ -24,3 +24,14 @@
 2026-03-19 20:46:02,852 | INFO | 🚀 Deployed: Biodiversity
 2026-03-19 20:46:02,852 | INFO | ✅ COMPLETE: Biodiversity (Score: 100.0)
 2026-03-19 20:46:02,859 | INFO | 📦 Batch complete: 4 lessons
+2026-03-19 20:47:40,052 | INFO | 📂 Restored state: 0 queued
+2026-03-19 20:47:40,053 | INFO | 🎯 Pipeline Orchestrator initialized
+2026-03-19 20:47:40,053 | INFO | 📝 Queued: Grade 1 Module 1 - Living Things
+2026-03-19 20:47:40,057 | INFO | 📝 Queued: Grade 1 Module 2 - Matter
+2026-03-19 20:47:40,061 | INFO | 📝 Queued: Grade 1 Module 3 - Light and Shadow
+2026-03-19 20:47:40,065 | INFO | 📝 Queued: Grade 1 Module 4 - Sky Patterns
+2026-03-19 20:47:40,068 | INFO | 📝 Queued: Grade 1 Module 5 - Sound
+2026-03-19 20:47:40,072 | INFO | 📝 Queued: Grade 1 Module 6 - Sorting and Classifying
+2026-03-19 20:47:40,075 | INFO | 📦 Starting batch processing (max: 10)
+2026-03-19 20:47:40,075 | INFO | 🔄 Processing: Living Things (Grade 1)
+2026-03-19 20:47:40,087 | ERROR |   ✗ systems_literacy: 'Lesson' object has no attribute 'grade_band'
