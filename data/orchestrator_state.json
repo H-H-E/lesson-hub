@@ -2,14 +2,6 @@
   "queue": [
     {
       "grade": 4,
-      "module": 1,
-      "topic": "Senses",
-      "version": 1,
-      "score": 0.0,
-      "status": "pending"
-    },
-    {
-      "grade": 4,
       "module": 2,
       "topic": "Energy",
       "version": 1,
@@ -25,7 +17,7 @@
       "status": "pending"
     }
   ],
-  "completed": 7,
+  "completed": 8,
   "failed": 0,
-  "last_updated": "2026-03-19T20:19:16.145499"
+  "last_updated": "2026-03-19T20:19:18.193401"
 }

@@ -1,158 +1,147 @@
 # Grade 4 Science - Module 2
-## Ecosystems and Habitats
+## Energy
 
-**Duration:** 60 minutes (Lesson 1 of 5)
-**Grade:** 4
-**Curriculum Area:** Science - Life Sciences
+**Duration:** 45 minutes
+**Version:** 1
 
 ---
 
-## Learning Objectives (SMART)
+## Learning Objectives
 
-By the end of this lesson, students will be able to:
+By end of lesson, students will be able to:
+1. [SMART objective 1]
+2. [SMART objective 2]  
+3. [SMART objective 3]
 
-1. **Define** the terms "ecosystem," "habitat," and "community" with 90% accuracy on an exit ticket
-2. **Identify** at least 3 components of a local ecosystem (producers, consumers, decomposers) through guided observation
-3. **Analyze** how living and non-living elements interact within a habitat using a graphic organizer
-4. **Compare** differences between terrestrial and aquatic ecosystems with 80% accuracy
+---
+
+## Materials
+
+- [ ] Required materials
+- [ ] Handouts
+- [ ] Technology access
 
 ---
 
 ## Lesson Sequence
 
-### Opening (10 min)
-**Hook:** Show a 2-minute video clip of a forest ecosystem or display a detailed image of a pond habitat.
+### Opening (5 min)
+**Hook:** [Engaging introduction]
 
-*Teacher prompts:*
-- "What do you see in this picture?"
-- "How are the plants and animals connected?"
-- "What would happen if one piece disappeared?"
+### Exploration (15 min)
+**Activity:** [Hands-on exploration]
 
-**Whole Class Discussion:** Introduce key vocabulary - ecosystem, habitat, community, biotic, abiotic.
-
-### Exploration (20 min)
-**Activity: Ecosystem in a Bag Investigation**
-
-Students work in groups of 3-4 to examine a sealed ecosystem-in-a-bag (terrarium or aquarium sample):
-
-| Observation Station | What to Look For |
-|---------------------|------------------|
-| Living things | Plants, animals, insects |
-| Non-living things | Water, soil, rocks, sunlight |
-| Interactions | How things affect each other |
-
-Groups record observations on handout and hypothesize about:
-- What might eat what?
-- Where does energy come from?
-- What would happen if we added/removed something?
-
-### Discovery (15 min)
-**Interactive Mini-Lesson: Ecosystem Roles**
-
-Introduce the three main roles using visual cards:
-- **Producers:** Plants make their own food (photosynthesis)
-- **Consumers:** Animals that eat plants or other animals
-- **Decomposers:** Fungi and bacteria that break down dead things
-
-*Connection to First Peoples:* "Many Indigenous communities understand these roles through the concept of the 'food web' - all living things are connected. The Haudenosaunee (Iroquois) concept of *The Great Law of Peace* reminds us that all parts of creation have a purpose and must be balanced."
+### Discovery (10 min)
+**Discussion:** [Key concepts]
 
 ### Create (10 min)
-**Activity: Build an Ecosystem Model**
-
-Students use provided materials (paper plates, craft supplies, printed images) to create a 2D model of one ecosystem type:
-- Forest
-- Pond
-- Desert
-- Tundra
-
-Must include: at least 2 producers, 2 consumers, 1 decomposer, and 3 abiotic factors
+**Activity:** [Student creation]
 
 ### Check (5 min)
-**Exit Ticket:** 
-- Define ecosystem in your own words
-- Draw one connection between living and non-living things
+**Exit ticket:** [Quick assessment]
 
 ---
 
 ## Differentiation
 
-### Level 1 - Support
-- Pre-teach vocabulary with picture cards
-- Provide a word bank for written responses
-- Partner students with a peer mentor
-- Offer a partially completed graphic organizer
-- Allow verbal responses as alternative to writing
+### Level 1 (Highest Support)
+- Step-by-step instructions
+- Visual guides
+- Teacher support
 
-### Level 2 - Guided
-- Provide sentence stems for definitions
-- Offer choice of ecosystem type
-- Include checking questions in activity sheets
-- Allow collaboration with peers
+### Level 2 (Guided)
+- Partner work
+- Checkpoints
 
-### Level 3 - Extension
-- Research a unique ecosystem (coral reef, tundra)
-- Create a food chain diagram for their ecosystem
-- Investigate human impacts on ecosystems
-- Write a creative story from an organism's perspective
+### Level 3 (Extension)
+- Open challenges
+- Independent research
 
 ---
 
 ## Assessment
 
-### Formative Assessment
-- **Observation Checklist:** Monitor group participation and scientific thinking
-- **Graphic Organizer:** Check for completion and accuracy during exploration
-- **Exit Ticket:** Assess understanding of key vocabulary (threshold: 80% accuracy)
+### Formative
+- Observation
+- Discussion
+- Exit ticket
 
-### Summative Assessment Options
-- **Option A:** Ecosystem Project - Create a detailed ecosystem model with written explanation
-- **Option B:** Ecosystem Test - Multiple choice and short answer covering all vocabulary and concepts
-- **Option C:** Ecosystem Interview - Oral presentation explaining their ecosystem model
-
-### Success Criteria
-- [ ] Correctly uses vocabulary (ecosystem, habitat, biotic, abiotic)
-- [ ] Identifies producers, consumers, decomposers
-- [ ] Shows understanding of interactions between living/non-living elements
-- [ ] Communicates findings clearly
+### Summative
+- Project or quiz
 
 ---
 
 ## First Peoples Integration
 
-### Content Connections
-- **Secwepemc (Shuswap) Territory:** Local ecosystems around Kamloops, BC - pine forests, grasslands, rivers
-- **Coast Salish Territories:** West Coast forest ecosystems, intertidal zones
-- **Haida Gwaii:** Unique island ecosystems with endemic species
-
-### Indigenous Knowledge Integration
-1. **Traditional Ecological Knowledge (TEK):** Many First Peoples understood ecosystems through seasonal rounds - the cyclical movement of animals and plants throughout the year
-2. **Place-based Learning:** Connect to local lands - take students outside to observe a nearby ecosystem if possible
-3. **Storytelling:** Include Indigenous stories about the natural world that teach ecosystem relationships
-
-### Suggested Resources
-- FNESC First Peoples resources for Grade 4 Science
-- Local Elder or knowledge keeper for guest presentation
-- Indigenous plant and animal guides specific to your region
-
-### Cultural Protocols
-- Acknowledge the traditional territory your school is located on
-- Use correct pronunciation of Indigenous names
-- When possible, invite Indigenous community members to share knowledge
+[Where appropriate, connect to local Indigenous knowledge]
 
 ---
 
-## Materials Checklist
+*Designed by AI Pipeline v2*
 
-- [ ] Ecosystem image/video
-- [ ] Ecosystem-in-a-bag samples (3-4)
-- [ ] Magnifying glasses
-- [ ] Graphic organizer handouts
-- [ ] Role cards (producer/consumer/decomposer)
-- [ ] Craft supplies for model building
-- [ ] Printed ecosystem images
-- [ ] Exit tickets
+
+## Detailed Activities
+
+### Activity 1: [Name]
+**Time:** 10 minutes
+**Materials:** [List]
+**Procedure:**
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+
+**Differentiation Tips:**
+- Level 1: [Support]
+- Level 2: [Guidance]  
+- Level 3: [Extension]
+
+### Activity 2: [Name]
+**Time:** 15 minutes
+[Similar structure]
 
 ---
 
-*Designed: 2026-03-19*
-*Aligned with BC Grade 4 Science - Life Sciences*
+## Student Version
+
+[Simplified version for students to follow independently]
+
+---
+
+## Teacher Version
+
+[Detailed notes for teachers including:
+- Common questions
+- What to watch for
+- Timing adjustments
+- Discussion prompts]
+
+
+## Interactive Simulation
+
+p5.js code available: `CODE-GRADE4-MODULE2.py`
+
+Copy/paste into editor.p5js.org to run.
+
+
+## Assessments
+
+### Quiz (5 questions)
+1. [Question 1]
+   a) [Option A]
+   b) [Option B] ✓
+   c) [Option C]
+   
+2. [Question 2]
+[...]
+
+### Rubric
+
+| Criteria | 1 | 2 | 3 | 4 |
+|----------|---|---|---|---|
+| [Criterion 1] | | | | |
+| [Criterion 2] | | | | |
+
+### Self-Assessment
+- [ ] I can do this
+- [ ] I need practice
+- [ ] I need help
