@@ -109,6 +109,9 @@ class Pipeline:
         # Final status
         self.update_status('completed')
         
+        # Push to GitHub
+        self.push_to_github()
+        
         print("\n" + "=" * 60)
         print("✅ OVERNIGHT PIPELINE COMPLETE")
         print(f"📚 {len(curriculum)} lessons processed")
@@ -460,6 +463,38 @@ Students work through the interactive simulation. Walk around and help.
 """)
         
         return '\n\n'.join(sections)
+
+    def push_to_github(self):
+        """Auto-commit and push new lessons to GitHub"""
+        import subprocess
+        import os
+        
+        os.chdir(BASE_DIR)
+        
+        # Check for changes
+        result = subprocess.run(['git', 'diff', '--quiet'], capture_output=True)
+        result_staged = subprocess.run(['git', 'diff', '--staged', '--quiet'], capture_output=True)
+        
+        if result.returncode == 0 and result_staged.returncode == 0:
+            print("No changes to commit")
+            return
+        
+        # Add all changes
+        subprocess.run(['git', 'add', '-A'])
+        
+        # Commit with timestamp
+        from datetime import datetime
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M')
+        subprocess.run(['git', 'commit', '-m', f'Lesson update: {timestamp}'])
+        
+        # Push
+        print("Pushing to GitHub...")
+        result = subprocess.run(['git', 'push', 'origin', 'master'], capture_output=True)
+        
+        if result.returncode == 0:
+            print("✅ Pushed to https://github.com/H-H-E/lesson-hub")
+        else:
+            print(f"⚠️ Push failed: {result.stderr.decode()}")
 
 
 def run_pipeline(stage=None, topic="p5.js basics", lessons=5):
