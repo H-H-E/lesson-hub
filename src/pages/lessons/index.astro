@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const grades = [
+  { level: 1, title: "Grade 1", topics: ["Living Things", "Matter", "Light & Shadow", "Sky Patterns", "Sound", "Sorting"] },
+  { level: 2, title: "Grade 2", topics: ["Life Cycles", "Properties of Matter", "Weather", "Position & Motion", "Growth", "Air"] },
+  { level: 3, title: "Grade 3", topics: ["Biodiversity", "Forces", "Matter", "Climate", "Rocks", "Systems"] },
+  { level: 4, title: "Grade 4", topics: ["Senses", "Light", "Sound", "Energy", "Ecosystems", "Habitats"] },
+  { level: 5, title: "Grade 5", topics: ["Body Systems", "Matter", "Earth Systems", "Chemical", "Space", "Sustainability"] },
+  { level: 6, title: "Grade 6", topics: ["Cells", "Electricity", "Chemistry", "Ecosystems", "Space", "Water"] },
+  { level: 7, title: "Grade 7", topics: ["Evolution", "Chemical Reactions", "Earth History", "Diversity", "Interactions", "Resources"] },
+];
+---
+
+<Layout title="Lessons">
+  <main class="lessons-page">
+    <div class="container">
+      <header class="page-header">
+        <h1>📚 Lessons</h1>
+        <p>Explore our K-7 curriculum aligned with BC Science and CSTA Standards.</p>
+      </header>
+      
+      <div class="grades-grid">
+        {grades.map(grade => (
+          <div class="grade-card">
+            <div class="grade-header">
+              <h2>{grade.title}</h2>
+              <span class="topic-count">{grade.topics.length} topics</span>
+            </div>
+            <ul class="topics-list">
+              {grade.topics.map(topic => (
+                <li>
+                  <a href={`/lessons/grade${grade.level}/${topic.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}>
+                    {topic}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .lessons-page {
+    padding: 60px 0;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .page-header h1 {
+    margin-bottom: 16px;
+  }
+  
+  .page-header p {
+    color: var(--fg-muted);
+    font-size: 1.1rem;
+  }
+  
+  .grades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  
+  .grade-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: all var(--transition);
+  }
+  
+  .grade-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+  }
+  
+  .grade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .grade-header h2 {
+    color: var(--accent);
+  }
+  
+  .topic-count {
+    font-size: 0.8rem;
+    color: var(--fg-muted);
+    background: var(--bg);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+  
+  .topics-list {
+    list-style: none;
+  }
+  
+  .topics-list li {
+    margin-bottom: 8px;
+  }
+  
+  .topics-list a {
+    display: block;
+    padding: 10px 14px;
+    background: var(--bg);
+    border-radius: 8px;
+    color: var(--fg);
+    font-weight: 500;
+    transition: all var(--transition);
+  }
+  
+  .topics-list a:hover {
+    background: var(--accent);
+    color: var(--bg);
+    padding-left: 20px;
+  }
+</style>

@@ -1,0 +1,337 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">✨ AI-Powered Curriculum</div>
+        <h1 class="hero-title">
+          Systems Literacy
+          <span class="highlight">Curriculum</span>
+        </h1>
+        <p class="hero-desc">
+          Transform how students understand themselves and the world. 
+          A K-12 curriculum built on the principle: <em>"You are not a lone creature — you are a living process inside other living processes."</em>
+        </p>
+        <div class="hero-actions">
+          <a href="/lessons" class="btn">
+            Explore Lessons
+            <span>→</span>
+          </a>
+          <a href="/about" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">7</div>
+            <div class="stat-label">Grade Levels</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">42+</div>
+            <div class="stat-label">Lessons</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">27</div>
+            <div class="stat-label">AI Agents</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">BC + CSTA Aligned</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Vision Section -->
+    <section class="vision">
+      <div class="container">
+        <h2>The Vision</h2>
+        <blockquote class="vision-quote">
+          "You are not a lone creature being bossed around by morality; 
+          you are a living process inside other living processes, and 
+          learning to see that is both an introduction to science and an introduction to code."
+        </blockquote>
+        
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-icon">🧬</div>
+            <h3>Self as System</h3>
+            <p>Understand yourself as a dynamic process, not a fixed essence.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">💻</div>
+            <h3>Life as Computation</h3>
+            <p>See biology as information processing and feedback loops.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌍</div>
+            <h3>Society as Systems</h3>
+            <p>Recognize how families, institutions, and cultures emerge.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">⚡</div>
+            <h3>Code as Literacy</h3>
+            <p>Programming as a language for understanding process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2>What You Get</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">📚</div>
+            <h3>BC + CSTA Aligned</h3>
+            <p>Every lesson maps to British Columbia curriculum and Computer Science standards.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎨</div>
+            <h3>First Peoples Integration</h3>
+            <p>Indigenous perspectives woven throughout with respect and authenticity.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">♿</div>
+            <h3>3-Level Differentiation</h3>
+            <p>Support, guided, and extension activities for every learner.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎮</div>
+            <h3>p5.js Simulations</h3>
+            <p>Interactive code-based visualizations for every topic.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">👨‍👩‍👧</div>
+            <h3>Family Guides</h3>
+            <p>Take-home resources for parent engagement.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📊</div>
+            <h3>Real-Time Dashboard</h3>
+            <p>Track pipeline progress and curriculum generation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to Explore?</h2>
+        <p>Start with Grade 1 lessons or browse by grade level.</p>
+        <div class="cta-actions">
+          <a href="/lessons" class="btn">Browse Lessons</a>
+          <a href="/dashboard" class="btn btn-secondary">View Dashboard</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    overflow-x: hidden;
+  }
+  
+  /* Hero */
+  .hero {
+    padding: 100px 0;
+    text-align: center;
+    background: radial-gradient(ellipse at top, rgba(0, 217, 255, 0.1) 0%, transparent 60%);
+  }
+  
+  .hero-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 100px;
+    color: var(--accent-2);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    margin-bottom: 24px;
+  }
+  
+  .highlight {
+    display: block;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hero-desc {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.25rem;
+    color: var(--fg-muted);
+    line-height: 1.8;
+  }
+  
+  .hero-desc em {
+    color: var(--accent);
+    font-style: normal;
+  }
+  
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Stats */
+  .stats {
+    padding: 60px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+  
+  .stat-card {
+    text-align: center;
+    padding: 24px;
+    background: var(--bg-elevated);
+    border-radius: var(--radius);
+  }
+  
+  .stat-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  
+  .stat-label {
+    color: var(--fg-muted);
+    font-size: 0.875rem;
+  }
+  
+  /* Vision */
+  .vision {
+    padding: 100px 0;
+  }
+  
+  .vision h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .vision-quote {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    padding: 40px;
+    background: var(--bg-elevated);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--fg-muted);
+  }
+  
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+  }
+  
+  .pillar {
+    padding: 30px;
+    background: var(--bg-elevated);
+    border-radius: var(--radius);
+    text-align: center;
+  }
+  
+  .pillar-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+  
+  .pillar h3 {
+    margin-bottom: 12px;
+    color: var(--accent);
+  }
+  
+  .pillar p {
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+  }
+  
+  /* Features */
+  .features {
+    padding: 100px 0;
+    background: var(--bg-elevated);
+  }
+  
+  .features h2 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  .feature {
+    padding: 30px;
+    background: var(--bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  
+  .feature h3 {
+    margin-bottom: 12px;
+  }
+  
+  .feature p {
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+  }
+  
+  /* CTA */
+  .cta {
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .cta h2 {
+    margin-bottom: 16px;
+  }
+  
+  .cta p {
+    color: var(--fg-muted);
+    margin-bottom: 32px;
+  }
+  
+  .cta-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+</style>

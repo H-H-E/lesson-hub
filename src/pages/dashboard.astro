@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Dashboard">
+  <main class="dashboard-page">
+    <div class="container">
+      <header class="page-header">
+        <h1>📊 Pipeline Dashboard</h1>
+        <p>Real-time status of curriculum generation.</p>
+      </header>
+      
+      <!-- Stats Overview -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-value">27</div>
+          <div class="stat-label">AI Agents</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📚</div>
+          <div class="stat-value">42</div>
+          <div class="stat-label">Lessons</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div class="stat-value">9</div>
+          <div class="stat-label">Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🔄</div>
+          <div class="stat-value">33</div>
+          <div class="stat-label">Queued</div>
+        </div>
+      </div>
+      
+      <!-- Pipeline Status -->
+      <section class="pipeline-section">
+        <h2>Pipeline Status</h2>
+        <div class="pipeline-stages">
+          <div class="stage complete">
+            <div class="stage-number">1</div>
+            <div class="stage-name">Research</div>
+            <div class="stage-status">3/3</div>
+          </div>
+          <div class="stage complete">
+            <div class="stage-number">2</div>
+            <div class="stage-name">Design</div>
+            <div class="stage-status">10/10</div>
+          </div>
+          <div class="stage complete">
+            <div class="stage-number">3</div>
+            <div class="stage-name">Create</div>
+            <div class="stage-status">6/6</div>
+          </div>
+          <div class="stage complete">
+            <div class="stage-number">4</div>
+            <div class="stage-name">Evaluate</div>
+            <div class="stage-status">4/4</div>
+          </div>
+          <div class="stage complete">
+            <div class="stage-number">5</div>
+            <div class="stage-name">Test/QA</div>
+            <div class="stage-status">4/4</div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Recent Activity -->
+      <section class="activity-section">
+        <h2>Recent Activity</h2>
+        <div class="activity-list">
+          <div class="activity-item complete">
+            <div class="activity-time">Just now</div>
+            <div class="activity-desc">Grade 1 Living Things - All phases complete</div>
+          </div>
+          <div class="activity-item complete">
+            <div class="activity-time">2 min ago</div>
+            <div class="activity-desc">Adversarial testing passed (62/100)</div>
+          </div>
+          <div class="activity-item complete">
+            <div class="activity-time">5 min ago</div>
+            <div class="activity-desc">Quality validation passed (98/100)</div>
+          </div>
+          <div class="activity-item running">
+            <div class="activity-time">Queue</div>
+            <div class="activity-desc">Grade 2 Life Cycles - Waiting</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .dashboard-page {
+    padding: 60px 0;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .page-header h1 {
+    margin-bottom: 12px;
+  }
+  
+  .page-header p {
+    color: var(--fg-muted);
+  }
+  
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  
+  .stat-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--fg-muted);
+  }
+  
+  /* Pipeline */
+  .pipeline-section {
+    margin-bottom: 60px;
+  }
+  
+  .pipeline-section h2 {
+    margin-bottom: 24px;
+  }
+  
+  .pipeline-stages {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+  }
+  
+  .stage {
+    flex: 1;
+    min-width: 140px;
+    background: var(--bg-elevated);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .stage.complete {
+    border-color: var(--accent-2);
+    background: rgba(0, 255, 136, 0.05);
+  }
+  
+  .stage.running {
+    border-color: var(--accent);
+    background: rgba(0, 217, 255, 0.05);
+  }
+  
+  .stage-number {
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 12px;
+  }
+  
+  .stage-name {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .stage-status {
+    font-size: 0.8rem;
+    color: var(--fg-muted);
+  }
+  
+  /* Activity */
+  .activity-section h2 {
+    margin-bottom: 24px;
+  }
+  
+  .activity-list {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  
+  .activity-item {
+    display: flex;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .activity-item:last-child {
+    border-bottom: none;
+  }
+  
+  .activity-time {
+    width: 100px;
+    font-size: 0.8rem;
+    color: var(--fg-muted);
+  }
+  
+  .activity-desc {
+    flex: 1;
+  }
+  
+  .activity-item.complete .activity-desc {
+    color: var(--accent-2);
+  }
+  
+  .activity-item.running .activity-desc {
+    color: var(--accent);
+  }
+</style>
