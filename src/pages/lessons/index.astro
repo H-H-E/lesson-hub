@@ -1,7 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const grades = [
+// Dynamic lesson data - would fetch from API in production
+const generatedLessons = [
+  { grade: 1, module: 1, topic: 'Living Things', status: 'complete', score: 85 },
+  { grade: 1, module: 2, topic: 'Matter', status: 'complete', score: 88 },
+  { grade: 2, module: 1, topic: 'Life Cycles', status: 'complete', score: 82 },
+];
+
+// Group by grade
+const gradesMap = {};
+for (const lesson of generatedLessons) {
+  if (!gradesMap[lesson.grade]) {
+    gradesMap[lesson.grade] = { level: lesson.grade, title: `Grade ${lesson.grade}`, topics: [], status: lesson.status, score: lesson.score };
+  }
+  gradesMap[lesson.grade].topics.push(lesson.topic);
+}
+
+const grades = Object.values(gradesMap);
+
+// Fallback for grades without generated lessons
+const allGrades = [
   { level: 1, title: "Grade 1", topics: ["Living Things", "Matter", "Light & Shadow", "Sky Patterns", "Sound", "Sorting"] },
   { level: 2, title: "Grade 2", topics: ["Life Cycles", "Properties of Matter", "Weather", "Position & Motion", "Growth", "Air"] },
   { level: 3, title: "Grade 3", topics: ["Biodiversity", "Forces", "Matter", "Climate", "Rocks", "Systems"] },
@@ -10,6 +29,12 @@ const grades = [
   { level: 6, title: "Grade 6", topics: ["Cells", "Electricity", "Chemistry", "Ecosystems", "Space", "Water"] },
   { level: 7, title: "Grade 7", topics: ["Evolution", "Chemical Reactions", "Earth History", "Diversity", "Interactions", "Resources"] },
 ];
+
+// Merge generated with template
+const displayGrades = allGrades.map(g => {
+  const generated = grades.find(x => x.level === g.level);
+  return generated || g;
+});
 ---
 
 <Layout title="Lessons">
@@ -21,20 +46,26 @@ const grades = [
       </header>
       
       <div class="grades-grid">
-        {grades.map(grade => (
+        {displayGrades.map(grade => (
           <div class="grade-card">
             <div class="grade-header">
               <h2>{grade.title}</h2>
-              <span class="topic-count">{grade.topics.length} topics</span>
+              {grade.status === 'complete' && (
+                <span class="status-badge complete">✓ Generated</span>
+              )}
             </div>
             <ul class="topics-list">
-              {grade.topics.map(topic => (
-                <li>
-                  <a href={`/lessons/grade${grade.level}/${topic.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}>
-                    {topic}
-                  </a>
-                </li>
-              ))}
+              {grade.topics.map(topic => {
+                const isGenerated = generatedLessons.some(l => l.topic === topic);
+                return (
+                  <li>
+                    <a href={isGenerated ? `/lessons/${topic.toLowerCase().replace(/[^a-z0-9]/g, '-')}` : '#'}>
+                      {topic}
+                      {isGenerated && <span class="topic-badge">✓</span>}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
