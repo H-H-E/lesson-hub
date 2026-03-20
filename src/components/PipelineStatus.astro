@@ -1,0 +1,263 @@
+---
+type Stage = {
+  name: string;
+  status: 'pending' | 'running' | 'complete' | 'failed';
+  duration?: string;
+  details?: string;
+};
+
+interface Props {
+  title?: string;
+  stages: Stage[];
+  showTimeline?: boolean;
+}
+
+const { title = 'Pipeline', stages, showTimeline = true } = Astro.props;
+
+const statusConfig = {
+  pending: { color: '#444444', label: 'Pending', icon: 'clock' },
+  running: { color: '#00d9ff', label: 'Running', icon: 'loader' },
+  complete: { color: '#00ff88', label: 'Complete', icon: 'check' },
+  failed: { color: '#ff3c00', label: 'Failed', icon: 'x' },
+};
+
+const icons: Record<string, string> = {
+  clock: `<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>`,
+  loader: `<line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>`,
+  check: `<polyline points="20 6 9 17 4 12"/>`,
+  x: `<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>`,
+};
+---
+
+<div class="pipeline-container">
+  {title && <h3 class="pipeline-title">{title}</h3>}
+  
+  <div class="pipeline-stages">
+    {stages.map((stage, index) => {
+      const config = statusConfig[stage.status];
+      const isLast = index === stages.length - 1;
+      
+      return (
+        <>
+          <div class={`stage stage-${stage.status}`}>
+            <div class="stage-indicator" style={`--status-color: ${config.color}`}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons[config.icon]} />
+              
+              {stage.status === 'running' && <span class="pulse-ring" />}
+            </div>
+            
+            <div class="stage-content">
+              <span class="stage-name">{stage.name}</span>
+              <span class="stage-status" style={`color: ${config.color}`}>
+                {config.label}
+              </span>
+              
+              {(stage.duration || stage.details) && (
+                <span class="stage-meta">
+                  {stage.duration && <span class="duration">{stage.duration}</span>}
+                  {stage.details && <span class="details">{stage.details}</span>}
+                </span>
+              )}
+            </div>
+          </div>
+          
+          {!isLast && (
+            <div class={`stage-connector ${stage.status === 'complete' ? 'complete' : ''}`}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          )}
+        </>
+      );
+    })}
+  </div>
+  
+  {showTimeline && (
+    <div class="pipeline-timeline">
+      {stages.map((stage) => {
+        const config = statusConfig[stage.status];
+        const width = stage.status === 'complete' ? '100%' 
+          : stage.status === 'running' ? '50%'
+          : stage.status === 'failed' ? '0%'
+          : '0%';
+        
+        return (
+          <div 
+            class="timeline-segment" 
+            style={`--width: ${width}; --color: ${config.color}`}
+          />
+        );
+      })}
+    </div>
+  )}
+</div>
+
+<style>
+  .pipeline-container {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  
+  .pipeline-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .pipeline-title::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  
+  .pipeline-stages {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  
+  .stage {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    min-width: 140px;
+  }
+  
+  .stage:hover {
+    background: var(--bg-hover);
+  }
+  
+  .stage-indicator {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: color-mix(in srgb, var(--status-color) 15%, transparent);
+    border: 2px solid var(--status-color);
+    border-radius: 50%;
+    color: var(--status-color);
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+  
+  .stage-running .stage-indicator {
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--status-color) 40%, transparent); }
+    50% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--status-color) 0%, transparent); }
+  }
+  
+  .pulse-ring {
+    position: absolute;
+    inset: -4px;
+    border: 2px solid var(--status-color);
+    border-radius: 50%;
+    opacity: 0;
+    animation: ringPulse 1.5s ease-out infinite;
+  }
+  
+  @keyframes ringPulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.5); opacity: 0; }
+  }
+  
+  .stage-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .stage-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--fg);
+  }
+  
+  .stage-status {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .stage-meta {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  
+  .stage-meta .duration,
+  .stage-meta .details {
+    font-size: 0.7rem;
+    color: var(--fg-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .stage-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    color: var(--border);
+    align-self: center;
+    margin-top: 20px;
+  }
+  
+  .stage-connector.complete {
+    color: var(--accent-2);
+  }
+  
+  .pipeline-timeline {
+    display: flex;
+    height: 4px;
+    background: var(--bg-hover);
+    border-radius: 2px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  .timeline-segment {
+    flex: 1;
+    background: var(--color);
+    width: var(--width);
+    transition: width 0.3s ease;
+  }
+  
+  .timeline-segment:first-child {
+    border-radius: 2px 0 0 2px;
+  }
+  
+  .timeline-segment:last-child {
+    border-radius: 0 2px 2px 0;
+  }
+  
+  @media (max-width: 600px) {
+    .pipeline-stages {
+      flex-direction: column;
+    }
+    
+    .stage-connector {
+      transform: rotate(90deg);
+      margin: 4px 0;
+      padding: 8px 0;
+    }
+  }
+</style>

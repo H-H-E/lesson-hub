@@ -1,0 +1,228 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  topic: string;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  duration: string;
+  progress?: number;
+  href?: string;
+  tags?: string[];
+}
+
+const { 
+  title, 
+  description, 
+  topic, 
+  difficulty, 
+  duration, 
+  progress = 0, 
+  href = '#',
+  tags = []
+} = Astro.props;
+
+const difficultyColors = {
+  beginner: '#00ff88',
+  intermediate: '#ffaa00',
+  advanced: '#ff3c00'
+};
+
+const difficultyColor = difficultyColors[difficulty];
+---
+
+<article class="lesson-card">
+  <a href={href} class="card-link">
+    <div class="card-header">
+      <span class="topic-badge" style={`--topic-color: ${difficultyColor}`}>
+        {topic}
+      </span>
+      <span class="difficulty" style={`--diff-color: ${difficultyColor}`}>
+        {difficulty}
+      </span>
+    </div>
+    
+    <h3 class="card-title">{title}</h3>
+    <p class="card-description">{description}</p>
+    
+    <div class="card-meta">
+      <span class="duration">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        {duration}
+      </span>
+      
+      {tags.length > 0 && (
+        <div class="tags">
+          {tags.slice(0, 3).map((tag) => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      )}
+    </div>
+    
+    {progress > 0 && (
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" style={`width: ${progress}%`}></div>
+        </div>
+        <span class="progress-text">{progress}% complete</span>
+      </div>
+    )}
+    
+    <div class="card-arrow">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </div>
+  </a>
+</article>
+
+<style>
+  .lesson-card {
+    position: relative;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  
+  .lesson-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 217, 255, 0.1);
+  }
+  
+  .card-link {
+    display: block;
+    padding: 24px;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .topic-badge {
+    display: inline-flex;
+    padding: 4px 12px;
+    background: color-mix(in srgb, var(--topic-color) 15%, transparent);
+    color: var(--topic-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 20px;
+  }
+  
+  .difficulty {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--diff-color);
+    text-transform: capitalize;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin-bottom: 8px;
+    transition: color 0.2s ease;
+  }
+  
+  .lesson-card:hover .card-title {
+    color: var(--accent);
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+    color: var(--fg-muted);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .duration {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--fg-muted);
+  }
+  
+  .duration svg {
+    opacity: 0.7;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  
+  .tag {
+    padding: 2px 8px;
+    background: var(--bg-hover);
+    color: var(--fg-muted);
+    font-size: 0.7rem;
+    border-radius: 4px;
+  }
+  
+  .progress-container {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  
+  .progress-bar {
+    height: 4px;
+    background: var(--bg-hover);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-text {
+    font-size: 0.75rem;
+    color: var(--fg-muted);
+  }
+  
+  .card-arrow {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all 0.2s ease;
+    color: var(--accent);
+  }
+  
+  .lesson-card:hover .card-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+</style>

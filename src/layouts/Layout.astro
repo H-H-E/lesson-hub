@@ -1,10 +1,13 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 interface Props {
   title: string;
   description?: string;
 }
 
 const { title, description = "K-12 Systems Literacy Curriculum" } = Astro.props;
+const currentPath = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -19,19 +22,32 @@ const { title, description = "K-12 Systems Literacy Curriculum" } = Astro.props;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
+  <ViewTransitions />
+  
   <style is:global>
     :root {
-      --bg: #0a0a0a;
-      --bg-elevated: #111111;
+      --bg: #080808;
+      --bg-elevated: #121212;
       --bg-hover: #1a1a1a;
-      --fg: #f5f5f5;
-      --fg-muted: #888888;
-      --accent: #00d9ff;
-      --accent-2: #00ff88;
-      --accent-warm: #ff3c00;
-      --border: #222222;
-      --radius: 12px;
-      --transition: 0.2s ease;
+      --bg-active: #222222;
+      --fg: #f0f0f0;
+      --fg-muted: #6b6b6b;
+      --fg-subtle: #444444;
+      --accent: #00e5ff;
+      --accent-glow: rgba(0, 229, 255, 0.15);
+      --accent-2: #00ff9d;
+      --accent-warm: #ff6b35;
+      --border: #1f1f1f;
+      --border-light: #2a2a2a;
+      --radius: 10px;
+      --radius-lg: 16px;
+      --transition-fast: 150ms ease;
+      --transition-base: 250ms ease;
+      --transition-slow: 400ms ease;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+      --shadow-glow: 0 0 30px var(--accent-glow);
     }
     
     * {
@@ -45,94 +61,244 @@ const { title, description = "K-12 Systems Literacy Curriculum" } = Astro.props;
       background: var(--bg);
       color: var(--fg);
       line-height: 1.6;
+      text-wrap: balance;
+      scroll-behavior: smooth;
     }
     
     body {
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 229, 255, 0.08), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(0, 255, 157, 0.05), transparent),
+        var(--bg);
+    }
+    
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
     }
     
     a {
       color: var(--accent);
       text-decoration: none;
-      transition: color var(--transition);
+      transition: color var(--transition-fast);
     }
     
     a:hover {
       color: var(--accent-2);
     }
     
-    h1, h2, h3, h4 {
+    h1, h2, h3, h4, h5, h6 {
       font-weight: 600;
       line-height: 1.2;
+      text-wrap: balance;
     }
     
-    h1 { font-size: 3rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
+    h1 { 
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    h2 { 
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      letter-spacing: -0.01em;
+    }
+    h3 { font-size: 1.35rem; }
     
     code, pre {
       font-family: 'JetBrains Mono', monospace;
     }
     
     .container {
+      width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 clamp(16px, 4vw, 32px);
     }
     
     .btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       padding: 12px 24px;
       background: var(--accent);
       color: var(--bg);
       border-radius: var(--radius);
       font-weight: 600;
-      transition: all var(--transition);
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+      transition: all var(--transition-fast);
+      border: none;
+      cursor: pointer;
     }
     
     .btn:hover {
       background: var(--accent-2);
       transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+    
+    .btn:active {
+      transform: translateY(0) scale(0.98);
     }
     
     .btn-secondary {
       background: transparent;
-      border: 2px solid var(--accent);
+      border: 1.5px solid var(--accent);
       color: var(--accent);
     }
     
     .btn-secondary:hover {
       background: var(--accent);
       color: var(--bg);
+      box-shadow: var(--shadow-glow);
+    }
+    
+    /* View Transitions */
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation-duration: 300ms;
+      animation-timing-function: ease-out;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-light);
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--fg-subtle);
     }
   </style>
 </head>
 
 <body>
-  <nav class="site-nav">
+  <nav class="site-nav" transition:animate="none">
     <div class="container nav-inner">
       <a href="/" class="logo">
-        <span class="logo-icon">🌱</span>
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14 2L4 8v12l10 6 10-6V8L14 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M14 10v8M10 14h8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
         <span class="logo-text">Lesson Hub</span>
       </a>
       
-      <div class="nav-links">
-        <a href="/lessons">Lessons</a>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/about">About</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="/" class:list={[{ active: currentPath === '/' }]}>Home</a>
+          <a href="/lessons" class:list={[{ active: currentPath.startsWith('/lessons') }]}>Lessons</a>
+          <a href="/dashboard" class:list={[{ active: currentPath.startsWith('/dashboard') }]}>Dashboard</a>
+          <a href="/about" class:list={[{ active: currentPath === '/about' }]}>About</a>
+        </div>
+        <a href="/lessons" class="btn nav-cta">
+          Start Learning
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
     </div>
   </nav>
   
-  <slot />
+  <main class="main-content">
+    <slot />
+  </main>
   
   <footer class="site-footer">
-    <div class="container">
-      <p>🎓 Systems Literacy Curriculum — Built with AI agents</p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+            <path d="M14 2L4 8v12l10 6 10-6V8L14 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M14 10v8M10 14h8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>Lesson Hub</span>
+        </a>
+        <p class="footer-tagline">Systems Literacy Curriculum</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="/lessons">All Lessons</a>
+          <a href="/dashboard">Progress</a>
+          <a href="/about">Curriculum</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">Teacher Guide</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">GitHub</a>
+          <a href="#">Discord</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>🎓 Built with AI agents — Systems Literacy for Everyone</p>
+        <p class="copyright">© 2025 Lesson Hub. Open source forever.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!isOpen));
+      navMenu?.classList.toggle('open');
+      document.body.style.overflow = isOpen ? '' : 'hidden';
+    });
+    
+    // Close menu on link click (mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle?.setAttribute('aria-expanded', 'false');
+        navMenu?.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+    
+    // View transition handling
+    document.addEventListener('astro:page-load', () => {
+      // Re-initialize after page transition
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      navToggle?.addEventListener('click', () => {
+        const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!isOpen));
+        navMenu?.classList.toggle('open');
+        document.body.style.overflow = isOpen ? '' : 'hidden';
+      });
+    });
+  </script>
 </body>
 </html>
 
@@ -141,8 +307,8 @@ const { title, description = "K-12 Systems Literacy Curriculum" } = Astro.props;
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(10, 10, 10, 0.9);
-    backdrop-filter: blur(10px);
+    background: rgba(8, 8, 8, 0.85);
+    backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
   }
   
@@ -150,41 +316,286 @@ const { title, description = "K-12 Systems Literacy Curriculum" } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    height: clamp(60px, 10vh, 72px);
   }
   
   .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--fg);
+    transition: all var(--transition-fast);
+  }
+  
+  .logo:hover {
+    color: var(--accent);
   }
   
   .logo-icon {
-    font-size: 1.5rem;
+    display: flex;
+    color: var(--fg-muted);
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
   }
   
   .nav-links {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 8px;
   }
   
   .nav-links a {
+    position: relative;
     color: var(--fg-muted);
     font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    transition: all var(--transition-fast);
   }
   
   .nav-links a:hover {
-    color: var(--accent);
+    color: var(--fg);
+    background: var(--bg-hover);
   }
   
+  .nav-links a.active {
+    color: var(--accent);
+    background: var(--accent-glow);
+  }
+  
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  
+  .nav-cta {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+  
+  /* Mobile Navigation */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 110;
+  }
+  
+  .hamburger {
+    position: relative;
+    width: 22px;
+    height: 2px;
+    background: var(--fg);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background: var(--fg);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+  }
+  
+  .hamburger::before { top: -7px; }
+  .hamburger::after { top: 7px; }
+  
+  .nav-toggle[aria-expanded="true"] .hamburger {
+    background: transparent;
+  }
+  
+  .nav-toggle[aria-expanded="true"] .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  
+  .nav-toggle[aria-expanded="true"] .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: flex;
+    }
+    
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: min(300px, 80vw);
+      height: 100vh;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 100px 24px 40px;
+      background: var(--bg-elevated);
+      border-left: 1px solid var(--border);
+      transform: translateX(100%);
+      transition: transform var(--transition-slow);
+      z-index: 105;
+    }
+    
+    .nav-menu.open {
+      transform: translateX(0);
+    }
+    
+    .nav-links {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      gap: 4px;
+    }
+    
+    .nav-links a {
+      padding: 14px 16px;
+      font-size: 1.05rem;
+    }
+    
+    .nav-cta {
+      width: 100%;
+      justify-content: center;
+      margin-top: auto;
+    }
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: clamp(32px, 6vw, 64px) 0;
+  }
+  
+  /* Footer */
   .site-footer {
-    padding: 40px 0;
-    text-align: center;
-    color: var(--fg-muted);
+    margin-top: auto;
+    padding: clamp(40px, 8vw, 80px) 0 24px;
+    background: var(--bg-elevated);
     border-top: 1px solid var(--border);
-    margin-top: 80px;
+  }
+  
+  .footer-inner {
+    display: grid;
+    gap: 48px;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-inner {
+      grid-template-columns: 1fr 2fr;
+      gap: 64px;
+    }
+  }
+  
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--fg);
+  }
+  
+  .footer-logo svg {
+    color: var(--fg-muted);
+  }
+  
+  .footer-tagline {
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  @media (max-width: 540px) {
+    .footer-links {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-col h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--fg-muted);
+    margin-bottom: 4px;
+  }
+  
+  .footer-col a {
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+    transition: color var(--transition-fast);
+  }
+  
+  .footer-col a:hover {
+    color: var(--fg);
+  }
+  
+  .footer-bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  
+  .footer-bottom p {
+    color: var(--fg-muted);
+    font-size: 0.85rem;
+  }
+  
+  .copyright {
+    color: var(--fg-subtle) !important;
   }
 </style>

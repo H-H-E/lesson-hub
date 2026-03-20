@@ -1,6 +1,12 @@
 {
-  "extends": "astro/vercel",
-  "build": {
-    "format": "directory"
-  }
+  "$schema": "https://openapi.vercel.com/schema.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }

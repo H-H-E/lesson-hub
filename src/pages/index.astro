@@ -6,23 +6,47 @@ import Layout from '../layouts/Layout.astro';
   <main>
     <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
-        <div class="hero-badge">✨ AI-Powered Curriculum</div>
-        <h1 class="hero-title">
-          Systems Literacy
-          <span class="highlight">Curriculum</span>
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+      </div>
+      
+      <div class="container hero-content">
+        <div class="hero-badge" data-animate>
+          <span class="badge-icon">✨</span>
+          AI-Powered Curriculum
+        </div>
+        
+        <h1 class="hero-title" data-animate>
+          <span class="title-line">Systems Literacy</span>
+          <span class="title-line highlight">Curriculum</span>
         </h1>
-        <p class="hero-desc">
+        
+        <p class="hero-desc" data-animate>
           Transform how students understand themselves and the world. 
           A K-12 curriculum built on the principle: <em>"You are not a lone creature — you are a living process inside other living processes."</em>
         </p>
-        <div class="hero-actions">
-          <a href="/lessons" class="btn">
-            Explore Lessons
-            <span>→</span>
+        
+        <div class="hero-actions" data-animate>
+          <a href="/lessons" class="btn btn-primary">
+            <span>Explore Lessons</span>
+            <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </a>
-          <a href="/about" class="btn btn-secondary">Learn More</a>
+          <a href="/about" class="btn btn-secondary">
+            <span>Learn More</span>
+          </a>
         </div>
+      </div>
+      
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" data-animate>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll to explore</span>
       </div>
     </section>
     
@@ -30,20 +54,24 @@ import Layout from '../layouts/Layout.astro';
     <section class="stats">
       <div class="container">
         <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value">7</div>
+          <div class="stat-card" data-animate>
+            <div class="stat-icon">�🎓</div>
+            <div class="stat-value" data-count="7">0</div>
             <div class="stat-label">Grade Levels</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">42+</div>
+          <div class="stat-card" data-animate>
+            <div class="stat-icon">�📖</div>
+            <div class="stat-value" data-count="42">0</div>
             <div class="stat-label">Lessons</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">27</div>
+          <div class="stat-card" data-animate>
+            <div class="stat-icon">🤖</div>
+            <div class="stat-value" data-count="27">0</div>
             <div class="stat-label">AI Agents</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">100%</div>
+          <div class="stat-card" data-animate>
+            <div class="stat-icon">✓</div>
+            <div class="stat-value"><span data-count="100">0</span>%</div>
             <div class="stat-label">BC + CSTA Aligned</div>
           </div>
         </div>
@@ -53,34 +81,64 @@ import Layout from '../layouts/Layout.astro';
     <!-- Vision Section -->
     <section class="vision">
       <div class="container">
-        <h2>The Vision</h2>
-        <blockquote class="vision-quote">
-          "You are not a lone creature being bossed around by morality; 
-          you are a living process inside other living processes, and 
-          learning to see that is both an introduction to science and an introduction to code."
+        <header class="section-header" data-animate>
+          <span class="section-tag">Our Philosophy</span>
+          <h2>The Vision</h2>
+        </header>
+        
+        <blockquote class="vision-quote" data-animate>
+          <div class="quote-mark">"</div>
+          <p>"You are not a lone creature being bossed around by morality; you are a living process inside other living processes, and learning to see that is both an introduction to science and an introduction to code."</p>
         </blockquote>
         
         <div class="pillars">
-          <div class="pillar">
-            <div class="pillar-icon">🧬</div>
+          <article class="pillar" data-animate>
+            <div class="pillar-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V24M8 16H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
             <h3>Self as System</h3>
             <p>Understand yourself as a dynamic process, not a fixed essence.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">💻</div>
+          </article>
+          
+          <article class="pillar" data-animate>
+            <div class="pillar-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M4 16H28M16 4V28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
             <h3>Life as Computation</h3>
             <p>See biology as information processing and feedback loops.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">🌍</div>
+          </article>
+          
+          <article class="pillar" data-animate>
+            <div class="pillar-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <circle cx="10" cy="16" r="4" stroke="currentColor" stroke-width="2"/>
+                <circle cx="22" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                <circle cx="22" cy="22" r="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M13 16H19M19 10L22 14M19 22L22 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
             <h3>Society as Systems</h3>
             <p>Recognize how families, institutions, and cultures emerge.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">⚡</div>
+          </article>
+          
+          <article class="pillar" data-animate>
+            <div class="pillar-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M8 24L14 12L20 20L26 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="14" cy="12" r="2" fill="currentColor"/>
+                <circle cx="20" cy="20" r="2" fill="currentColor"/>
+                <circle cx="26" cy="8" r="2" fill="currentColor"/>
+              </svg>
+            </div>
             <h3>Code as Literacy</h3>
             <p>Programming as a language for understanding process.</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -88,38 +146,47 @@ import Layout from '../layouts/Layout.astro';
     <!-- Features Section -->
     <section class="features">
       <div class="container">
-        <h2>What You Get</h2>
+        <header class="section-header" data-animate>
+          <span class="section-tag">What's Included</span>
+          <h2>What You Get</h2>
+        </header>
+        
         <div class="features-grid">
-          <div class="feature">
+          <article class="feature" data-animate>
             <div class="feature-icon">📚</div>
             <h3>BC + CSTA Aligned</h3>
             <p>Every lesson maps to British Columbia curriculum and Computer Science standards.</p>
-          </div>
-          <div class="feature">
+          </article>
+          
+          <article class="feature" data-animate>
             <div class="feature-icon">🎨</div>
             <h3>First Peoples Integration</h3>
             <p>Indigenous perspectives woven throughout with respect and authenticity.</p>
-          </div>
-          <div class="feature">
+          </article>
+          
+          <article class="feature" data-animate>
             <div class="feature-icon">♿</div>
             <h3>3-Level Differentiation</h3>
             <p>Support, guided, and extension activities for every learner.</p>
-          </div>
-          <div class="feature">
+          </article>
+          
+          <article class="feature" data-animate>
             <div class="feature-icon">🎮</div>
             <h3>p5.js Simulations</h3>
             <p>Interactive code-based visualizations for every topic.</p>
-          </div>
-          <div class="feature">
+          </article>
+          
+          <article class="feature" data-animate>
             <div class="feature-icon">👨‍👩‍👧</div>
             <h3>Family Guides</h3>
             <p>Take-home resources for parent engagement.</p>
-          </div>
-          <div class="feature">
+          </article>
+          
+          <article class="feature" data-animate>
             <div class="feature-icon">📊</div>
             <h3>Real-Time Dashboard</h3>
             <p>Track pipeline progress and curriculum generation.</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -127,16 +194,64 @@ import Layout from '../layouts/Layout.astro';
     <!-- CTA Section -->
     <section class="cta">
       <div class="container">
-        <h2>Ready to Explore?</h2>
-        <p>Start with Grade 1 lessons or browse by grade level.</p>
-        <div class="cta-actions">
-          <a href="/lessons" class="btn">Browse Lessons</a>
-          <a href="/dashboard" class="btn btn-secondary">View Dashboard</a>
+        <div class="cta-card" data-animate>
+          <h2>Ready to Explore?</h2>
+          <p>Start with Grade 1 lessons or browse by grade level.</p>
+          <div class="cta-actions">
+            <a href="/lessons" class="btn btn-primary">
+              <span>Browse Lessons</span>
+            </a>
+            <a href="/dashboard" class="btn btn-secondary">
+              <span>View Dashboard</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 </Layout>
+
+<script>
+  // Counter animation for stats
+  const animateCount = (el: Element) => {
+    const target = parseInt(el.getAttribute('data-count') || '0', 10);
+    const duration = 1500;
+    const start = performance.now();
+    
+    const update = (now: number) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * eased);
+      el.textContent = String(current);
+      
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+    };
+    
+    requestAnimationFrame(update);
+  };
+  
+  // Intersection Observer for animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        
+        // Trigger counter animation if this is a stat value
+        const countEl = entry.target.querySelector('[data-count]');
+        if (countEl) {
+          animateCount(countEl);
+        }
+        
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+</script>
 
 <style>
   main {
@@ -145,130 +260,353 @@ import Layout from '../layouts/Layout.astro';
   
   /* Hero */
   .hero {
-    padding: 100px 0;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 0 80px;
+    overflow: hidden;
+  }
+  
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+  
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 100% 80% at 50% -30%, rgba(0, 229, 204, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 50% at 100% 0%, rgba(124, 58, 237, 0.08) 0%, transparent 40%),
+      radial-gradient(ellipse 50% 40% at 0% 100%, rgba(249, 115, 22, 0.05) 0%, transparent 40%);
+  }
+  
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 70%);
+  }
+  
+  .hero-glow {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 229, 204, 0.1) 0%, transparent 60%);
+    filter: blur(60px);
+    animation: pulse 8s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+    50% { opacity: 0.8; transform: translateX(-50%) scale(1.1); }
+  }
+  
+  .hero-content {
+    position: relative;
     text-align: center;
-    background: radial-gradient(ellipse at top, rgba(0, 217, 255, 0.1) 0%, transparent 60%);
+    max-width: 800px;
   }
   
   .hero-badge {
-    display: inline-block;
-    padding: 8px 16px;
-    background: rgba(0, 255, 136, 0.1);
-    border: 1px solid rgba(0, 255, 136, 0.3);
-    border-radius: 100px;
-    color: var(--accent-2);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(0, 229, 204, 0.1);
+    border: 1px solid rgba(0, 229, 204, 0.2);
+    border-radius: var(--radius-full);
+    color: var(--accent-primary);
     font-size: 0.875rem;
     font-weight: 500;
-    margin-bottom: 24px;
+    margin-bottom: var(--space-lg);
+    transition: all var(--transition-base);
+  }
+  
+  .hero-badge:hover {
+    background: rgba(0, 229, 204, 0.15);
+    border-color: rgba(0, 229, 204, 0.3);
+  }
+  
+  .badge-icon {
+    font-size: 1rem;
   }
   
   .hero-title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    margin-bottom: 24px;
+    margin-bottom: var(--space-lg);
   }
   
-  .highlight {
+  .title-line {
     display: block;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  }
+  
+  .hero-title .highlight {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 50%, var(--accent-tertiary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .hero-desc {
-    max-width: 700px;
-    margin: 0 auto 40px;
     font-size: 1.25rem;
-    color: var(--fg-muted);
+    color: var(--fg-secondary);
     line-height: 1.8;
+    margin-bottom: var(--space-xl);
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .hero-desc em {
-    color: var(--accent);
+    color: var(--accent-primary);
     font-style: normal;
+    font-weight: 500;
   }
   
   .hero-actions {
     display: flex;
-    gap: 16px;
+    gap: var(--space-md);
     justify-content: center;
     flex-wrap: wrap;
   }
   
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-decoration: none;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: var(--bg-deep);
+    box-shadow: 0 4px 20px rgba(0, 229, 204, 0.3);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 229, 204, 0.4);
+  }
+  
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+  
+  .btn-arrow {
+    transition: transform var(--transition-base);
+  }
+  
+  .btn-primary:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    border: 2px solid var(--border-default);
+    color: var(--fg-primary);
+  }
+  
+  .btn-secondary:hover {
+    border-color: var(--accent-primary);
+    background: rgba(0, 229, 204, 0.05);
+  }
+  
+  /* Scroll indicator */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--fg-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .scroll-mouse {
+    width: 24px;
+    height: 38px;
+    border: 2px solid var(--fg-muted);
+    border-radius: 12px;
+    position: relative;
+  }
+  
+  .scroll-wheel {
+    width: 3px;
+    height: 8px;
+    background: var(--fg-muted);
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll-bounce 2s ease-in-out infinite;
+  }
+  
+  @keyframes scroll-bounce {
+    0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 0.5; transform: translateX(-50%) translateY(8px); }
+  }
+  
   /* Stats */
   .stats {
-    padding: 60px 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    padding: var(--space-3xl) 0;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    background: rgba(0, 0, 0, 0.3);
   }
   
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
+    gap: var(--space-lg);
   }
   
   .stat-card {
     text-align: center;
-    padding: 24px;
-    background: var(--bg-elevated);
-    border-radius: var(--radius);
+    padding: var(--space-xl);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+  }
+  
+  .stat-card:hover {
+    border-color: rgba(0, 229, 204, 0.3);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .stat-icon {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
   }
   
   .stat-value {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--accent);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: var(--space-xs);
   }
   
   .stat-label {
     color: var(--fg-muted);
     font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  /* Section headers */
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-primary);
+    margin-bottom: var(--space-sm);
   }
   
   /* Vision */
   .vision {
-    padding: 100px 0;
-  }
-  
-  .vision h2 {
-    text-align: center;
-    margin-bottom: 40px;
+    padding: var(--space-3xl) 0;
   }
   
   .vision-quote {
+    position: relative;
     max-width: 800px;
-    margin: 0 auto 60px;
-    padding: 40px;
-    background: var(--bg-elevated);
-    border-left: 4px solid var(--accent);
-    border-radius: var(--radius);
+    margin: 0 auto var(--space-3xl);
+    padding: var(--space-2xl);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+  
+  .quote-mark {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--accent-primary);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+  }
+  
+  .vision-quote p {
     font-size: 1.25rem;
     line-height: 1.8;
-    color: var(--fg-muted);
+    color: var(--fg-secondary);
   }
   
   .pillars {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
   }
   
   .pillar {
-    padding: 30px;
-    background: var(--bg-elevated);
-    border-radius: var(--radius);
+    padding: var(--space-xl);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
     text-align: center;
+    transition: all var(--transition-base);
+  }
+  
+  .pillar:hover {
+    border-color: rgba(0, 229, 204, 0.3);
+    transform: translateY(-4px);
   }
   
   .pillar-icon {
-    font-size: 2.5rem;
-    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, rgba(0, 229, 204, 0.1), rgba(124, 58, 237, 0.1));
+    border-radius: var(--radius-md);
+    color: var(--accent-primary);
+    margin-bottom: var(--space-md);
   }
   
   .pillar h3 {
-    margin-bottom: 12px;
-    color: var(--accent);
+    margin-bottom: var(--space-sm);
+    color: var(--fg-primary);
   }
   
   .pillar p {
@@ -278,35 +616,37 @@ import Layout from '../layouts/Layout.astro';
   
   /* Features */
   .features {
-    padding: 100px 0;
-    background: var(--bg-elevated);
-  }
-  
-  .features h2 {
-    text-align: center;
-    margin-bottom: 60px;
+    padding: var(--space-3xl) 0;
+    background: var(--bg-surface);
   }
   
   .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    gap: var(--space-lg);
   }
   
   .feature {
-    padding: 30px;
-    background: var(--bg);
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
+    padding: var(--space-xl);
+    background: var(--bg-base);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+  }
+  
+  .feature:hover {
+    border-color: rgba(0, 229, 204, 0.3);
+    transform: translateY(-2px);
   }
   
   .feature-icon {
     font-size: 2rem;
-    margin-bottom: 16px;
+    margin-bottom: var(--space-md);
   }
   
   .feature h3 {
-    margin-bottom: 12px;
+    margin-bottom: var(--space-sm);
+    color: var(--fg-primary);
   }
   
   .feature p {
@@ -316,22 +656,76 @@ import Layout from '../layouts/Layout.astro';
   
   /* CTA */
   .cta {
-    padding: 100px 0;
+    padding: var(--space-3xl) 0;
+  }
+  
+  .cta-card {
     text-align: center;
+    padding: var(--space-3xl);
+    background: 
+      radial-gradient(ellipse 100% 100% at 50% 0%, rgba(0, 229, 204, 0.1) 0%, transparent 50%),
+      var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
   }
   
-  .cta h2 {
-    margin-bottom: 16px;
+  .cta-card h2 {
+    margin-bottom: var(--space-md);
   }
   
-  .cta p {
-    color: var(--fg-muted);
-    margin-bottom: 32px;
+  .cta-card p {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xl);
   }
   
   .cta-actions {
     display: flex;
-    gap: 16px;
+    gap: var(--space-md);
     justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Animation states */
+  [data-animate] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  [data-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 100px 0 60px;
+      min-height: auto;
+    }
+    
+    .scroll-indicator {
+      display: none;
+    }
+    
+    .hero-desc {
+      font-size: 1.1rem;
+    }
+    
+    .stat-card {
+      padding: var(--space-lg);
+    }
+    
+    .stat-value {
+      font-size: 2.5rem;
+    }
+    
+    .pillars {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-card {
+      padding: var(--space-xl);
+    }
   }
 </style>
