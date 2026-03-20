@@ -55,12 +55,12 @@ import Layout from '../layouts/Layout.astro';
       <div class="container">
         <div class="stats-grid">
           <div class="stat-card" data-animate>
-            <div class="stat-icon">�🎓</div>
+            <div class="stat-icon">🎓</div>
             <div class="stat-value" data-count="7">0</div>
             <div class="stat-label">Grade Levels</div>
           </div>
           <div class="stat-card" data-animate>
-            <div class="stat-icon">�📖</div>
+            <div class="stat-icon">📖</div>
             <div class="stat-value" data-count="42">0</div>
             <div class="stat-label">Lessons</div>
           </div>
@@ -213,12 +213,12 @@ import Layout from '../layouts/Layout.astro';
 
 <script>
   // Counter animation for stats
-  const animateCount = (el: Element) => {
+  function animateCount(el) {
     const target = parseInt(el.getAttribute('data-count') || '0', 10);
     const duration = 1500;
     const start = performance.now();
     
-    const update = (now: number) => {
+    function update(now) {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
@@ -228,10 +228,10 @@ import Layout from '../layouts/Layout.astro';
       if (progress < 1) {
         requestAnimationFrame(update);
       }
-    };
+    }
     
     requestAnimationFrame(update);
-  };
+  }
   
   // Intersection Observer for animations
   const observer = new IntersectionObserver((entries) => {
@@ -398,7 +398,7 @@ import Layout from '../layouts/Layout.astro';
   
   .btn-primary {
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    color: var(--bg-deep);
+    color: var(--bg);
     box-shadow: 0 4px 20px rgba(0, 229, 204, 0.3);
   }
   

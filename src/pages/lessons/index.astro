@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 
 // Dynamic lesson data - would fetch from API in production
 const generatedLessons = [
@@ -20,7 +20,7 @@ const allGrades = [
 ];
 
 // Grade colors for visual distinction
-const gradeColors: Record<number, { primary: string; secondary: string; glow: string }> = {
+const gradeColors = {
   1: { primary: '#00e5cc', secondary: '#00b8d4', glow: 'rgba(0, 229, 204, 0.15)' },
   2: { primary: '#7c3aed', secondary: '#a855f7', glow: 'rgba(124, 58, 237, 0.15)' },
   3: { primary: '#f97316', secondary: '#fb923c', glow: 'rgba(249, 115, 22, 0.15)' },
@@ -219,7 +219,7 @@ const gradeColors: Record<number, { primary: string; secondary: string; glow: st
     inset: 0;
     background: 
       radial-gradient(ellipse 100% 60% at 50% -20%, rgba(0, 229, 204, 0.1) 0%, transparent 50%),
-      var(--bg-deep);
+      var(--bg);
     z-index: -1;
   }
   
@@ -318,7 +318,7 @@ const gradeColors: Record<number, { primary: string; secondary: string; glow: st
     border-radius: var(--radius-md);
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--bg-deep);
+    color: var(--bg);
   }
   
   .grade-header h2 {
@@ -342,7 +342,7 @@ const gradeColors: Record<number, { primary: string; secondary: string; glow: st
   }
   
   .meta-item.generated {
-    color: var(--success);
+    color: var(--accent-secondary);
   }
   
   .topics-list {
@@ -389,7 +389,7 @@ const gradeColors: Record<number, { primary: string; secondary: string; glow: st
   }
   
   .topic-indicator svg {
-    color: var(--success);
+    color: var(--accent-secondary);
   }
   
   .pending-dot {
@@ -406,7 +406,7 @@ const gradeColors: Record<number, { primary: string; secondary: string; glow: st
   .topic-score {
     font-size: 0.75rem;
     font-weight: 600;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono, monospace);
   }
   
   .grade-footer {

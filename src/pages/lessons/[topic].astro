@@ -5,22 +5,29 @@ import Layout from '../../layouts/Layout.astro';
 const workspacePath = '../../workspace/';
 const docsPath = '../../docs/';
 
-// Dynamic lesson data - in production this would read from the generated JSON files
-const lessons = [
-  {
-    grade: 1,
-    module: 1,
-    topic: "Living Things",
-    status: "complete",
-    score: 85,
-    phases: { research: 3, design: 10, create: 6, evaluate: 4, test: 4 }
-  }
-];
+export function getStaticPaths() {
+  const lessonData = [
+    {
+      grade: 1,
+      module: 1,
+      topic: "Living Things",
+      status: "complete",
+      score: 85,
+      phases: { research: 3, design: 10, create: 6, evaluate: 4, test: 4 }
+    }
+  ];
+  
+  return lessonData.map(lesson => ({
+    params: { 
+      topic: lesson.topic.toLowerCase().replace(/[^a-z0-9]/g, '-'),
+      grade: String(lesson.grade)
+    },
+    props: { lesson }
+  }));
+}
 
 const { grade, topic } = Astro.params;
-
-// Find lesson data
-const lesson = lessons.find(l => l.topic.toLowerCase().replace(/[^a-z0-9]/g, '-') === topic);
+const { lesson } = Astro.props;
 
 if (!lesson) {
   return Astro.redirect('/lessons');

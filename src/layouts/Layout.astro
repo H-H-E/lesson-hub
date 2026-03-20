@@ -1,6 +1,4 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-
 interface Props {
   title: string;
   description?: string;
@@ -22,25 +20,42 @@ const currentPath = Astro.url.pathname;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <ViewTransitions />
-  
   <style is:global>
     :root {
       --bg: #080808;
       --bg-elevated: #121212;
       --bg-hover: #1a1a1a;
       --bg-active: #222222;
+      --bg-surface: #0f0f0f;
+      --bg-base: #0a0a0a;
       --fg: #f0f0f0;
+      --fg-primary: #f0f0f0;
+      --fg-secondary: #a0a0a0;
       --fg-muted: #6b6b6b;
       --fg-subtle: #444444;
       --accent: #00e5ff;
       --accent-glow: rgba(0, 229, 255, 0.15);
       --accent-2: #00ff9d;
       --accent-warm: #ff6b35;
+      --accent-primary: #00e5ff;
+      --accent-secondary: #00ff9d;
+      --accent-tertiary: #ff6b35;
       --border: #1f1f1f;
       --border-light: #2a2a2a;
+      --border-default: #3a3a3a;
+      --border-subtle: #1a1a1a;
       --radius: 10px;
+      --radius-md: 12px;
       --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 64px;
       --transition-fast: 150ms ease;
       --transition-base: 250ms ease;
       --transition-slow: 400ms ease;
@@ -157,13 +172,6 @@ const currentPath = Astro.url.pathname;
       box-shadow: var(--shadow-glow);
     }
     
-    /* View Transitions */
-    ::view-transition-old(root),
-    ::view-transition-new(root) {
-      animation-duration: 300ms;
-      animation-timing-function: ease-out;
-    }
-    
     /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
@@ -186,7 +194,7 @@ const currentPath = Astro.url.pathname;
 </head>
 
 <body>
-  <nav class="site-nav" transition:animate="none">
+  <nav class="site-nav">
     <div class="container nav-inner">
       <a href="/" class="logo">
         <span class="logo-icon">
@@ -204,10 +212,10 @@ const currentPath = Astro.url.pathname;
       
       <div class="nav-menu">
         <div class="nav-links">
-          <a href="/" class:list={[{ active: currentPath === '/' }]}>Home</a>
-          <a href="/lessons" class:list={[{ active: currentPath.startsWith('/lessons') }]}>Lessons</a>
-          <a href="/dashboard" class:list={[{ active: currentPath.startsWith('/dashboard') }]}>Dashboard</a>
-          <a href="/about" class:list={[{ active: currentPath === '/about' }]}>About</a>
+          <a href="/" class:active={currentPath === '/'}>Home</a>
+          <a href="/lessons" class:active={currentPath.startsWith('/lessons')}>Lessons</a>
+          <a href="/dashboard" class:active={currentPath.startsWith('/dashboard')}>Dashboard</a>
+          <a href="/about" class:active={currentPath === '/about'}>About</a>
         </div>
         <a href="/lessons" class="btn nav-cta">
           Start Learning
@@ -269,35 +277,23 @@ const currentPath = Astro.url.pathname;
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
-    navToggle?.addEventListener('click', () => {
-      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!isOpen));
-      navMenu?.classList.toggle('open');
-      document.body.style.overflow = isOpen ? '' : 'hidden';
-    });
-    
-    // Close menu on link click (mobile)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle?.setAttribute('aria-expanded', 'false');
-        navMenu?.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-    
-    // View transition handling
-    document.addEventListener('astro:page-load', () => {
-      // Re-initialize after page transition
-      const navToggle = document.querySelector('.nav-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-      
-      navToggle?.addEventListener('click', () => {
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
         const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
         navToggle.setAttribute('aria-expanded', String(!isOpen));
-        navMenu?.classList.toggle('open');
+        navMenu.classList.toggle('open');
         document.body.style.overflow = isOpen ? '' : 'hidden';
       });
-    });
+      
+      // Close menu on link click (mobile)
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navToggle.setAttribute('aria-expanded', 'false');
+          navMenu.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    }
   </script>
 </body>
 </html>

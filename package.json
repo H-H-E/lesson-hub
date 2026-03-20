@@ -1,15 +1,16 @@
 {
   "name": "lesson-hub",
-  "type": "module",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "npx serve .",
+    "start": "npx serve ."
   },
-  "dependencies": {
-    "astro": "^4.0.0"
+  "serve": {
+    "rewrites": [
+      { "source": "/", "destination": "/index.html" },
+      { "source": "/lessons", "destination": "/lessons.html" },
+      { "source": "/dashboard", "destination": "/dashboard.html" }
+    ]
   }
 }

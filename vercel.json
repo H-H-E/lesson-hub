@@ -1,12 +1,9 @@
 {
-  "$schema": "https://openapi.vercel.com/schema.json",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": null,
+  "buildCommand": "echo 'Static HTML - no build needed'",
+  "outputDirectory": ".",
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/lessons", "destination": "/lessons.html" },
+    { "source": "/dashboard", "destination": "/dashboard.html" }
   ]
 }

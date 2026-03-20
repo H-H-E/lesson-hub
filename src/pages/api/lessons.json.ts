@@ -1,4 +1,3 @@
----
 // API endpoint to get all lessons
 export const prerender = false;
 
@@ -34,17 +33,3 @@ export async function GET() {
     });
   }
 }
----
-
-// Also generate static JSON for lessons
-export const GET_STATIC = () => {
-  const lessons = [
-    { grade: 1, module: 1, topic: 'Living Things', status: 'complete', score: 85 },
-    { grade: 1, module: 2, topic: 'Matter', status: 'complete', score: 88 },
-    { grade: 2, module: 1, topic: 'Life Cycles', status: 'complete', score: 82 },
-  ];
-  
-  return new Response(JSON.stringify({ lessons, total: lessons.length }), {
-    headers: { 'Content-Type': 'application/json' }
-  });
-};
